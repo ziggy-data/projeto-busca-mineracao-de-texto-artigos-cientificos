@@ -124,7 +124,6 @@ O projeto construiu uma pipeline completa de ponta a ponta:
 | **Triplestore** | Apache Jena Fuseki (Docker, TDB2) | Armazenamento e consulta SPARQL |
 | **Linguagem de consulta** | SPARQL 1.1 | Análise do corpus |
 | **LLM local** | llama3.1:8b via ollama | Extração de discurso científico |
-| **Embeddings** | nomic-embed-text via ollama | Busca semântica (IR) |
 | **Linguagem** | Python 3.14 | Toda a pipeline |
 | **Sistema operacional** | Windows 11 | Ambiente de desenvolvimento |
 | **Hardware** | Ryzen 9 7900 · 16GB RAM · RTX 4070 Super 12GB | Processamento local |
@@ -163,7 +162,7 @@ projeto-artigos-buscas/
 │       └── logger_setup.py    ← Logging colorido
 │   └── data/
 │       ├── manifest.jsonl     ← Metadados de todos os documentos coletados
-│       └── pdfs/              ← 2.441 PDFs baixados
+│       └── pdfs/              ← ~ 2.441 PDFs baixados
 │
 ├── fase_2/                    ← EXTRAÇÃO ESTRUTURAL + RDF
 │   ├── grobid_setup.py        ← Sobe container Docker com GROBID 0.8.1
@@ -172,8 +171,8 @@ projeto-artigos-buscas/
 │   ├── quality_gate.py        ← Valida PDFs, TEIs e TTLs em 3 estágios
 │   ├── validate_rdf.py        ← Validação de integridade dos TTLs
 │   └── data/
-│       ├── tei/               ← 1.970 XMLs TEI gerados pelo GROBID
-│       ├── rdf/               ← 1.970 TTLs RDF com ontologias SPAR
+│       ├── tei/               ← ~ 1.970 XMLs TEI gerados pelo GROBID
+│       ├── rdf/               ← ~ 1.970 TTLs RDF com ontologias SPAR
 │       ├── tei_rejected/      ← TEIs rejeitados pelo quality gate
 │       └── quality_reports/   ← Relatórios de qualidade por estágio
 │
@@ -187,11 +186,9 @@ projeto-artigos-buscas/
 │   ├── check_discourse.py     ← Relatório de qualidade da análise LLM
 │   ├── diagnose_discourse.py  ← Diagnóstico de documentos sem seções-alvo
 │   ├── diagnose_llm.py        ← Diagnóstico de conectividade e saúde do ollama
-│   ├── ir_search.py           ← Sistema de IR estrutural (BM25 + embeddings)
 │   └── data/
-│       ├── discourse/         ← 1.970 JSONs com análise de discurso por documento
+│       ├── discourse/         ← ~1.970 JSONs com análise de discurso por documento
 │       ├── enriched/          ← TTLs com triplas de discurso
-│       ├── ir_index/          ← Índice BM25 + embeddings para busca semântica
 │       └── model_comparison/  ← Relatórios de comparação entre modelos LLM
 │
 └── avaliacao/                 ← RELATÓRIOS E AVALIAÇÃO
