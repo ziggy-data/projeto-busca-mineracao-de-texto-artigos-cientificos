@@ -2,6 +2,7 @@
 
 > Projeto desenvolvido para a disciplina **Busca e Mineração de Texto**  
 > Programa de Pós-Graduação em Engenharia de Sistemas e Computação — COPPE/UFRJ
+
 > Participantes: Reinaldo A. Simoes e Luciana O. Dias
 ---
 
