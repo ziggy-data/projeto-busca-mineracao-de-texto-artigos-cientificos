@@ -41,10 +41,6 @@ STEPS = [
      "fase_2", "process_pdfs.py", [],
      "Envia PDFs ao GROBID e gera XML TEI"),
 
-    ("fase_2_retry",      "Reprocessar PDFs com falha",
-     "fase_2", "retry_failed.py", [],
-     "Reprocessa PDFs que deram timeout — aumenta cobertura de 81% para mais"),
-
     ("fase_2_quality",    "Quality Gate TEI",
      "fase_2", "quality_gate.py", ["stage2"],
      "Valida os TEIs gerados e rejeita os ruins"),
@@ -281,7 +277,6 @@ Exemplos:
         "fase_1_collect":    "30-60 min",
         "fase_2_grobid":     "1-2 min",
         "fase_2_process":    "50 min",
-        "fase_2_retry":      "10-20 min",
         "fase_2_quality":    "5 min",
         "fase_2_patch":      "5 min",
         "fase_2_convert":    "< 1 min",

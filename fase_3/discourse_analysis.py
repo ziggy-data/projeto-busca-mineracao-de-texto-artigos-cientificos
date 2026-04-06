@@ -10,9 +10,6 @@
 #   - Retry com backoff exponencial em vez de timeout fixo
 #   - Estimativa de tempo real baseada em ETA dinâmico
 #
-# Velocidade esperada vs v2:
-#   llama3.1:8b: 16h → ~6-8h  (2-2.5x mais rápido)
-#   qwen2.5:7b : estimado ~4-5h se score similar ao llama
 #
 # Uso:
 #   python discourse_analysis.py                   # processa tudo
@@ -111,8 +108,7 @@ KEYWORD_STOPWORDS = {
     "discussion", "discussão", "overview", "summary", "resumo",
     "model", "modelo", "technique", "técnica",
     "data", "dados", "system", "sistema", "process", "processo",
-    # Adicionados a partir de casos observados nos testes
-    "seção 6.5", "análise da tabela", "melhores resultados dos experimentos",
+    "análise da tabela", "melhores resultados dos experimentos",
     "indústria", "comunidade acadêmica", "conhecimento geral",
     "oportunidades de trabalho futuro", "prática",
 }
