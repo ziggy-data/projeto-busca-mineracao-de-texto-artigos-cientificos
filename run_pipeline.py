@@ -57,6 +57,10 @@ STEPS = [
      "fase_2", "validate_rdf.py", [],
      "Valida integridade dos TTLs gerados"),
 
+    ("avaliacao_shacl",   "Validação SHACL do grafo",
+     "avaliacao", "shacl_validate.py", ["--export", "data/shacl_report.json"],
+     "Valida conformidade formal dos TTLs com as shapes SHACL (padrão W3C)"),
+
     ("fase_3_fuseki",     "Subir Fuseki",
      "fase_3", "fuseki_setup.py", ["--reload"],
      "Sobe o Apache Jena Fuseki e carrega os TTLs"),
@@ -88,6 +92,10 @@ STEPS = [
     ("fase_3_advanced",   "Queries SPARQL avançadas",
      "fase_3", "sparql_advanced.py", ["--export", "data/sparql_advanced_results.json"],
      "Executa as 10 queries de análise aprofundada"),
+
+    ("avaliacao_evaluate", "Avaliar hipóteses H1/H2/H3",
+     "avaliacao", "evaluate_project.py", ["--export", "data/evaluation_results.json"],
+     "Verifica critérios de sucesso da proposta e emite veredicto por hipótese"),
 
     ("avaliacao_report",  "Gerar relatório",
      "avaliacao", "generate_report.py", [],
@@ -248,7 +256,7 @@ Exemplos:
         skip_set.add("fase_1_collect")
         print(f"  {SKIP} Coleta OAI-PMH ignorada (--skip-collect)")
     if args.skip_grobid:
-        skip_set.update({"fase_2_grobid", "fase_2_process", "fase_2_quality"})
+        skip_set.update({"fase_2_grobid", "fase_2_process", "fase_2_retry", "fase_2_quality"})
         print(f"  {SKIP} Processamento GROBID ignorado (--skip-grobid)")
     if args.skip_discourse:
         skip_set.update({"fase_3_discourse", "fase_3_check_disc", "fase_3_compare"})
@@ -281,6 +289,7 @@ Exemplos:
         "fase_2_patch":      "5 min",
         "fase_2_convert":    "< 1 min",
         "fase_2_validate":   "5 min",
+        "avaliacao_shacl":   "5-10 min",
         "fase_3_fuseki":     "10 min",
         "fase_3_discourse":  "10-17 h",
         "fase_3_check_disc": "< 1 min",
@@ -289,6 +298,7 @@ Exemplos:
         "fase_3_fix_titles": "5-10 min",
         "fase_3_sparql":     "2 min",
         "fase_3_advanced":   "2 min",
+        "avaliacao_evaluate": "< 1 min",
         "avaliacao_report":  "< 1 min",
     }
 

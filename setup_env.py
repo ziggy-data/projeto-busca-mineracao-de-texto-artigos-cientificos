@@ -35,6 +35,7 @@ REQUIREMENTS = {
         "requests==2.31.0",
         "tqdm",
         "rdflib==7.0.0",
+        "pyshacl",
     ],
     "fase_3": [
         "requests==2.31.0",
@@ -280,6 +281,7 @@ def check_scripts() -> bool:
         "fase_2/process_pdfs.py",
         "fase_2/tei_to_doco.py",
         "fase_2/quality_gate.py",
+        "fase_2/shacl_validate.py",
         "fase_3/fuseki_setup.py",
         "fase_3/discourse_analysis.py",
         "fase_3/enrich_graph.py",
