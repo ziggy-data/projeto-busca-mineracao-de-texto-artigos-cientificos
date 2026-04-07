@@ -84,12 +84,13 @@ ORDER BY DESC(?total)
         "name":  "Top 20 keywords por frequência",
         "desc":  "Termos mais frequentes nos dc:subject do corpus",
         "sparql": """
-SELECT ?keyword (COUNT(?doc) AS ?freq)
+SELECT ?keyword_norm (COUNT(?doc) AS ?freq)
 WHERE {
   ?doc a fabio:Work .
   ?doc dcterms:subject ?keyword .
+  BIND(LCASE(?keyword) AS ?keyword_norm)
 }
-GROUP BY ?keyword
+GROUP BY ?keyword_norm
 ORDER BY DESC(?freq)
 LIMIT 20
 """,
@@ -199,7 +200,7 @@ LIMIT 20
         "name":  "Limitações por área (keywords inferidas)",
         "desc":  "Limitações associadas a conceitos técnicos",
         "sparql": """
-SELECT ?keyword ?limitacao
+SELECT (LCASE(?keyword) AS ?keyword_norm) ?limitacao
 WHERE {
   ?doc discourse:inferredKeyword ?keyword .
   ?doc discourse:hasLimitation ?lim .
@@ -227,12 +228,13 @@ LIMIT 30
         "name":  "Top keywords inferidas pelo LLM",
         "desc":  "Conceitos técnicos mais frequentes extraídos da análise de discurso",
         "sparql": """
-SELECT ?keyword (COUNT(?doc) AS ?freq)
+SELECT ?keyword_norm (COUNT(?doc) AS ?freq)
 WHERE {
   ?doc discourse:inferredKeyword ?keyword .
-  FILTER(STRLEN(?keyword) > 4)
+  BIND(LCASE(?keyword) AS ?keyword_norm)
+  FILTER(STRLEN(?keyword_norm) > 4)
 }
-GROUP BY ?keyword
+GROUP BY ?keyword_norm
 ORDER BY DESC(?freq)
 LIMIT 25
 """,
