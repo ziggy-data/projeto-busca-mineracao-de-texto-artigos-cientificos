@@ -50,8 +50,14 @@ def run_set(set_spec: str, set_name: str, logger) -> tuple[int, int]:
 
     config.OAI_SET_FILTER = set_spec
 
+    # Slug de área para organização das pastas de PDF
+    area_slug = config.SET_AREA_SLUG.get(set_spec, set_name.split("—")[-1].strip()
+                                         .replace(" ", "_")[:40])
+
     records = []
     for record in harvest():
+        # Injeta o slug de área para que pdf_downloader saiba onde salvar
+        record["_area_slug"] = area_slug
         records.append(record)
         safe_handle = record["handle"].replace("/", "_")
         meta_path = os.path.join(config.METADATA_DIR, f"{safe_handle}.json")

@@ -93,6 +93,10 @@ STEPS = [
      "fase_3", "sparql_advanced.py", ["--export", "data/sparql_advanced_results.json"],
      "Executa as 10 queries de análise aprofundada"),
 
+    ("avaliacao_graph",    "Validar integridade do grafo",
+     "avaliacao", "validate_graph.py", ["--export", "data/graph_integrity.json"],
+     "Verifica consistência semântica do grafo via SPARQL (órfãos, duplicatas, etc.)"),
+
     ("avaliacao_evaluate", "Avaliar hipóteses H1/H2/H3",
      "avaliacao", "evaluate_project.py", ["--export", "data/evaluation_results.json"],
      "Verifica critérios de sucesso da proposta e emite veredicto por hipótese"),
@@ -298,6 +302,7 @@ Exemplos:
         "fase_3_fix_titles": "5-10 min",
         "fase_3_sparql":     "2 min",
         "fase_3_advanced":   "2 min",
+        "avaliacao_graph":    "< 1 min",
         "avaliacao_evaluate": "< 1 min",
         "avaliacao_report":  "< 1 min",
     }

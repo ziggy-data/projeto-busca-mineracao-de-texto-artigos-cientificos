@@ -36,12 +36,19 @@ def _download_one(record: dict, session, pdf_dir: str) -> dict:
     """
     Baixa o PDF de um registro.
 
+    O arquivo é salvo em {pdf_dir}/{AREA}/{ANO}/{handle}.pdf quando
+    config.ORGANIZE_BY_TOPIC=True, ou em {pdf_dir}/{handle}.pdf caso contrário.
+
     Returns:
         dict com resultado: handle, status, path, size_bytes, md5
     """
     handle   = record["handle"]
     filename = _sanitize_filename(handle)
-    dest     = os.path.join(pdf_dir, filename)
+
+    # Diretório organizado por tópico/ano (definido em config.get_pdf_dir)
+    save_dir = config.get_pdf_dir(record, base_dir=pdf_dir)
+    os.makedirs(save_dir, exist_ok=True)
+    dest = os.path.join(save_dir, filename)
 
     result = {
         "handle":     handle,

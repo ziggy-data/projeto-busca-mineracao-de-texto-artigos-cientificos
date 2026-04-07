@@ -105,8 +105,15 @@ def main():
     logger.info("FASE 1 — Coleta de metadados OAI-PMH")
     records = []
 
+    # Determina slug de área para organização (set único via --set)
+    area_slug = config.SET_AREA_SLUG.get(
+        config.OAI_SET_FILTER or "",
+        config.OAI_SET_FILTER or "Sem_Area"
+    )
+
     for record in harvest():
         records.append(record)
+        record["_area_slug"] = area_slug
 
         # Salva JSON individual por artigo (fácil de inspecionar)
         safe_handle = record["handle"].replace("/", "_")

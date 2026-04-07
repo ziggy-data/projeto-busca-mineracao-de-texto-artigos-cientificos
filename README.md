@@ -1,131 +1,377 @@
 # Grafo de Conhecimento de Discurso Científico — Pantheon/UFRJ
 
-> Projeto desenvolvido para a disciplina **Busca e Mineração de Texto**  
-> Programa de Pós-Graduação em Engenharia de Sistemas e Computação — COPPE/UFRJ
+> **Disciplina:** Busca e Mineração de Texto  
+> **Programa:** Engenharia de Sistemas e Computação — PESC/COPPE/UFRJ  
+> **Participantes:** Reinaldo A. Simões · Luciana O. Dias
 
-> Participantes: Reinaldo A. Simoes e Luciana O. Dias
 ---
 
 ## Índice
 
-1. [Motivação e Contexto](#1-motivação-e-contexto)
-2. [O que foi feito](#2-o-que-foi-feito)
+1. [Motivação e contexto](#1-motivação-e-contexto)
+2. [Proposta e hipóteses](#2-proposta-e-hipóteses)
 3. [Arquitetura geral](#3-arquitetura-geral)
-4. [Tecnologias e ferramentas](#4-tecnologias-e-ferramentas)
-5. [Estrutura de arquivos](#5-estrutura-de-arquivos)
-6. [Pipeline detalhada](#6-pipeline-detalhada)
+4. [Estrutura de arquivos](#4-estrutura-de-arquivos)
+5. [Pipeline detalhada](#5-pipeline-detalhada)
+6. [Avaliação](#6-avaliação)
 7. [Resultados obtidos](#7-resultados-obtidos)
-8. [Dificuldades e soluções](#8-dificuldades-e-soluções)
-9. [Como executar](#9-como-executar)
-10. [Requisitos](#10-requisitos)
+8. [Tecnologias e ferramentas](#8-tecnologias-e-ferramentas)
+9. [Dificuldades e soluções](#9-dificuldades-e-soluções)
+10. [Como executar](#10-como-executar)
+11. [Requisitos](#11-requisitos)
 
 ---
 
-## 1. Motivação e Contexto
+## 1. Motivação e contexto
 
-O **Pantheon** é o repositório institucional da UFRJ, construído sobre DSpace 5.3, e abriga milhares de teses e dissertações de todos os programas de pós-graduação da universidade. Embora esses documentos estejam acessíveis publicamente, eles existem como PDFs isolados — sem estrutura semântica, sem conexões entre si, e sem nenhuma forma de busca que vá além de palavras-chave no título ou no abstract.
+O **Pantheon** é o repositório institucional da UFRJ, construído sobre DSpace 5.3, e abriga milhares de teses e dissertações de todos os programas de pós-graduação da universidade. Embora esses documentos sejam publicamente acessíveis, existem como PDFs isolados — sem estrutura semântica, sem conexão entre si, e sem nenhuma forma de busca que vá além de palavras-chave no título ou no abstract.
 
 A pergunta que motivou este projeto foi: **é possível extrair automaticamente o conhecimento científico contido nessas teses e organizá-lo em um grafo semântico navegável?**
 
-Mais especificamente, queríamos ir além da indexação tradicional e capturar o **discurso científico**: o que cada tese afirma como resultado, quais limitações os autores reconhecem, quais contribuições declaram, e quais direções de pesquisa futura propõem. Isso é diferente de buscar um termo em um PDF — é entender a estrutura argumentativa do texto.
+Mais especificamente, queríamos capturar o **discurso científico**: o que cada tese afirma como resultado, quais limitações os autores reconhecem, quais contribuições declaram e quais direções de pesquisa futura propõem. Isso vai além da indexação tradicional — é entender a estrutura argumentativa do texto.
 
-O projeto nasceu da combinação de três áreas:
+O projeto articula três áreas:
 
-- **Mineração de texto estrutural** — usando ontologias de documentos científicos (DoCO, DEO) para mapear a estrutura retórica de teses
-- **Web Semântica** — representando o conhecimento extraído como grafos RDF consultáveis via SPARQL
-- **LLMs locais** — usando modelos de linguagem rodando localmente (sem dependência de APIs pagas) para extrair afirmações científicas das seções de conclusão e resultados
+- **Mineração de texto estrutural** — ontologias de documentos científicos (DoCO, DEO) para mapear a estrutura retórica de teses
+- **Web Semântica** — representação do conhecimento extraído como grafos RDF consultáveis via SPARQL
+- **LLMs locais** — modelos de linguagem rodando sem dependência de APIs externas para extrair afirmações científicas
 
 ---
 
-## 2. O que foi feito
+## 2. Proposta e hipóteses
 
-O projeto construiu uma pipeline completa de ponta a ponta:
+### Hipótese principal
 
-1. **Coleta automatizada** de 2.441 PDFs do repositório Pantheon via protocolo OAI-PMH, cobrindo 13 conjuntos temáticos da COPPE (Engenharia Civil, Elétrica, Química, Nuclear, Naval, Biomédica, entre outras)
+> É possível extrair automaticamente elementos de discurso científico — afirmações, contribuições, limitações e direções de pesquisa futura — de teses e dissertações de engenharia com qualidade suficiente para revelar padrões temáticos e temporais no corpus, utilizando exclusivamente modelos de linguagem locais e ontologias abertas.
 
-2. **Extração estrutural** dos PDFs usando GROBID, gerando XML no formato TEI com seções, parágrafos, referências e metadados identificados automaticamente
+### Hipóteses verificáveis
 
-3. **Mapeamento ontológico** do TEI para RDF usando as ontologias SPAR (DoCO, DEO, C4O, FaBiO), resultando em 2,2 milhões de triplas que representam a estrutura de cada documento
+**H1 — Viabilidade de extração:** um modelo de linguagem de pequeno porte, executado localmente sem ajuste fino, extrai elementos de discurso de seções de conclusão e resultados com taxa de sucesso ≥ 50% dos documentos elegíveis.
 
-4. **Armazenamento** dessas triplas no Apache Jena Fuseki, um triplestore que permite consultas SPARQL sobre o corpus inteiro
+**H2 — Qualidade da extração:** a proporção de itens genéricos é ≤ 35% do total; o grafo RDF satisfaz as restrições formais das ontologias adotadas (SHACL); os campos de discurso são preenchidos em ≥ 2,0 de 4 possíveis por documento.
 
-5. **Análise de discurso científico** com LLM local (llama3.1:8b via ollama), extraindo automaticamente claims, contribuições, limitações e direções de trabalho futuro de 1.366 documentos
+**H3 — Valor analítico do grafo:** consultas SPARQL revelam padrões não triviais — variação temporal no uso de técnicas, diferença de densidade de afirmações entre doutorado e mestrado, e perfis de limitação distintos entre áreas.
 
-6. **Enriquecimento do grafo** com as 165.312 triplas de discurso extraídas pelo LLM, usando uma ontologia customizada
+### Baseline
 
-7. **Análise do corpus** via 20+ queries SPARQL, revelando padrões como a transição do uso de Elementos Finitos para Machine Learning entre 2017 e 2020
-
-8. **Comparação de modelos LLM** (llama3.1:8b vs qwen2.5:14b-instruct) com métricas objetivas de qualidade de extração
-
-9. **Geração automática de relatório** em Markdown com todas as estatísticas do corpus
+Busca direta nos metadados OAI-PMH (`dc:subject` CNPq), sem extração de conteúdo das seções. Representa o que o Pantheon oferece hoje, sem o projeto.
 
 ---
 
 ## 3. Arquitetura geral
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                      Pantheon/UFRJ                               │
-│              Repositório DSpace 5.3 (OAI-PMH)                   │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │ OAI-PMH (XML Dublin Core)
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                        FASE 1 — Coleta                          │
-│   collect_all_sets.py → manifest.jsonl + 2.441 PDFs             │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │ PDFs + metadados
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   FASE 2 — Extração Estrutural                  │
-│                                                                  │
-│   PDFs → [GROBID 0.8.1] → 1.970 TEI XMLs                       │
-│        → [tei_to_doco.py] → 1.970 TTLs RDF                     │
-│        → [quality_gate.py] → validação e correção               │
-│                                                                  │
-│   Ontologias: DoCO · DEO · C4O · FaBiO · PO · BiBO             │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │ ~2,2M triplas RDF
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   FASE 3 — Análise e Consulta                   │
-│                                                                  │
-│   TTLs → [Apache Jena Fuseki] ← SPARQL queries                 │
-│                ↑                                                  │
-│   [discourse_analysis.py]  ← llama3.1:8b (ollama)             │
-│   TEIs → extrai claims/limitações/contribuições                 │
-│        → [enrich_graph.py] → +165.312 triplas                  │
-│                                                                  │
-│   Ontologia customizada: discourse#ScientificClaim, etc.        │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │ Resultados SPARQL + JSONs
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      AVALIAÇÃO                                   │
-│   generate_report.py → relatorio_final.md                       │
-│   compare_models.py  → comparação llama3.1 vs qwen2.5           │
-└─────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│                     Pantheon/UFRJ                             │
+│             Repositório DSpace 5.3 (OAI-PMH)                 │
+└─────────────────────┬────────────────────────────────────────┘
+                      │ Dublin Core + PDFs organizados por área/ano
+                      ▼
+┌──────────────────────────────────────────────────────────────┐
+│                  FASE 1 — Coleta                              │
+│  collect_all_sets.py → manifest.jsonl                         │
+│  PDFs em data/pdfs/{AREA}/{ANO}/                              │
+└─────────────────────┬────────────────────────────────────────┘
+                      │ ~2.441 PDFs + metadados
+                      ▼
+┌──────────────────────────────────────────────────────────────┐
+│               FASE 2 — Extração Estrutural                    │
+│  PDFs → [GROBID 0.8.1] → TEI XML                             │
+│       → [tei_to_doco.py] → TTL RDF                           │
+│       → [quality_gate.py] → validação 3 estágios             │
+│  Ontologias: DoCO · DEO · C4O · FaBiO · PO · BiBO            │
+└─────────────────────┬────────────────────────────────────────┘
+                      │ ~2,2M triplas RDF
+                      ▼
+┌──────────────────────────────────────────────────────────────┐
+│               FASE 3 — Análise e Consulta                     │
+│  TTLs → [Apache Jena Fuseki TDB2]                            │
+│  TEIs → [discourse_analysis.py / llama3.1:8b]                │
+│       → claims · contribuições · limitações · futuro         │
+│       → [enrich_graph.py] → +165k triplas de discurso        │
+│  [fix_titles.py] → corrige títulos via SPARQL UPDATE         │
+│  [sparql_queries.py + sparql_advanced.py] → 30 queries        │
+└─────────────────────┬────────────────────────────────────────┘
+                      │
+                      ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    AVALIAÇÃO                                   │
+│  shacl_validate.py   → conformidade formal do grafo (W3C)    │
+│  validate_graph.py   → integridade semântica via SPARQL      │
+│  compare_models.py   → llama3.1:8b vs qwen2.5:14b            │
+│  evaluate_project.py → veredicto H1 / H2 / H3                │
+│  generate_report.py  → relatório final em Markdown            │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 4. Tecnologias e ferramentas
+## 4. Estrutura de arquivos
 
-| Categoria | Tecnologia | Uso no projeto |
+```
+projeto-artigos-buscas/
+│
+├── .gitignore
+├── README.md                     ← Este arquivo
+├── run_pipeline.py               ← Executa os 19 passos da pipeline
+├── setup_env.py                  ← Verifica e instala dependências, Docker, ollama
+│
+├── fase_1/                       ── COLETA OAI-PMH
+│   ├── collect.py                ← Coleta de um único set OAI-PMH
+│   ├── collect_all_sets.py       ← Coleta todos os sets COPPE em sequência
+│   ├── config.py                 ← Endpoints, filtros, mapeamento set → área/ano
+│   ├── README.md                 ← Documentação da fase 1
+│   ├── requirements.txt
+│   ├── diagnose_find_thesis_sets.py   ← Varre sets do Pantheon procurando teses
+│   ├── diagnose_set.py                ← Inspeciona tipos e datas de um set
+│   ├── diagnose-paths-url-pantheon.py ← Testa endpoints OAI-PMH
+│   ├── diagnose-site-patheon-download-pdf.py ← Testa scraping de bistreams
+│   └── src/
+│       ├── oai_harvester.py      ← Cliente OAI-PMH com checkpoint e deduplicação
+│       ├── dspace_client.py      ← Scraping HTML para URL do bitstream PDF
+│       ├── pdf_downloader.py     ← Download paralelo; salva em {ÁREA}/{ANO}/
+│       ├── http_client.py        ← Sessão HTTP com retry exponencial
+│       └── logger_setup.py       ← Logging colorido + arquivo rotativo
+│   (data/ gerado na execução)
+│       ├── manifest.jsonl        ← Metadados de todos os documentos coletados
+│       ├── metadata/             ← JSON individual por documento
+│       └── pdfs/
+│           ├── Engenharia_de_Sistemas/
+│           │   ├── 2019/  └── *.pdf
+│           │   └── 2020/  └── *.pdf
+│           ├── Engenharia_Eletrica/
+│           └── ...               ← Organizado por área CNPq e ano de publicação
+│
+├── fase_2/                       ── EXTRAÇÃO ESTRUTURAL + RDF
+│   ├── grobid_setup.py           ← Sobe container GROBID 0.8.1 (Docker)
+│   ├── process_pdfs.py           ← Envia PDFs ao GROBID; rglob recursivo
+│   ├── tei_to_doco.py            ← TEI XML → Turtle RDF com ontologias SPAR
+│   ├── quality_gate.py           ← Valida PDFs / TEIs / TTLs em 3 estágios
+│   ├── validate_rdf.py           ← Integridade dos TTLs gerados
+│   ├── README.md
+│   └── requirements.txt
+│   (data/ gerado na execução)
+│       ├── tei/                  ← ~1.970 XMLs TEI
+│       ├── rdf/                  ← ~1.970 TTLs RDF
+│       ├── tei_rejected/         ← Rejeitados pelo quality gate
+│       └── quality_reports/      ← Relatórios por estágio
+│
+├── fase_3/                       ── FUSEKI + DISCURSO + SPARQL
+│   ├── fuseki_setup.py           ← Sobe Fuseki e carrega TTLs no grafo default
+│   ├── discourse_analysis.py     ← Extrai claims/limitações/contribuições (llama3.1:8b)
+│   ├── enrich_graph.py           ← Insere triplas de discurso no Fuseki
+│   ├── sparql_queries.py         ← 20 queries de análise do corpus
+│   ├── sparql_advanced.py        ← 10 queries aprofundadas
+│   ├── fix_titles.py             ← Corrige títulos via SPARQL UPDATE usando manifest
+│   ├── check_discourse.py        ← Relatório de qualidade da extração LLM
+│   ├── diagnose_discourse.py     ← Diagnóstico de documentos sem seções-alvo
+│   ├── diagnose_llm.py           ← Diagnóstico de conectividade e saúde do ollama
+│   ├── README.md
+│   └── requirements.txt
+│   (data/ gerado na execução)
+│       ├── discourse/            ← JSONs de análise por documento
+│       └── discourse_report.jsonl ← Sumário de status (ok / no_target / failed)
+│
+└── avaliacao/                    ── AVALIAÇÃO E RELATÓRIO
+    ├── shacl_validate.py         ← Conformidade formal dos TTLs (shapes SHACL W3C)
+    ├── validate_graph.py         ← Integridade semântica do grafo via SPARQL
+    ├── compare_models.py         ← Compara llama3.1:8b vs qwen2.5:14b em 30 docs
+    ├── evaluate_project.py       ← Veredicto H1/H2/H3 com critérios da proposta
+    ├── generate_report.py        ← Relatório final consolidado em Markdown
+    └── data/
+        ├── shacl_report.json          ← Resultado da validação SHACL
+        ├── graph_integrity.json       ← Resultado da validação semântica
+        ├── evaluation_results.json    ← Veredicto H1/H2/H3 (gerado pelo evaluate_project)
+        ├── model_comparison/          ← Relatórios Markdown por par de modelos
+        │   └── comparison_llama3.1_8b_vs_qwen2.5_7b.md
+        └── run_logs/                  ← Logs de execução JSON por run
+            └── run_YYYYMMDD_HHMMSS.json
+```
+
+---
+
+## 5. Pipeline detalhada
+
+A pipeline completa é orquestrada pelo `run_pipeline.py` em 19 passos:
+
+| # | Passo | Script | Descrição |
+|---|---|---|---|
+| 1 | Coleta OAI-PMH | `fase_1/collect_all_sets.py` | Harvesting de metadados e PDFs do Pantheon |
+| 2 | Subir GROBID | `fase_2/grobid_setup.py` | Container Docker GROBID 0.8.1 |
+| 3 | Processar PDFs | `fase_2/process_pdfs.py` | PDFs → TEI XML (14 workers, recursivo) |
+| 4 | Quality Gate TEI | `fase_2/quality_gate.py stage2` | Valida TEIs gerados |
+| 5 | TEI → RDF | `fase_2/tei_to_doco.py` | TEI → Turtle com DoCO/DEO/FaBiO |
+| 6 | Patch metadados | `fase_2/quality_gate.py stage3` | Corrige tipos/datas via manifest |
+| 7 | Validar RDF | `fase_2/validate_rdf.py` | Integridade dos TTLs |
+| 8 | SHACL | `avaliacao/shacl_validate.py` | Conformidade formal W3C |
+| 9 | Subir Fuseki | `fase_3/fuseki_setup.py --reload` | Carrega TTLs no triplestore |
+| 10 | Análise de discurso | `fase_3/discourse_analysis.py` | LLM extrai claims/limitações |
+| 11 | Checar discurso | `fase_3/check_discourse.py` | Relatório de qualidade LLM |
+| 12 | Comparar modelos | `avaliacao/compare_models.py` | llama3.1 vs qwen2.5 (30 docs) |
+| 13 | Enriquecer grafo | `fase_3/enrich_graph.py` | Insere triplas de discurso |
+| 14 | Corrigir títulos | `fase_3/fix_titles.py` | SPARQL UPDATE com manifest |
+| 15 | SPARQL básico | `fase_3/sparql_queries.py` | 20 queries de análise |
+| 16 | SPARQL avançado | `fase_3/sparql_advanced.py` | 10 queries aprofundadas |
+| 17 | Integridade do grafo | `avaliacao/validate_graph.py` | Verificações semânticas SPARQL |
+| 18 | Avaliar hipóteses | `avaliacao/evaluate_project.py` | Veredicto H1/H2/H3 |
+| 19 | Gerar relatório | `avaliacao/generate_report.py` | Relatório Markdown final |
+
+### Fase 1 — Coleta
+
+O protocolo **OAI-PMH** exposto pelo DSpace em `https://pantheon.ufrj.br/oai/request` permite listar registros por conjuntos temáticos e baixar metadados em Dublin Core. O DSpace não expõe links para PDFs no OAI-PMH, então `dspace_client.py` faz scraping HTML de cada página de item para encontrar a URL do bitstream, com fallback para a API REST.
+
+Os PDFs são salvos organizados por área CNPq e ano de publicação em `data/pdfs/{AREA}/{ANO}/`. A área é determinada pelo set OAI-PMH coletado (mapeado em `config.SET_AREA_SLUG`); o ano vem do campo `dc:date`. O `process_pdfs.py` na fase seguinte usa `rglob("*.pdf")` para varrer recursivamente.
+
+Os conjuntos coletados cobrem 13 programas da COPPE. Filtros: tipo "Tese" ou "Dissertação", publicados a partir de 2000.
+
+### Fase 2 — Extração Estrutural
+
+**GROBID 0.8.1** processa cada PDF e extrai XML TEI com seções, parágrafos, referências e metadados. O `tei_to_doco.py` mapeia cada elemento para as ontologias SPAR:
+
+```turtle
+base:11422_5432 a fabio:DoctoralThesis, fabio:Work ;
+    dcterms:title "Otimização de Redes Neurais..." ;
+    dcterms:creator "João Silva" ;
+    dcterms:date "2020-03-15" ;
+    dcterms:subject "CNPQ::ENGENHARIAS::ENGENHARIA ELETRICA" ;
+    po:contains base:11422_5432_sec_3 .
+
+base:11422_5432_sec_3 a deo:Conclusion, doco:Section ;
+    dcterms:title "Conclusões" ;
+    po:contains base:11422_5432_sec_3_para_0 .
+
+base:11422_5432_sec_3_para_0 a doco:Paragraph ;
+    c4o:hasContent "Os resultados demonstram que a arquitetura proposta..." .
+```
+
+O `quality_gate.py` opera em três estágios: valida PDFs (magic bytes, tamanho), TEIs (corpo não vazio, proporção de ruído OCR, número mínimo de seções), e TTLs (triplas mínimas, metadados do manifest).
+
+### Fase 3 — Análise e Consulta
+
+**Fuseki** recebe todos os TTLs via upload HTTP e indexa no TDB2. As triplas são carregadas no *default graph* para que queries SPARQL funcionem sem `GRAPH ?g { }`.
+
+**discourse_analysis.py** identifica seções retoricamente relevantes pelo título (conclusões, resultados, discussões) e envia cada seção ao llama3.1:8b via ollama, solicitando extração JSON. O prompt instrui o modelo a rejeitar afirmações genéricas. JSONs truncados são reparados automaticamente.
+
+**enrich_graph.py** converte os JSONs em triplas RDF usando a ontologia `discourse#` e as insere no Fuseki.
+
+**fix_titles.py** usa o manifest como fonte autoritativa para corrigir títulos problemáticos diretamente no Fuseki via SPARQL UPDATE.
+
+### Ontologia de discurso customizada
+
+Namespace: `http://pantheon.ufrj.br/ontology/discourse#`
+
+| Elemento | Tipo | Descrição |
 |---|---|---|
-| **Repositório fonte** | Pantheon/UFRJ (DSpace 5.3) | Fonte dos PDFs e metadados |
-| **Protocolo de coleta** | OAI-PMH | Harvesting automatizado de metadados |
-| **Extração de estrutura** | GROBID 0.8.1 (Docker) | PDF → XML TEI com seções e referências |
-| **Formato intermediário** | XML TEI P5 | Representação estruturada dos documentos |
-| **Ontologia de documentos** | DoCO (Document Components Ontology) | Estrutura física: Seção, Parágrafo, Lista |
-| **Ontologia de discurso** | DEO (Discourse Elements Ontology) | Retórica: Introdução, Conclusão, Métodos |
-| **Ontologia bibliográfica** | FaBiO, BiBO, C4O | Metadados e referências bibliográficas |
-| **Mapeamento RDF** | rdflib 7.0.0 (Python) | Conversão TEI → Turtle RDF |
+| `discourse:ScientificClaim` | Classe | Afirmação factual de resultados/conclusão |
+| `discourse:Contribution` | Classe | Contribuição declarada pelos autores |
+| `discourse:Limitation` | Classe | Limitação reconhecida no texto |
+| `discourse:FutureWork` | Classe | Direção de pesquisa futura mencionada |
+| `discourse:hasClaim` | Propriedade | Documento → ScientificClaim |
+| `discourse:hasContribution` | Propriedade | Documento → Contribution |
+| `discourse:hasLimitation` | Propriedade | Documento → Limitation |
+| `discourse:hasFutureWork` | Propriedade | Documento → FutureWork |
+| `discourse:inferredKeyword` | Propriedade | Documento → keyword técnica |
+| `discourse:inSection` | Propriedade | Claim/Limitation → seção de origem (DEO) |
+
+---
+
+## 6. Avaliação
+
+A avaliação combina três instrumentos complementares.
+
+### 6.1 Validação SHACL — conformidade formal
+
+`avaliacao/shacl_validate.py` valida cada nó do grafo contra shapes SHACL W3C. Dois tipos de problemas são distinguidos:
+
+- **Violação** — quebra uma restrição crítica (ex: documento sem título). Indica problema real.
+- **Aviso** — quebra uma restrição informativa (ex: abstract curto). Pode ser limitação do GROBID em PDFs históricos.
+
+O indicador central é a **taxa de violações críticas** — não a conformidade total, que inclui avisos esperados e tende a ser baixa mesmo com o grafo correto.
+
+### 6.2 Validação de integridade semântica
+
+`avaliacao/validate_graph.py` executa queries SPARQL verificando a consistência das relações: seções sem documento pai, claims sem conteúdo, handles duplicados, títulos suspeitos.
+
+| Aspecto | SHACL | Integridade semântica |
+|---|---|---|
+| O que testa | Forma de cada nó | Relações entre nós |
+| Padrão | W3C SHACL 1.0 | SPARQL 1.1 |
+| Detecta | Metadados ausentes, tipos incorretos | Órfãos, duplicatas, relações quebradas |
+
+### 6.3 Avaliação das hipóteses
+
+`avaliacao/evaluate_project.py` lê os artefatos da pipeline e verifica cada critério da proposta, exibindo para cada hipótese a pergunta, o critério, o valor medido e um veredicto — sem narrativa conclusiva.
+
+### 6.4 Comparação de modelos LLM
+
+`avaliacao/compare_models.py` avalia llama3.1:8b e qwen2.5:14b-instruct em 30 documentos nas dimensões de confiabilidade, qualidade e eficiência.
+
+---
+
+## 7. Resultados obtidos
+
+### Corpus (COPPE completo)
+
+| Métrica | Valor |
+|---|---|
+| Documentos coletados | 2.441 |
+| PDFs processados pelo GROBID | 1.970 (81%) |
+| Triplas totais no grafo | ~2.365.312 |
+| Teses de Doutorado | 515 |
+| Dissertações de Mestrado | 1.455 |
+| Seções estruturadas | 76.239 |
+| Parágrafos | 353.031 |
+
+### Análise de discurso
+
+| Métrica | Valor |
+|---|---|
+| Documentos analisados com sucesso | 1.366 (69,3%) |
+| Documentos sem seções-alvo | 597 (30,3%) |
+| Falhas LLM | 7 (0,4%) |
+| Claims extraídos | 12.344 |
+| Contribuições | 7.222 |
+| Limitações | 3.031 |
+| Trabalhos futuros | 5.430 |
+| Triplas de discurso inseridas | 165.312 |
+
+### Transição paradigmática detectada automaticamente
+
+| Ano | Machine Learning | Elementos Finitos |
+|---|---|---|
+| 2017 | 0 | 22 |
+| 2018 | 0 | 9 |
+| 2019 | 6 | 7 |
+| 2020 | 13 | 3 |
+| 2021 | 6 | 7 |
+
+### Comparação de modelos LLM
+
+| Métrica | llama3.1:8b | qwen2.5:14b-instruct |
+|---|---|---|
+| Tipo retórico correto | **96%** | 13% |
+| Itens específicos/doc | **1,9** | 0,9 |
+| Tempo médio/request | **7,0s** | 10,2s |
+
+---
+
+## 8. Tecnologias e ferramentas
+
+| Categoria | Tecnologia | Uso |
+|---|---|---|
+| **Repositório fonte** | Pantheon/UFRJ (DSpace 5.3) | PDFs e metadados |
+| **Protocolo de coleta** | OAI-PMH | Harvesting automatizado |
+| **Extração de estrutura** | GROBID 0.8.1 (Docker) | PDF → XML TEI |
+| **Formato intermediário** | XML TEI P5 | Representação estruturada |
+| **Ontologia de documentos** | DoCO (Document Components Ontology) | Seção, Parágrafo, Lista |
+| **Ontologia de discurso** | DEO (Discourse Elements Ontology) | Introdução, Conclusão, Métodos |
+| **Ontologia bibliográfica** | FaBiO, BiBO, C4O | Metadados e referências |
+| **Validação formal** | SHACL W3C (pyshacl) | Conformidade das ontologias |
+| **Mapeamento RDF** | rdflib 7.0.0 (Python) | TEI → Turtle |
 | **Triplestore** | Apache Jena Fuseki (Docker, TDB2) | Armazenamento e consulta SPARQL |
 | **Linguagem de consulta** | SPARQL 1.1 | Análise do corpus |
 | **LLM local** | llama3.1:8b via ollama | Extração de discurso científico |
 | **Linguagem** | Python 3.14 | Toda a pipeline |
-| **Sistema operacional** | Windows 11 | Ambiente de desenvolvimento |
 | **Hardware** | Ryzen 9 7900 · 16GB RAM · RTX 4070 Super 12GB | Processamento local |
 
 ### Por que essas escolhas?
@@ -142,225 +388,37 @@ O projeto construiu uma pipeline completa de ponta a ponta:
 
 ---
 
-## 5. Estrutura de arquivos
+## 9. Dificuldades e soluções
 
-```
-projeto-artigos-buscas/
-│
-├── setup_env.py               ← Prepara o ambiente (instala deps, verifica Docker/ollama)
-├── run_pipeline.py            ← Executa o pipeline completo ou por fases
-│
-├── fase_1/                    ← COLETA OAI-PMH
-│   ├── collect.py             ← Coleta de um único conjunto (set)
-│   ├── collect_all_sets.py    ← Coleta de todos os conjuntos COPPE em sequência
-│   ├── config.py              ← Configurações: URL OAI, sets, filtros de ano/tipo
-│   └── src/
-│       ├── oai_harvester.py   ← Cliente OAI-PMH com checkpoint e deduplicação
-│       ├── dspace_client.py   ← Scraping HTML para obter URLs dos PDFs
-│       ├── pdf_downloader.py  ← Download paralelo com validação de PDF
-│       ├── http_client.py     ← Sessão HTTP com retry automático
-│       └── logger_setup.py    ← Logging colorido
-│   └── data/
-│       ├── manifest.jsonl     ← Metadados de todos os documentos coletados
-│       └── pdfs/              ← ~ 2.441 PDFs baixados
-│
-├── fase_2/                    ← EXTRAÇÃO ESTRUTURAL + RDF
-│   ├── grobid_setup.py        ← Sobe container Docker com GROBID 0.8.1
-│   ├── process_pdfs.py        ← Envia PDFs ao GROBID (14 workers paralelos)
-│   ├── tei_to_doco.py         ← Converte TEI XML → RDF Turtle com DoCO/DEO
-│   ├── quality_gate.py        ← Valida PDFs, TEIs e TTLs em 3 estágios
-│   ├── validate_rdf.py        ← Validação de integridade dos TTLs
-│   └── data/
-│       ├── tei/               ← ~ 1.970 XMLs TEI gerados pelo GROBID
-│       ├── rdf/               ← ~ 1.970 TTLs RDF com ontologias SPAR
-│       ├── tei_rejected/      ← TEIs rejeitados pelo quality gate
-│       └── quality_reports/   ← Relatórios de qualidade por estágio
-│
-├── fase_3/                    ← FUSEKI + DISCURSO + SPARQL
-│   ├── fuseki_setup.py        ← Sobe Fuseki e carrega TTLs no triplestore
-│   ├── discourse_analysis.py  ← Extrai discurso via LLM (claims, limitações, etc.)
-│   ├── enrich_graph.py        ← Insere triplas de discurso no Fuseki
-│   ├── sparql_queries.py      ← 20 queries de análise do corpus
-│   ├── sparql_advanced.py     ← 10 queries de análise aprofundada
-│   ├── fix_titles.py          ← Corrige títulos errados no Fuseki via SPARQL UPDATE
-│   ├── check_discourse.py     ← Relatório de qualidade da análise LLM
-│   ├── diagnose_discourse.py  ← Diagnóstico de documentos sem seções-alvo
-│   ├── diagnose_llm.py        ← Diagnóstico de conectividade e saúde do ollama
-│   └── data/
-│       ├── discourse/         ← ~1.970 JSONs com análise de discurso por documento
-│       ├── enriched/          ← TTLs com triplas de discurso
-│       └── model_comparison/  ← Relatórios de comparação entre modelos LLM
-│
-└── avaliacao/                 ← RELATÓRIOS E AVALIAÇÃO
-    ├── generate_report.py     ← Gera relatório final em Markdown (coleta dados do Fuseki)
-    ├── compare_models.py      ← Compara qualidade de extração entre dois modelos LLM
-    ├── relatorio_final.md     ← Relatório gerado automaticamente
-    └── run_logs/              ← Logs de execução da pipeline em JSON
-```
+**Endpoint OAI-PMH incorreto** — `/oai` retornava HTTP 400. O correto é `/oai/request`, descoberto por inspeção manual.
+
+**URLs de PDFs não expostas no OAI-PMH** — o DSpace não inclui links para bistreams. Solução: scraping HTML com fallback para REST API do DSpace.
+
+**Organização por tópico/ano** — o OAI-PMH não informa a pasta de destino. Solução: `config.SET_AREA_SLUG` mapeia cada set para um slug de área; injetado como `_area_slug` em cada record antes do download. O `pdf_downloader.py` chama `config.get_pdf_dir(record)` para calcular o caminho organizado.
+
+**Formato de data ISO no Fuseki** — datas `2020-03-15T18:34:16Z` causavam falha nas queries. Solução: `BIND(SUBSTR(STR(?date), 1, 4) AS ?ano)` com `FILTER(STRLEN(?ano)=4)`.
+
+**SPARQL GROUP BY com expressões** — o Jena não aceita expressões diretamente no `GROUP BY`. Solução: `BIND` dentro do `WHERE`.
+
+**Regex no Fuseki** — o parser rejeita `\s*` e `[0-9]+`. Solução: `CONTAINS()` e filtros combinados.
+
+**GROBID capturando agradecimentos como título** — teses antigas onde o GROBID capturava o primeiro texto disponível. Solução: `is_bad_title()` em `tei_to_doco.py`; `fix_titles.py` corrige 681 títulos diretamente no Fuseki via SPARQL UPDATE.
+
+**Títulos irrecuperáveis (7 docs)** — o manifest OAI-PMH também tinha título incorreto (OCR garbage de PDFs dos anos 70-80). Limitação do repositório de origem — não há fonte melhor disponível.
+
+**Metadados ausentes no grafo** — caminho relativo no `tei_to_doco.py` causava falha ao executar de outro diretório. Solução: `os.path.abspath(__file__)`.
+
+**JSON truncado pelo LLM** — `num_predict` baixo cortava o JSON. Solução: função `extract_json()` que conta `{` e `[` abertos e injeta fechamentos faltantes.
+
+**Triplas em named graphs** — queries sem `GRAPH ?g {}` retornavam vazio. Solução: remoção do parâmetro `graph` do upload, enviando tudo para o default graph.
+
+**SHACL com sintaxe Turtle conflitando com Python** — o prefixo vazio (`:`) dentro de uma string `"""` causava `BadSyntax`. Solução: declarar `@base` e `@prefix :` explicitamente.
+
+**Seções órfãs no validate_graph** — 148 seções detectadas como sem documento pai. Investigação revelou artefatos de OCR de PDFs históricos (`??ir~`, `-viii`). Rebaixado para check informativo.
 
 ---
 
-## 6. Pipeline detalhada
-
-### Fase 1 — Coleta
-
-O ponto de entrada é o protocolo **OAI-PMH** (Open Archives Initiative Protocol for Metadata Harvesting), que o DSpace expõe em `https://pantheon.ufrj.br/oai/request`. O protocolo permite listar registros por conjuntos temáticos (sets) e baixar os metadados em Dublin Core.
-
-O desafio imediato foi descobrir o endpoint correto: o endereço `/oai` retorna HTTP 400, sendo o correto `/oai/request`. O segundo desafio foi descobrir o padrão de URL dos PDFs: o DSpace não expõe os links diretamente no OAI-PMH, então o código faz scraping HTML de cada página de item para extrair a URL do bitstream.
-
-Os conjuntos coletados cobrem o PESC (Engenharia de Sistemas e Computação) e todas as subáreas da COPPE: Civil, Elétrica, Química, Naval, Mecânica, Nuclear, Biomédica, Transportes, Produção, Materiais e Metalúrgica.
-
-O filtro aplicado: documentos do tipo "Tese" ou "Dissertação" publicados a partir do ano 2000.
-
-### Fase 2 — Extração Estrutural
-
-**GROBID** processa cada PDF e extrai um XML no formato TEI (Text Encoding Initiative) com:
-- Metadados do documento (título, autores, data, afiliações)
-- Estrutura de seções (com títulos identificados)
-- Conteúdo de cada parágrafo
-- Lista de referências bibliográficas com autores, título, ano e venue
-
-O script `tei_to_doco.py` percorre cada TEI e produz um arquivo Turtle RDF mapeando cada elemento para a ontologia correspondente:
-
-```turtle
-base:11422_5432 a fabio:DoctoralThesis, fabio:Work ;
-    dcterms:title "Otimização de Redes Neurais para Previsão de Séries Temporais" ;
-    dcterms:creator "João Silva" ;
-    dcterms:date "2020-03-15" ;
-    dcterms:subject "CNPQ::ENGENHARIAS::ENGENHARIA ELETRICA" ;
-    po:contains base:11422_5432_sec_3 .
-
-base:11422_5432_sec_3 a deo:Conclusion, doco:Section ;
-    dcterms:title "Conclusões" ;
-    po:contains base:11422_5432_sec_3_para_0 .
-
-base:11422_5432_sec_3_para_0 a doco:Paragraph ;
-    c4o:hasContent "Os resultados demonstram que a arquitetura proposta..." .
-```
-
-O `quality_gate.py` opera em três estágios: valida PDFs (magic bytes, tamanho), valida TEIs (corpo não vazio, proporção de ruído OCR, número mínimo de seções), e valida TTLs (triplas mínimas, metadados do manifest).
-
-### Fase 3 — Análise e Consulta
-
-**Fuseki** recebe todos os TTLs via upload HTTP e os indexa no formato TDB2. As triplas são carregadas no *default graph* (sem named graphs) para que queries SPARQL simples funcionem sem `GRAPH ?g { }`.
-
-**discourse_analysis.py** percorre os TEIs identificando seções retoricamente relevantes (conclusões, resultados, discussões, considerações finais) pelo título da seção. Para cada seção encontrada, envia um prompt ao llama3.1:8b pedindo extração estruturada em JSON.
-
-O prompt instrui o modelo a rejeitar afirmações genéricas ("este capítulo apresenta...") e extrair apenas conteúdo substantivo. O resultado é validado e reparado se o JSON vier truncado.
-
-**enrich_graph.py** converte os JSONs de discurso em triplas RDF usando a ontologia customizada `discourse#`, mantendo a ligação com o documento original e a seção de origem.
-
----
-
-## 7. Resultados obtidos
-
-### Corpus
-
-| Métrica | Valor |
-|---|---|
-| Documentos coletados | 2.441 |
-| PDFs processados pelo GROBID | 1.970 (81%) |
-| TTLs RDF gerados | 1.970 |
-| Triplas totais no grafo | ~2.365.312 |
-| Teses de Doutorado | 515 |
-| Dissertações de Mestrado | 1.455 |
-| Seções estruturadas | 76.239 |
-| Parágrafos | 353.031 |
-
-### Análise de Discurso
-
-| Métrica | Valor |
-|---|---|
-| Documentos analisados com sucesso | 1.366 (69,3%) |
-| Documentos sem seções-alvo | 597 (30,3%) |
-| Falhas LLM | 7 (0,4%) |
-| Claims extraídos | 12.344 |
-| Contribuições extraídas | 7.222 |
-| Limitações extraídas | 3.031 |
-| Trabalhos futuros extraídos | 5.430 |
-| Triplas de discurso inseridas | 165.312 |
-
-### Achado principal
-
-A query que cruza subjects CNPq com ano de publicação revelou uma **inversão de paradigma** no corpus entre 2017 e 2020:
-
-| Ano | Machine Learning | Elementos Finitos |
-|---|---|---|
-| 2017 | 0 | 22 |
-| 2018 | 0 | 9 |
-| 2019 | 6 | 7 |
-| 2020 | 13 | 3 |
-| 2021 | 6 | 7 |
-
-Essa transição foi detectada **automaticamente por mineração de texto**, sem nenhuma intervenção manual.
-
-### Comparação de modelos LLM
-
-| Métrica | llama3.1:8b | qwen2.5:14b-instruct |
-|---|---|---|
-| Tipo retórico correto | **96%** | 13% |
-| Itens específicos/doc | **1,9** | 0,9 |
-| Campos preenchidos/doc | **0,7/4** | 0,4/4 |
-| Tempo médio/request | **7,0s** | 10,2s |
-| JSON inválido | **0%** | 0% |
-
-Conclusão: modelos maiores não necessariamente produzem melhor qualidade em tarefas especializadas de extração de discurso científico.
-
----
-
-## 8. Dificuldades e soluções
-
-### Endpoint OAI-PMH incorreto
-
-O endpoint documentado do Pantheon (`/oai`) retornava HTTP 400. Descobrimos via inspeção manual que o correto é `/oai/request`. O código tem o URL hardcoded com comentário explicativo.
-
-### URLs de PDFs não expostas via OAI-PMH
-
-O DSpace não inclui os links diretos para os PDFs nos registros OAI-PMH. A solução foi scraping HTML de cada página de item para extrair a URL do bitstream, com fallback para a API REST do DSpace.
-
-### Formato de data ISO no Fuseki
-
-As datas armazenadas no formato `2020-03-15T18:34:16Z` causavam falha nas queries que tentavam extrair o ano com `SUBSTR`. A solução foi usar `BIND(SUBSTR(STR(?date), 1, 4) AS ?ano)` com filtro de comprimento em vez de expressões regulares.
-
-### SPARQL GROUP BY com expressões
-
-O Apache Jena não aceita expressões diretamente no `GROUP BY` (ex: `GROUP BY (SUBSTR(...) AS ?ano)`). A solução foi usar `BIND` dentro do `WHERE` para criar a variável antes do agrupamento.
-
-### Regex no Fuseki
-
-O parser de regex do Jena é muito restritivo com caracteres de escape. Expressões como `\s*` ou `[0-9]+` dentro de strings SPARQL causavam erros de parse. A solução foi substituir por `CONTAINS()` e filtros combinados.
-
-### TEI title extraindo seção de agradecimentos como título
-
-O GROBID frequentemente capturava a seção de agradecimentos ou a lista de figuras como título do documento em teses antigas. O `tei_to_doco.py` implementa `is_bad_title()` com padrões de detecção, usando o título do manifest como fallback autoritativo. O `fix_titles.py` corrigiu 681 títulos diretamente no Fuseki via SPARQL UPDATE.
-
-### Metadados ausentes no grafo
-
-O `tei_to_doco.py` original usava `MANIFEST = "../data/manifest.jsonl"` com caminho relativo ao diretório de execução, não ao script. Isso fazia com que o manifest não fosse encontrado quando o script era executado de outro diretório, resultando em documentos sem tipo (todos `MastersThesis`), sem data e sem subjects. A solução foi usar `os.path.abspath(__file__)` para resolver o caminho relativo ao script.
-
-### LLM respondendo com JSON truncado
-
-Com `num_predict` baixo, o modelo cortava a resposta no meio do JSON. A função `extract_json()` implementa reparo de JSON truncado: conta `{` e `[` abertos e injeta os fechamentos faltantes.
-
-### ollama com dois workers simultâneos retornando vazios
-
-O ollama processa um request por vez. Com `workers=2`, o segundo request ficava na fila e às vezes retornava vazio ao dar timeout. A solução foi eliminar o ThreadPoolExecutor e processar sequencialmente (workers=1).
-
-### GPU não sendo utilizada
-
-O ollama rodava o modelo na CPU por padrão, causando 17 horas de processamento para 1.970 documentos. A solução foi adicionar `"num_gpu": 99` nas opções do request, forçando todas as camadas do modelo para a VRAM da RTX 4070 Super.
-
-### Triplas carregadas em named graphs
-
-O `fuseki_setup.py` original enviava os TTLs com `params={"graph": uri}`, colocando cada arquivo em um named graph separado. As queries SPARQL sem `GRAPH ?g { }` consultavam apenas o default graph (vazio). A solução foi remover o parâmetro `graph` do upload, enviando tudo para o default graph.
-
-### Comparação de modelos com configuração hardcoded no relatório
-
-O script `compare_models.py` gerava um relatório Markdown com `num_predict=700` e `TEXT_LIMIT=3000` escritos como strings fixas no template, enquanto o código real usava valores diferentes. O template foi corrigido para referenciar as variáveis reais `QUALITY_OPTIONS` e `TEXT_LIMIT`.
-
----
-
-## 9. Como executar
+## 10. Como executar
 
 ### Pré-requisitos
 
@@ -372,29 +430,36 @@ cd projeto-artigos-buscas
 # 2. Verifique e instale o ambiente
 python setup_env.py
 
-# 3. Instale modelos LLM (se ainda não instalados)
+# 3. Modelos LLM
 ollama pull llama3.1:8b
 ollama pull nomic-embed-text
+
+# 4. Imagens Docker
+docker pull lfoppiano/grobid:0.8.1
+docker pull secoresearch/fuseki
 ```
 
-### Execução completa (do zero)
+### Pipeline completa
 
 ```bash
 python run_pipeline.py
 ```
 
-> ⚠️ Tempo estimado: 20+ horas (coleta + GROBID + análise de discurso)
+> Tempo estimado: 15–20 horas (coleta + GROBID + análise de discurso com GPU)
 
-### Execução com dados já existentes
+### Retomada parcial
 
 ```bash
-# Pula coleta e GROBID — só reconstrói o grafo e a análise
+# Pula coleta e GROBID (dados já existem)
 python run_pipeline.py --skip-collect --skip-grobid
 
-# Retoma a partir do Fuseki (TTLs já existem)
+# Retoma a partir de um passo específico
 python run_pipeline.py --from-step fase_3_fuseki
 
-# Só regenera o relatório
+# Só avaliação e relatório
+python run_pipeline.py --from-step avaliacao_shacl
+
+# Executa apenas um passo
 python run_pipeline.py --only avaliacao_report
 ```
 
@@ -402,27 +467,31 @@ python run_pipeline.py --only avaliacao_report
 
 ```bash
 # Fase 1 — Coleta
-cd fase_1
-python collect_all_sets.py
+cd fase_1 && python collect_all_sets.py
 
 # Fase 2 — Extração
 cd ../fase_2
-python grobid_setup.py
-python process_pdfs.py
-python quality_gate.py stage2
-python tei_to_doco.py
+python grobid_setup.py && python process_pdfs.py
+python quality_gate.py stage2 && python tei_to_doco.py
+python quality_gate.py stage3 --patch && python validate_rdf.py
+
+# SHACL (roda antes do Fuseki)
+cd ../avaliacao
+python shacl_validate.py --export data/shacl_report.json
 
 # Fase 3 — Análise
 cd ../fase_3
 python fuseki_setup.py --reload
 python discourse_analysis.py --model llama3.1:8b
-python enrich_graph.py
+python check_discourse.py && python enrich_graph.py
 python fix_titles.py --manifest ../fase_1/data/manifest.jsonl
-python sparql_queries.py
-python sparql_advanced.py
+python sparql_queries.py && python sparql_advanced.py
 
-# Relatório
+# Avaliação completa
 cd ../avaliacao
+python validate_graph.py --export data/graph_integrity.json
+python compare_models.py --limit 30
+python evaluate_project.py --export data/evaluation_results.json
 python generate_report.py
 ```
 
@@ -439,94 +508,7 @@ python fase_3/sparql_queries.py --query 8
 # (edite a query 8 no arquivo para mudar o termo de busca)
 ```
 
-### Sistema de Recuperação de Informação
-
-```bash
-cd fase_3
-
-# Constrói o índice (1x, ~20-30 min)
-python ir_search.py --build
-
-# Busca híbrida (BM25 + embeddings)
-python ir_search.py --query "redes neurais para previsão"
-
-# Só em seções de conclusão, só teses de doutorado
-python ir_search.py --query "limitações de dados" --section conclusion --type thesis
-```
-
----
-
-## 10. Requisitos
-
-### Software
-
-| Software | Versão | Uso |
-|---|---|---|
-| Python | ≥ 3.10 | Toda a pipeline |
-| Docker Desktop | Recente | GROBID e Fuseki |
-| ollama | Recente | LLM local |
-
-### Pacotes Python
-
-```
-requests==2.31.0
-sickle==0.7.0        # OAI-PMH (fase 1)
-beautifulsoup4==4.12.3
-colorlog
-rdflib==7.0.0
-tqdm
-tabulate==0.9.0
-numpy                 # IR semântico
-```
-
-### Modelos e imagens
-
-```bash
-# Docker
-docker pull secoresearch/fuseki
-docker pull lfoppiano/grobid:0.8.1
-
-# ollama
-ollama pull llama3.1:8b          # ~4.7GB — análise de discurso
-ollama pull nomic-embed-text      # ~274MB — embeddings para IR
-```
-
-### Hardware mínimo recomendado
-
-| Componente | Mínimo | Usado no projeto |
-|---|---|---|
-| CPU | 6 cores | Ryzen 9 7900 (12 cores) |
-| RAM | 16 GB | 16 GB |
-| GPU VRAM | 8 GB (para llama3.1:8b) | RTX 4070 Super (12 GB) |
-| Armazenamento | 50 GB livres | — |
-
-> Sem GPU: o pipeline funciona, mas a análise de discurso levará ~17h em CPU (vs ~3-4h com GPU).
-
----
-
-## Ontologia de discurso customizada
-
-Namespace: `http://pantheon.ufrj.br/ontology/discourse#`
-
-| Elemento | Tipo | Descrição |
-|---|---|---|
-| `discourse:ScientificClaim` | Classe | Afirmação factual extraída de seções de resultados/conclusão |
-| `discourse:Contribution` | Classe | Contribuição específica declarada pelos autores |
-| `discourse:Limitation` | Classe | Limitação explicitamente reconhecida no texto |
-| `discourse:FutureWork` | Classe | Direção de pesquisa futura mencionada |
-| `discourse:AnalyzedDocument` | Classe | Documento que passou pela análise LLM |
-| `discourse:hasClaim` | Propriedade | Documento → ScientificClaim |
-| `discourse:hasContribution` | Propriedade | Documento → Contribution |
-| `discourse:hasLimitation` | Propriedade | Documento → Limitation |
-| `discourse:hasFutureWork` | Propriedade | Documento → FutureWork |
-| `discourse:inferredKeyword` | Propriedade | Documento → Literal (keyword técnica) |
-| `discourse:inSection` | Propriedade | Claim/Limitation → Seção de origem (DEO) |
-
----
-
-## Exemplo de query SPARQL
-
-Dissertações de mestrado sobre ML a partir de 2018, com seus claims mais específicos:
+### Exemplo de query SPARQL
 
 ```sparql
 PREFIX fabio:     <http://purl.org/spar/fabio/>
@@ -541,17 +523,49 @@ WHERE {
   ?doc dcterms:date ?date .
   BIND(SUBSTR(STR(?date), 1, 4) AS ?ano)
   FILTER(?ano >= "2018")
-  ?doc dcterms:subject ?subj .
-  FILTER(CONTAINS(LCASE(?subj), "computacao"))
   ?doc discourse:hasClaim ?c .
   ?c c4o:hasContent ?claim .
-  FILTER(CONTAINS(LCASE(?claim), "aprendizado") ||
-         CONTAINS(LCASE(?claim), "machine learning"))
-  FILTER(STRLEN(STR(?titulo)) > 20)
+  FILTER(CONTAINS(LCASE(?claim), "machine learning"))
 }
-ORDER BY DESC(?ano)
-LIMIT 10
+ORDER BY DESC(?ano) LIMIT 10
 ```
+
+---
+
+## 11. Requisitos
+
+### Software
+
+| Software | Versão | Uso |
+|---|---|---|
+| Python | ≥ 3.10 | Toda a pipeline |
+| Docker Desktop | Recente | GROBID e Fuseki |
+| ollama | Recente | LLM |
+
+### Pacotes Python
+
+```
+requests==2.31.0
+sickle==0.7.0
+beautifulsoup4==4.12.3
+colorlog
+rdflib==7.0.0
+pyshacl
+tqdm
+tabulate==0.9.0
+numpy
+```
+
+### Hardware mínimo recomendado
+
+| Componente | Mínimo | Usado no projeto |
+|---|---|---|
+| CPU | 6 cores | Ryzen 9 7900 (12 cores) |
+| RAM | 16 GB | 16 GB |
+| GPU VRAM | 8 GB | RTX 4070 Super (12 GB) |
+| Armazenamento | 50 GB livres | — |
+
+> Sem GPU: a análise de discurso leva ~17h em CPU (vs ~3-4h com GPU).
 
 ---
 
