@@ -149,7 +149,7 @@ def main():
     os.makedirs(TEI_DIR, exist_ok=True)
 
     done  = set() if args.reprocess else load_done(PROCESS_REPORT)
-    pdfs  = sorted(Path(PDF_DIR).glob("*.pdf"))
+    pdfs  = sorted(Path(PDF_DIR).rglob("*.pdf"))  # recursivo: cobre {AREA}/{ANO}/
     tasks = []
 
     skipped_done  = 0

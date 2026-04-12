@@ -430,8 +430,8 @@ O indicador central é a **taxa de violações críticas** — não a conformida
 
 ```bash
 # 1. Clone o repositório
-git clone <url>
-cd projeto-artigos-buscas
+git clone https://github.com/ziggy-data/projeto-busca-mineracao-de-texto-artigos-cientificos
+cd projeto-busca-mineracao-de-texto-artigos-cientificos
 
 # 2. Verifique e instale o ambiente
 python setup_env.py

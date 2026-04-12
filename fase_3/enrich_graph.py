@@ -142,7 +142,7 @@ def build_discourse_graph(doc: dict) -> Graph:
 
 
 def upload_to_fuseki(graph: Graph, handle: str) -> bool:
-    """Envia o grafo como named graph para o Fuseki."""
+    """Envia o grafo como default graph para o Fuseki."""
     graph_uri = f"urn:corpus:discourse:{handle.replace('/', '_')}"
     ttl_data  = graph.serialize(format="turtle")
 
