@@ -8,12 +8,12 @@
 #   4. Geração do relatório               (avaliacao/)
 #
 # Uso:
-#   python run_pipeline.py                         # pipeline completo
-#   python run_pipeline.py --from-step fase_2      # retoma de uma fase
-#   python run_pipeline.py --only fase_3           # só uma fase
-#   python run_pipeline.py --dry-run               # mostra os comandos, não executa
-#   python run_pipeline.py --limit-pdfs 100        # testa com 100 PDFs
-#   python run_pipeline.py --skip-collect          # pula coleta (dados já existem)
+#   python run_pipeline.py                              # pipeline completo
+#   python run_pipeline.py --from-step fase_2_grobid    # retoma de uma fase
+#   python run_pipeline.py --only fase_3_fuseki         # só uma fase
+#   python run_pipeline.py --dry-run                    # mostra os comandos, não executa
+#   python run_pipeline.py --limit-pdfs 100             # testa com 100 PDFs
+#   python run_pipeline.py --skip-collect               # pula coleta (dados já existem)
 
 import argparse
 import json

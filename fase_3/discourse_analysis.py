@@ -62,8 +62,10 @@ TARGET_PATTERNS = [
 SYSTEM_PROMPT = """You are an expert in scientific discourse analysis of academic theses.
 Your task is to extract structured information from sections of academic papers.
 Always respond with valid JSON only — no preamble, no markdown, no explanation.
-The papers are primarily in Portuguese (Brazilian). Extract information as-is,
-keeping the original language of the text."""
+LANGUAGE RULE: Always write all extracted content (claims, contributions, limitations,
+future_work, keywords_inferred) in Brazilian Portuguese (pt-BR), regardless of the
+language of the input text. If the section is written in English, translate your
+extractions to Portuguese before including them in the JSON."""
 
 
 # Frases no CONTEÚDO que indicam parágrafo de conclusão/resultados
@@ -170,13 +172,15 @@ Section text:
 
 Extract the following and respond ONLY with a JSON object (no markdown, no explanation):
 {{
-  "claims": ["1-5 SPECIFIC findings with concrete details, numbers, comparisons. Only include claims explicitly present in the text. Example of GOOD claim: 'The proposed method reduced error by 23% compared to baseline.' Example of BAD claim: 'Results were obtained.' — do NOT include bad claims."],
+  "claims": ["1-5 SPECIFIC findings with concrete details, numbers, comparisons. Only include claims explicitly present in the text. Example of GOOD claim: 'O método proposto reduziu o erro em 23% em relação ao baseline.' Example of BAD claim: 'Resultados foram obtidos.' — do NOT include bad claims."],
   "contributions": ["1-3 specific technical artifacts produced: named algorithms, implementations, datasets, models, frameworks — not generic statements."],
   "limitations": ["0-3 limitations EXPLICITLY stated by the authors. If none mentioned in this text, return []."],
   "future_work": ["0-3 future directions EXPLICITLY mentioned by the authors. If none, return []."],
-  "keywords_inferred": ["3-5 specific TECHNICAL terms from this text: algorithm/method/tool/material names. FORBIDDEN words: 'results', 'conclusion', 'methodology', 'analysis', 'research', 'work', 'contributions', 'pesquisa', 'conclusão', 'dados', 'sistema'. Use instead: 'MBBR bioreactor', 'finite element method', 'LSTM network', 'TGA analysis'."],
+  "keywords_inferred": ["3-5 specific TECHNICAL terms from this text: algorithm/method/tool/material names. FORBIDDEN words: 'results', 'conclusion', 'methodology', 'analysis', 'research', 'work', 'contributions', 'pesquisa', 'conclusão', 'dados', 'sistema'. Use instead: 'MBBR bioreactor', 'método dos elementos finitos', 'rede LSTM', 'análise TGA'."],
   "rhetorical_type": "pick exactly ONE: conclusion OR results OR discussion OR contribution OR mixed"
-}}"""
+}}
+
+IMPORTANT: All extracted text (claims, contributions, limitations, future_work, keywords_inferred) MUST be written in Brazilian Portuguese, regardless of the language of the original section. If the section is in English, translate the extracted content to Portuguese."""
 
 
 # ── Extração de seções do TEI ─────────────────────────────────────────────────
@@ -400,13 +404,22 @@ def normalize_keywords(keywords: list) -> list:
     """
     Remove keywords genéricas usando KEYWORD_STOPWORDS global,
     normaliza case e deduplica.
+    Tolera casos onde o LLM retorna dicts {"term": "..."} em vez de strings.
     """
     seen   = set()
     result = []
     for kw in keywords:
         if not kw:
             continue
+        # LLM às vezes retorna {"term": "..."} ou {"keyword": "..."} em vez de string
+        if isinstance(kw, dict):
+            kw = kw.get("term") or kw.get("keyword") or kw.get("name") or ""
+            kw = str(kw)
+        elif not isinstance(kw, str):
+            kw = str(kw)
         kw_norm = kw.strip()
+        if not kw_norm:
+            continue
         kw_low  = kw_norm.lower()
         if kw_low in KEYWORD_STOPWORDS:
             continue
