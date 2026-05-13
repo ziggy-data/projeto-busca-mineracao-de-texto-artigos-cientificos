@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "h1": true,
+    "h2": true,
+    "h3": true,
+    "n_pass": 3
+  },
+  "h1": {
+    "total_documentos": 1845,
+    "elegiveis": 1570,
+    "ok": 1569,
+    "no_target": 275,
+    "failed": 1,
+    "taxa_sucesso": 0.9994,
+    "taxa_falhas": 0.0006,
+    "docs_com_claim": 1551,
+    "taxa_claim": 0.9885,
+    "criteria": {
+      "taxa_sucesso": true,
+      "taxa_falhas": true,
+      "docs_com_claim": true
+    },
+    "h1_pass": true
+  },
+  "h2": {
+    "shacl": {
+      "n_total": 1841,
+      "n_conforms": 1725,
+      "n_violation": 1,
+      "n_warning": 115,
+      "conformance": 0.937,
+      "viol_rate": 0.0005,
+      "n_warn_msgs": 151,
+      "warn_types": [
+        "Abstract vazio ou muito curto (menos de 30 caracteres)."
+      ]
+    },
+    "compare": {
+      "generic_ratio": 0.02,
+      "rhet_ok": 0.8333333333333334,
+      "source": "comparison_llama3.1_8b_vs_qwen2.5_7b.md"
+    },
+    "campos_preenchidos": {
+      "campos_avg": 3.188,
+      "n_docs": 1569
+    },
+    "criteria": {
+      "shacl_conformidade": true,
+      "shacl_violacoes": true,
+      "genericos": true,
+      "tipo_retorico": true,
+      "campos_preenchidos": true
+    },
+    "h2_pass": true
+  },
+  "h3": {
+    "variacao_temporal": {
+      "anos": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "ml_por_ano": {
+        "2017": 0,
+        "2018": 0,
+        "2019": 6,
+        "2020": 11,
+        "2021": 5,
+        "2022": 0,
+        "2023": 3,
+        "2024": 3,
+        "2025": 20
+      },
+      "fem_por_ano": {
+        "2017": 22,
+        "2018": 8,
+        "2019": 7,
+        "2020": 2,
+        "2021": 4,
+        "2022": 3,
+        "2023": 0,
+        "2024": 1,
+        "2025": 4
+      },
+      "variacao_detectada": true
+    },
+    "densidade_phd_msc": {
+      "phd_docs": 455,
+      "phd_claims": 5996,
+      "phd_avg": 13.18,
+      "msc_docs": 1386,
+      "msc_claims": 9164,
+      "msc_avg": 6.61,
+      "phd_maior": true
+    },
+    "perfis_limitacao": {
+      "areas": [
+        "ENGENHARIA CIVIL",
+        "ENGENHARIAS",
+        "ENGENHARIA ELETRICA",
+        "ENGENHARIA QUIMICA",
+        "ENGENHARIA DE MATERIAIS E METALURGICA",
+        "ENGENHARIA DE PRODUCAO",
+        "ENGENHARIA DE TRANSPORTES",
+        "ENGENHARIA NAVAL E OCEANICA",
+        "ENGENHARIA DE SOFTWARE",
+        "ENGENHARIA MECANICA",
+        "CIENCIA DA COMPUTACAO",
+        "ENGENHARIA BIOMEDICA",
+        "PLANEJAMENTO E ORGANIZACAO DO SISTEMA DE TRANSPORTE",
+        "ENGENHARIA ECONOMICA",
+        "ESTRUTURAS"
+      ],
+      "areas_n": {
+        "ENGENHARIA CIVIL": 283,
+        "ENGENHARIAS": 262,
+        "ENGENHARIA ELETRICA": 216,
+        "ENGENHARIA QUIMICA": 157,
+        "ENGENHARIA DE MATERIAIS E METALURGICA": 121,
+        "ENGENHARIA DE PRODUCAO": 99,
+        "ENGENHARIA DE TRANSPORTES": 95,
+        "ENGENHARIA NAVAL E OCEANICA": 82,
+        "ENGENHARIA DE SOFTWARE": 59,
+        "ENGENHARIA MECANICA": 52,
+        "CIENCIA DA COMPUTACAO": 48,
+        "ENGENHARIA BIOMEDICA": 43,
+        "PLANEJAMENTO E ORGANIZACAO DO SISTEMA DE TRANSPORTE": 42,
+        "ENGENHARIA ECONOMICA": 32,
+        "ESTRUTURAS": 25
+      },
+      "n_areas": 15,
+      "criterio": "≥ 2 áreas"
+    },
+    "criteria": {
+      "variacao_temporal": true,
+      "densidade_phd_msc": true,
+      "perfis_limitacao": true
+    },
+    "h3_pass": true
+  }
+}

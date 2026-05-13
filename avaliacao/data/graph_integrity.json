@@ -1,0 +1,129 @@
+{
+  "timestamp": "2026-04-13T02:48:07.241481",
+  "n_checks": 17,
+  "n_criticos": 7,
+  "n_pass": 6,
+  "n_fail": 1,
+  "integro": false,
+  "checks": [
+    {
+      "check": "documentos_sem_titulo",
+      "descricao": "Documentos sem dcterms:title",
+      "valor": 0,
+      "esperado_zero": true,
+      "passou": true
+    },
+    {
+      "check": "documentos_sem_tipo",
+      "descricao": "Documentos sem tipo específico (não são nem Tese nem Dissertação)",
+      "valor": 0,
+      "esperado_zero": true,
+      "passou": true
+    },
+    {
+      "check": "paragrafos_sem_conteudo",
+      "descricao": "Parágrafos sem c4o:hasContent",
+      "valor": 0,
+      "esperado_zero": true,
+      "passou": true
+    },
+    {
+      "check": "secoes_orfas",
+      "descricao": "Seções sem documento pai (nenhum nível da hierarquia)",
+      "valor": 502,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "claims_sem_conteudo",
+      "descricao": "Claims LLM sem c4o:hasContent",
+      "valor": 0,
+      "esperado_zero": true,
+      "passou": true
+    },
+    {
+      "check": "claims_sem_documento",
+      "descricao": "Claims não ligados a nenhum documento",
+      "valor": 0,
+      "esperado_zero": true,
+      "passou": true
+    },
+    {
+      "check": "documentos_duplicados",
+      "descricao": "Handles duplicados (mesmo documento indexado mais de uma vez)",
+      "valor": 0,
+      "esperado_zero": true,
+      "passou": true
+    },
+    {
+      "check": "titulos_suspeitos",
+      "descricao": "Documentos com títulos suspeitos (Lista de Figuras, Agradecimentos, etc.)",
+      "valor": 7,
+      "esperado_zero": true,
+      "passou": false
+    },
+    {
+      "check": "titulos_suspeitos_lista",
+      "descricao": "Lista dos títulos suspeitos encontrados",
+      "valor": 1,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "total_documentos",
+      "descricao": "Total de documentos no grafo",
+      "valor": 1841,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "total_secoes",
+      "descricao": "Total de seções estruturadas",
+      "valor": 68829,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "total_paragrafos",
+      "descricao": "Total de parágrafos",
+      "valor": 294819,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "total_claims",
+      "descricao": "Total de claims extraídos pelo LLM",
+      "valor": 30320,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "total_limitacoes",
+      "descricao": "Total de limitações extraídas",
+      "valor": 5118,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "cobertura_deo",
+      "descricao": "Seções com tipo retórico DEO atribuído",
+      "valor": 10693,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "docs_sem_secoes",
+      "descricao": "Documentos sem nenhuma seção extraída pelo GROBID",
+      "valor": 0,
+      "esperado_zero": false,
+      "passou": null
+    },
+    {
+      "check": "docs_com_discourse",
+      "descricao": "Documentos com pelo menos 1 elemento de discurso (claim/limitação/futuro)",
+      "valor": 1555,
+      "esperado_zero": false,
+      "passou": null
+    }
+  ]
+}
