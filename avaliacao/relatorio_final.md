@@ -2,7 +2,7 @@
 
 **Projeto:** Construção de um Grafo de Conhecimento de Discurso Científico  
 **Repositório:** Pantheon/UFRJ  
-**Gerado em:** 13/04/2026 02:48
+**Gerado em:** 19/05/2026 02:18
 
 ---
 
@@ -10,11 +10,11 @@
 
 | Métrica | Valor |
 |---|---|
-| Documentos indexados no grafo | 1,841 |
-| Teses de doutorado | 455 |
-| Dissertações de mestrado | 1,386 |
-| Seções estruturadas (DoCO) | 68,327 |
-| Parágrafos | 294,819 |
+| Documentos indexados no grafo | 2,316 |
+| Teses de doutorado | 671 |
+| Dissertações de mestrado | 1,645 |
+| Seções estruturadas (DoCO) | 93,545 |
+| Parágrafos | 405,854 |
 | Claims extraídos pelo LLM | 0 |
 | Limitações extraídas | 0 |
 | Trabalhos futuros extraídos | 0 |
@@ -23,15 +23,15 @@
 
 | Ano | Documentos |
 |---|---|
-| 2017 | 192 |
-| 2018 | 295 |
-| 2019 | 340 |
-| 2020 | 392 |
-| 2021 | 195 |
-| 2022 | 28 |
-| 2023 | 73 |
-| 2024 | 69 |
-| 2025 | 220 |
+| 2017 | 232 |
+| 2018 | 318 |
+| 2019 | 417 |
+| 2020 | 514 |
+| 2021 | 297 |
+| 2022 | 30 |
+| 2023 | 101 |
+| 2024 | 91 |
+| 2025 | 263 |
 
 > As datas refletem o campo `datestamp` de indexação no Pantheon, não necessariamente
 > o ano de defesa. O campo pode apresentar anos atípicos como 2025/2026 para
@@ -68,13 +68,13 @@ onde avisos de seções vazias são esperados do GROBID.
 
 | Métrica SHACL | Valor |
 |---|---|
-| Documentos validados | 1,841 |
-| Sem nenhum problema (conformidade total) | 1,725 (93.7%) |
-| Com violações críticas | 1 (0.1%) |
-| Com avisos (sem violações críticas) | 115 |
+| Documentos validados | 2,316 |
+| Sem nenhum problema (conformidade total) | 2,156 (93.1%) |
+| Com violações críticas | 1 (0.0%) |
+| Com avisos (sem violações críticas) | 159 |
 
 **Avisos mais frequentes** (limitações esperadas do processo de extração):
-- `Abstract vazio ou muito curto (menos de 30 caracteres).` — 151x
+- `Abstract vazio ou muito curto (menos de 30 caracteres).` — 207x
 
 ### 2.2 Validação de integridade semântica
 
@@ -93,23 +93,23 @@ sem conexão com outros, duplicatas, referências quebradas.
 | Claims LLM sem c4o:hasContent | ✓ zero |
 | Claims não ligados a nenhum documento | ✓ zero |
 | Handles duplicados (mesmo documento indexado mais de uma vez) | ✓ zero |
-| Documentos com títulos suspeitos (Lista de Figuras, Agradecimentos, etc.) | ✗ 7 |
+| Documentos com títulos suspeitos (Lista de Figuras, Agradecimentos, etc.) | ✗ 8 |
 
 
 **Contagens do corpus** (informativas):
 
 | Métrica | Valor |
 |---|---|
-| Seções sem documento pai (nenhum nível da hierarquia) | 502 |
+| Seções sem documento pai (nenhum nível da hierarquia) | 710 |
 | Lista dos títulos suspeitos encontrados | 1 |
-| Total de documentos no grafo | 1,841 |
-| Total de seções estruturadas | 68,829 |
-| Total de parágrafos | 294,819 |
-| Total de claims extraídos pelo LLM | 30,320 |
-| Total de limitações extraídas | 5,118 |
-| Seções com tipo retórico DEO atribuído | 10,693 |
+| Total de documentos no grafo | 2,316 |
+| Total de seções estruturadas | 94,255 |
+| Total de parágrafos | 405,854 |
+| Total de claims extraídos pelo LLM | 41,620 |
+| Total de limitações extraídas | 6,962 |
+| Seções com tipo retórico DEO atribuído | 14,601 |
 | Documentos sem nenhuma seção extraída pelo GROBID | 0 |
-| Documentos com pelo menos 1 elemento de discurso (claim/limitação/futuro) | 1,555 |
+| Documentos com pelo menos 1 elemento de discurso (claim/limitação/futuro) | 1,998 |
 
 
 ### 2.3 Como as duas abordagens se complementam
@@ -145,7 +145,7 @@ final cabe ao leitor.
 | Qual a taxa de falhas do modelo (saída inválida, timeout)? | ≤ 10% | 0.1% | ✓ |
 | Qual proporção dos documentos processados tem ao menos 1 afirmação? | ≥ 70% | 98.9% | ✓ |
 
-Universo de análise: 1845 documentos totais | 1569 analisados com sucesso | 275 sem seções-alvo | 1 falhas.
+Universo de análise: 7641 documentos totais | 3926 analisados com sucesso | 3712 sem seções-alvo | 3 falhas.
 
 ### H2 — Qualidade da extração
 
@@ -155,10 +155,10 @@ Universo de análise: 1845 documentos totais | 1569 analisados com sucesso | 275
 | Pergunta | Critério | Valor medido | |
 |---|---|---|---|
 | Qual proporção das afirmações extraídas é genérica (sem conteúdo específico)? | ≤ 35% | 2.0% | ✓ |
-| Qual proporção das seções foi classificada com tipo retórico correto? | ≥ 60% | 83.3% | ✓ |
-| Quantos dos 4 campos de discurso são preenchidos por documento (em média)? | ≥ 2,0 | 3.19 de 4 (1569 docs) | ✓ |
-| Qual proporção dos documentos está em conformidade formal (SHACL)? | ≥ 80% | 93.7% | ✓ |
-| Qual a taxa de violações críticas no grafo (SHACL)? | ≤ 5% | 0.1% | ✓ |
+| Qual proporção das seções foi classificada com tipo retórico correto? | ≥ 60% | 96.7% | ✓ |
+| Quantos dos 4 campos de discurso são preenchidos por documento (em média)? | ≥ 2,0 | 3.21 de 4 (2016 docs) | ✓ |
+| Qual proporção dos documentos está em conformidade formal (SHACL)? | ≥ 80% | 93.1% | ✓ |
+| Qual a taxa de violações críticas no grafo (SHACL)? | ≤ 5% | 0.0% | ✓ |
 
 > **Nota sobre conformidade SHACL:** a taxa de conformidade total reflete
 > documentos sem nenhum aviso ou violação. Avisos de seções sem parágrafo são
@@ -175,15 +175,15 @@ Critério: variação observável ao longo do período coberto.
 
 | Ano | Machine Learning | Elementos Finitos |
 |---|---|---|
-| 2017 | 0 | 22 |
-| 2018 | 0 | 8 |
+| 2017 | 0 | 27 |
+| 2018 | 0 | 11 |
 | 2019 | 6 | 7 |
-| 2020 | 11 | 2 |
-| 2021 | 5 | 4 |
+| 2020 | 14 | 2 |
+| 2021 | 9 | 7 |
 | 2022 | 0 | 3 |
-| 2023 | 3 | 0 |
+| 2023 | 5 | 3 |
 | 2024 | 3 | 1 |
-| 2025 | 20 | 4 |
+| 2025 | 22 | 6 |
 
 **Pergunta 2:** Há diferença de densidade de afirmações entre teses de doutorado e dissertações de mestrado?
 
@@ -191,8 +191,8 @@ Critério: teses de doutorado com densidade observavelmente maior.
 
 | Tipo | Documentos | Claims totais | Claims por documento |
 |---|---|---|---|
-| Doutorado | 455 | 5,996 | 13.18 |
-| Mestrado  | 1,386 | 9,164 | 6.61 |
+| Doutorado | 671 | 9,505 | 14.17 |
+| Mestrado  | 1,645 | 11,305 | 6.87 |
 
 **Pergunta 3:** As limitações declaradas diferem sistematicamente entre áreas do corpus?
 
@@ -200,11 +200,11 @@ Critério: ao menos 2 áreas com perfis de limitação distintos identificáveis
 
 | Área | Limitações declaradas |
 |---|---|
-| ENGENHARIAS::ENGENHARIA CIVIL | 283 |
-| ENGENHARIAS | 262 |
-| ENGENHARIAS::ENGENHARIA ELETRICA | 216 |
-| ENGENHARIAS::ENGENHARIA QUIMICA | 157 |
-| ENGENHARIAS::ENGENHARIA DE MATERIAIS E METALURGICA | 121 |
+| ENGENHARIAS | 419 |
+| ENGENHARIAS::ENGENHARIA CIVIL | 306 |
+| ENGENHARIAS::ENGENHARIA QUIMICA | 269 |
+| ENGENHARIAS::ENGENHARIA ELETRICA | 264 |
+| ENGENHARIAS::ENGENHARIA DE PRODUCAO | 163 |
 
 ---
 
@@ -217,9 +217,9 @@ completo.
 | Dimensão | Métrica | Valor |
 |---|---|---|
 | Confiabilidade | Taxa de saída genérica | 2.0% |
-| Qualidade | Tipo retórico correto | 83.3% |
-| Completude | Campos preenchidos por documento | 3.19/4 |
+| Qualidade | Tipo retórico correto | 96.7% |
+| Completude | Campos preenchidos por documento | 3.21/4 |
 
 ---
 
-_Relatório gerado automaticamente por `generate_report.py` em 13/04/2026 02:48_
+_Relatório gerado automaticamente por `generate_report.py` em 19/05/2026 02:18_

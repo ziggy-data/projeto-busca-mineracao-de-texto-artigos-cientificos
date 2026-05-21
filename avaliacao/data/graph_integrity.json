@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-13T02:48:07.241481",
+  "timestamp": "2026-05-19T02:18:34.041691",
   "n_checks": 17,
   "n_criticos": 7,
   "n_pass": 6,
@@ -30,7 +30,7 @@
     {
       "check": "secoes_orfas",
       "descricao": "Seções sem documento pai (nenhum nível da hierarquia)",
-      "valor": 502,
+      "valor": 710,
       "esperado_zero": false,
       "passou": null
     },
@@ -58,7 +58,7 @@
     {
       "check": "titulos_suspeitos",
       "descricao": "Documentos com títulos suspeitos (Lista de Figuras, Agradecimentos, etc.)",
-      "valor": 7,
+      "valor": 8,
       "esperado_zero": true,
       "passou": false
     },
@@ -72,42 +72,42 @@
     {
       "check": "total_documentos",
       "descricao": "Total de documentos no grafo",
-      "valor": 1841,
+      "valor": 2316,
       "esperado_zero": false,
       "passou": null
     },
     {
       "check": "total_secoes",
       "descricao": "Total de seções estruturadas",
-      "valor": 68829,
+      "valor": 94255,
       "esperado_zero": false,
       "passou": null
     },
     {
       "check": "total_paragrafos",
       "descricao": "Total de parágrafos",
-      "valor": 294819,
+      "valor": 405854,
       "esperado_zero": false,
       "passou": null
     },
     {
       "check": "total_claims",
       "descricao": "Total de claims extraídos pelo LLM",
-      "valor": 30320,
+      "valor": 41620,
       "esperado_zero": false,
       "passou": null
     },
     {
       "check": "total_limitacoes",
       "descricao": "Total de limitações extraídas",
-      "valor": 5118,
+      "valor": 6962,
       "esperado_zero": false,
       "passou": null
     },
     {
       "check": "cobertura_deo",
       "descricao": "Seções com tipo retórico DEO atribuído",
-      "valor": 10693,
+      "valor": 14601,
       "esperado_zero": false,
       "passou": null
     },
@@ -121,7 +121,7 @@
     {
       "check": "docs_com_discourse",
       "descricao": "Documentos com pelo menos 1 elemento de discurso (claim/limitação/futuro)",
-      "valor": 1555,
+      "valor": 1998,
       "esperado_zero": false,
       "passou": null
     }

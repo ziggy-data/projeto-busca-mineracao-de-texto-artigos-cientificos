@@ -113,8 +113,9 @@ projeto-artigos-buscas/
 │
 ├── .gitignore
 ├── README.md                     ← Este arquivo
-├── run_pipeline.py               ← Executa os 19 passos da pipeline
+├── run_pipeline.py               ← Executa os 20 passos da pipeline
 ├── setup_env.py                  ← Verifica e instala dependências, Docker, ollama
+├── setup_docker_env.py           ← Gera ambiente Docker completo e executa a pipeline
 │
 ├── fase_1/                       ── COLETA OAI-PMH
 │   ├── collect.py                ← Coleta de um único set OAI-PMH
@@ -178,6 +179,7 @@ projeto-artigos-buscas/
     ├── compare_models.py         ← Compara llama3.1:8b vs qwen2.5:14b em 30 docs
     ├── evaluate_project.py       ← Veredicto H1/H2/H3 com critérios da proposta
     ├── generate_report.py        ← Relatório final consolidado em Markdown
+    ├── corpus_statistics.py      ← Estatísticas descritivas e gráficos do corpus
     └── data/
         ├── shacl_report.json          ← Resultado da validação SHACL
         ├── graph_integrity.json       ← Resultado da validação semântica
@@ -192,7 +194,7 @@ projeto-artigos-buscas/
 
 ## 5. Pipeline detalhada
 
-A pipeline completa é orquestrada pelo `run_pipeline.py` em 19 passos:
+A pipeline completa é orquestrada pelo `run_pipeline.py` em 20 passos:
 
 | # | Passo | Script | Descrição |
 |---|---|---|---|
@@ -215,6 +217,7 @@ A pipeline completa é orquestrada pelo `run_pipeline.py` em 19 passos:
 | 17 | Integridade do grafo | `avaliacao/validate_graph.py` | Verificações semânticas SPARQL |
 | 18 | Avaliar hipóteses | `avaliacao/evaluate_project.py` | Veredicto H1/H2/H3 |
 | 19 | Gerar relatório | `avaliacao/generate_report.py` | Relatório Markdown final |
+| 20 | Estatísticas do corpus | `avaliacao/corpus_statistics.py` | Gera estatísticas descritivas, gráficos e relatório consolidado do corpus |
 
 ### Fase 1 — Coleta
 
@@ -304,7 +307,7 @@ O indicador central é a **taxa de violações críticas** — não a conformida
 
 ### 6.4 Comparação de modelos LLM
 
-`avaliacao/compare_models.py` avalia llama3.1:8b e qwen2.5:14b-instruct em 30 documentos nas dimensões de confiabilidade, qualidade e eficiência.
+`avaliacao/compare_models.py` avalia llama3.1:8b e qwen2.5:7b em 30 documentos nas dimensões de confiabilidade, qualidade e eficiência.
 
 ---
 
@@ -312,52 +315,19 @@ O indicador central é a **taxa de violações críticas** — não a conformida
 
 ### Corpus (COPPE completo)
 
-| Métrica | Valor |
-|---|---|
-| Documentos coletados | 2.441 |
-| PDFs processados pelo GROBID | 1.970 (81%) |
-| Triplas totais no grafo | ~2.365.312 |
-| Teses de Doutorado | 515 |
-| Dissertações de Mestrado | 1.455 |
-| Seções estruturadas | 76.239 |
-| Parágrafos | 353.031 |
+Resultados atualizados da última rodada: `avaliacao/data/corpus_analysis.md`.
 
 ### Análise de discurso
 
-| Métrica | Valor |
-|---|---|
-| Documentos analisados com sucesso | 1.366 (69,3%) |
-| Documentos sem seções-alvo | 597 (30,3%) |
-| Falhas LLM | 7 (0,4%) |
-| Claims extraídos | 12.344 |
-| Contribuições | 7.222 |
-| Limitações | 3.031 |
-| Trabalhos futuros | 5.430 |
-| Triplas de discurso inseridas | 165.312 |
+Resultados atualizados da última rodada: `avaliacao/relatorio_final.md`.
 
 ### Transição paradigmática detectada automaticamente
 
-| Ano | Machine Learning | Elementos Finitos |
-|---|---|---|
-| 2017 | 0 | 22 |
-| 2018 | 0 | 9 |
-| 2019 | 6 | 7 |
-| 2020 | 14 | 3 |
-| 2021 | 7 | 7 |
-| 2022 | 0 | 3 |
-| 2023 | 5 | 2 |
-| 2024 | 3 | 2 |
-| 2025 | 22 | 5 |
-| 2026 | 2 | 2 |
-
+Resultados atualizados da última rodada: `avaliacao/relatorio_final.md`.
 
 ### Comparação de modelos LLM
 
-| Métrica | llama3.1:8b | qwen2.5:14b-instruct |
-|---|---|---|
-| Tipo retórico correto | **96%** | 13% |
-| Itens específicos/doc | **1,9** | 0,9 |
-| Tempo médio/request | **7,0s** | 10,2s |
+Resultados atualizados da última rodada: `avaliacao/relatorio_final.md`.
 
 ---
 
@@ -388,7 +358,7 @@ O indicador central é a **taxa de violações críticas** — não a conformida
 
 **Fuseki** foi escolhido por ser a implementação de referência do Apache Jena, robusta para corpora dessa escala e com suporte nativo a TDB2 para persistência eficiente.
 
-**llama3.1:8b** foi escolhido após comparação experimental com qwen2.5:14b-instruct, onde o modelo menor venceu em qualidade de extração (96% vs 13% de tipo retórico correto), velocidade e ausência de falhas.
+**llama3.1:8b** foi escolhido após comparação experimental com qwen2.5:7b, com melhor qualidade de extração (83% vs 0% de tipo retórico correto) e maior robustez de saída JSON no teste mais recente.
 
 **ollama** foi escolhido para rodar os modelos localmente, sem custo de API e sem enviar dados de pesquisa para servidores externos — importante para um corpus acadêmico de uma instituição pública.
 
@@ -452,6 +422,66 @@ python run_pipeline.py
 ```
 
 > Tempo estimado: 15–20 horas (coleta + GROBID + análise de discurso com GPU)
+
+### Opção alternativa: executar com Docker (setup_docker_env.py)
+
+Use esta opção para rodar a pipeline em containers, sem depender do setup local com `setup_env.py`.
+
+Pré-requisitos Docker:
+
+- Python 3.10+ no host (necessário para executar `setup_docker_env.py`).
+- Docker instalado e em execução no host.
+- Docker Compose (`docker compose`) disponível.
+- Para execução com GPU (`--gpu`/`--gpulabel`): NVIDIA Container Toolkit instalado no host.
+
+Documentação oficial de instalação:
+
+- Docker Engine: https://docs.docker.com/engine/install/
+- Docker Desktop: https://docs.docker.com/desktop/
+- Docker Compose: https://docs.docker.com/compose/install/
+- NVIDIA Container Toolkit: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
+
+```bash
+# 1. Gera Dockerfile/compose auxiliares
+python setup_docker_env.py --generate
+
+# 2. Build da imagem da aplicação e subida dos serviços
+python setup_docker_env.py --build --up
+
+# 3. Baixa modelos no ollama (primeira execução)
+python setup_docker_env.py --pull-models
+
+# 4. Executa a pipeline dentro do container app
+python setup_docker_env.py --run-pipeline
+
+# 5. Fluxo integrado (build + serviços + modelos + pipeline)
+python setup_docker_env.py --build --up --pull-models --run-pipeline
+
+# 6. Fluxo integrado com GPU (quando disponível)
+python setup_docker_env.py --gpu --build --up --pull-models --run-pipeline
+
+# 7. Fluxo integrado com GPU específica (ex.: GPU 0)
+python setup_docker_env.py --gpulabel 0 --build --up --pull-models --run-pipeline
+```
+
+Exemplos adicionais:
+
+```bash
+# Rodar a pipeline a partir de um passo
+python setup_docker_env.py --run-pipeline --pipeline-args --from-step fase_3_fuseki
+
+# Derrubar os serviços
+python setup_docker_env.py --down
+
+# Roda todo processo do início ao fim e depois derrubar os serviços
+python setup_docker_env.py --gpu --gpulabel 0 --build --up --pull-models --run-pipeline --down
+```
+
+Notas sobre GPU no setup Docker:
+
+- `--gpu`: habilita uso de GPU nos serviços `app` e `ollama` (quando disponível no host).
+- `--gpulabel <id>`: seleciona explicitamente qual GPU usar (por exemplo `0`, `1` ou UUID NVIDIA).
+- `--gpulabel` também ativa modo GPU automaticamente, mesmo sem `--gpu`.
 
 ### Retomada parcial
 

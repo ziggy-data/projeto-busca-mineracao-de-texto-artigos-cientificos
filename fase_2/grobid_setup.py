@@ -4,6 +4,7 @@
 import subprocess
 import sys
 import time
+import shutil
 import requests
 
 GROBID_IMAGE   = "lfoppiano/grobid:0.8.1"
@@ -24,6 +25,9 @@ def run(cmd: str, check=True) -> subprocess.CompletedProcess:
 def run_silent(cmd: str) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, shell=True, capture_output=True, text=True, check=False)
 
+def docker_available() -> bool:
+    return shutil.which("docker") is not None
+
 
 def is_running() -> bool:
     r = run_silent(f"docker ps --filter name={CONTAINER_NAME} --format {{{{.Names}}}}")
@@ -39,6 +43,14 @@ def is_healthy() -> bool:
 
 
 def check_docker():
+    if not docker_available():
+        if is_healthy():
+            print("✓ Docker CLI não disponível, mas GROBID já está acessível.")
+            return
+        print("✗ Docker CLI não encontrado neste ambiente e GROBID não está acessível.")
+        print("  No modo dockerizado, suba os serviços com: python setup_docker_env.py --up")
+        sys.exit(1)
+
     r = run_silent("docker info")
     if r.returncode != 0:
         print("✗ Docker não está acessível.")
@@ -50,6 +62,8 @@ def check_docker():
 
 def stop_existing():
     """Para e remove container existente para recriar com nova config."""
+    if not docker_available():
+        return
     r = run_silent(f"docker ps -a --filter name={CONTAINER_NAME} --format {{{{.Names}}}}")
     if CONTAINER_NAME in r.stdout:
         print(f"Removendo container antigo ({CONTAINER_NAME})...")
@@ -59,6 +73,11 @@ def stop_existing():
 
 def start(force_recreate=False):
     check_docker()
+
+    if not docker_available():
+        print(f"✓ GROBID já está rodando em {GROBID_URL}")
+        print_info()
+        return
 
     if is_running() and is_healthy() and not force_recreate:
         print(f"✓ GROBID já está rodando em {GROBID_URL}")

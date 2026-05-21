@@ -124,12 +124,20 @@ def _download_one(record: dict, session, pdf_dir: str) -> dict:
             os.remove(dest)
         return result
 
-    # Valida que é realmente um PDF (magic bytes)
+    # Valida que o arquivo final existe e é realmente um PDF (magic bytes)
+    if not os.path.exists(dest):
+        result.update(status="write_error", error=f"Arquivo não encontrado após download: {dest}")
+        return result
+
     with open(dest, "rb") as f:
         magic = f.read(5)
     if magic != b"%PDF-":
         os.remove(dest)
         result.update(status="invalid_pdf", error="Arquivo não começa com %PDF-")
+        return result
+
+    if not os.path.exists(dest):
+        result.update(status="write_error", error=f"Arquivo sumiu antes do MD5: {dest}")
         return result
 
     result.update(
@@ -153,6 +161,9 @@ def download_batch(records: list[dict], pdf_dir: str = config.PDF_DIR) -> list[d
         lista de dicts com resultado de cada download
     """
     os.makedirs(pdf_dir, exist_ok=True)
+
+    # Evita condição de corrida quando o mesmo handle aparece mais de uma vez no lote.
+    unique_records = list({rec["handle"]: rec for rec in records}.values())
     results = []
     session = build_session()
 
@@ -162,12 +173,25 @@ def download_batch(records: list[dict], pdf_dir: str = config.PDF_DIR) -> list[d
     with ThreadPoolExecutor(max_workers=config.PDF_DOWNLOAD_WORKERS) as executor:
         futures = {
             executor.submit(_download_one, rec, session, pdf_dir): rec
-            for rec in records
+            for rec in unique_records
         }
 
         with tqdm(total=len(futures), desc="Baixando PDFs", unit="pdf") as pbar:
             for future in as_completed(futures):
-                res = future.result()
+                try:
+                    res = future.result()
+                except Exception as e:
+                    rec = futures.get(future, {})
+                    res = {
+                        "handle": rec.get("handle", "unknown"),
+                        "title": rec.get("title", ""),
+                        "filename": None,
+                        "pdf_path": None,
+                        "status": "worker_exception",
+                        "size_bytes": 0,
+                        "md5": None,
+                        "error": str(e),
+                    }
                 results.append(res)
 
                 st = res["status"]

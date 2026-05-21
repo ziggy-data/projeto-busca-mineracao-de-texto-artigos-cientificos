@@ -501,6 +501,27 @@ def check_ollama(model: str):
         print(f"✗ ollama não acessível em {OLLAMA_URL}")
         sys.exit(1)
 
+def detect_gpu_ollama() -> bool:
+    """
+    Detecção best-effort de uso de GPU no Ollama.
+    Usa /api/ps e verifica campos de VRAM quando disponíveis.
+    """
+    try:
+        r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
+        if r.status_code != 200:
+            return False
+        data = r.json()
+        models = data.get("models", []) if isinstance(data, dict) else []
+        for m in models:
+            details = m.get("details", {}) if isinstance(m, dict) else {}
+            # Alguns builds expõem memória em VRAM nesses campos.
+            size_vram = m.get("size_vram", 0) or details.get("size_vram", 0)
+            if isinstance(size_vram, (int, float)) and size_vram > 0:
+                return True
+    except Exception:
+        return False
+    return False
+
 
 def load_done() -> set:
     done = set()
@@ -529,6 +550,10 @@ def main():
     args = parser.parse_args()
 
     check_ollama(args.model)
+    if detect_gpu_ollama():
+        print("✓ GPU detectada (Ollama)")
+    else:
+        print("⚠ GPU não detectada (Ollama)")
     os.makedirs(DISCOURSE_DIR, exist_ok=True)
 
     # Carrega manifest — fonte autoritativa de título e metadados

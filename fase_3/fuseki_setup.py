@@ -11,6 +11,7 @@ import os
 import subprocess
 import sys
 import time
+import shutil
 from pathlib import Path
 
 import requests
@@ -35,6 +36,9 @@ def run(cmd: str, check=True):
 def run_silent(cmd: str):
     return subprocess.run(cmd, shell=True, capture_output=True, text=True, check=False)
 
+def docker_available() -> bool:
+    return shutil.which("docker") is not None
+
 
 def is_running() -> bool:
     r = run_silent(f"docker ps --filter name={CONTAINER_NAME} --format {{{{.Names}}}}")
@@ -51,6 +55,15 @@ def is_healthy() -> bool:
 
 
 def start():
+    if not docker_available():
+        if is_healthy():
+            print("✓ Docker CLI não disponível, mas Fuseki já está acessível.")
+            print(f"✓ Fuseki em {FUSEKI_URL}")
+            return
+        print("✗ Docker CLI não encontrado neste ambiente e Fuseki não está acessível.")
+        print("  No modo dockerizado, suba os serviços com: python setup_docker_env.py --up")
+        sys.exit(1)
+
     r = run_silent("docker info")
     if r.returncode != 0:
         print("✗ Docker não está rodando. Abra o Docker Desktop.")
@@ -195,6 +208,9 @@ def load_ttls(reload=False):
 
 
 def stop():
+    if not docker_available():
+        print("Docker CLI não disponível neste ambiente. Use setup_docker_env.py --down no host.")
+        return
     run_silent(f"docker stop {CONTAINER_NAME}")
     run_silent(f"docker rm {CONTAINER_NAME}")
     print(f"Fuseki parado.")

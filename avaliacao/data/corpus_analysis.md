@@ -1,7 +1,7 @@
 # Análise Estatística do Corpus — Grafo de Conhecimento de Discurso Científico
 
 **Projeto:** Busca e Mineração de Texto — PESC/COPPE/UFRJ  
-**Gerado em:** 13/05/2026 17:19
+**Gerado em:** 18/05/2026 20:13
 
 ---
 
@@ -9,12 +9,12 @@
 
 | Métrica | Valor |
 |---|---|
-| Total de registros no manifest | 2,452 |
-| Teses de Doutorado | 717 |
-| Dissertações de Mestrado | 1735 |
-| Documentos em português | 2096 |
-| Documentos em inglês | 340 |
-| Comprimento médio do título | 94.23 chars (DP=31.338) |
+| Total de registros no manifest | 3,336 |
+| Teses de Doutorado | 897 |
+| Dissertações de Mestrado | 2439 |
+| Documentos em português | 2881 |
+| Documentos em inglês | 434 |
+| Comprimento médio do título | 93.291 chars (DP=31.028) |
 | Subjects CNPq por documento (mediana) | 4.0 |
 
 ![Distribuição temporal](charts/01_distribuicao_temporal.png)
@@ -26,23 +26,23 @@
 
 | Métrica | Média | Mediana | DP | P95 |
 |---|---|---|---|---|
-| Seções DoCO por documento | 37.114 | 32.0 | 28.499 | 86.0 |
-| Parágrafos por documento | 160.141 | 135.0 | 116.873 | 374.0 |
-| Referências por documento | 66.655 | 53.0 | 56.32 | 166.2 |
+| Seções DoCO por documento | 40.391 | 35.0 | 31.463 | 96.0 |
+| Parágrafos por documento | 175.239 | 147.5 | 130.536 | 416.0 |
+| Referências por documento | 73.155 | 57.0 | 63.619 | 183.0 |
 
 ### Cobertura dos tipos retóricos DEO
 
 | Tipo DEO | Documentos | % do corpus |
 |---|---|---|
-| `deo:Results` | 1,083 | 58.8% |
-| `deo:Conclusion` | 998 | 54.2% |
-| `deo:Introduction` | 928 | 50.4% |
-| `deo:Methods` | 836 | 45.4% |
-| `deo:Discussion` | 771 | 41.9% |
-| `deo:RelatedWork` | 610 | 33.1% |
-| `deo:Background` | 309 | 16.8% |
-| `deo:FutureWork` | 172 | 9.3% |
-| `deo:Acknowledgements` | 119 | 6.5% |
+| `deo:Results` | 1,414 | 61.1% |
+| `deo:Conclusion` | 1,306 | 56.4% |
+| `deo:Introduction` | 1,192 | 51.5% |
+| `deo:Methods` | 1,095 | 47.3% |
+| `deo:Discussion` | 1,036 | 44.7% |
+| `deo:RelatedWork` | 802 | 34.6% |
+| `deo:Background` | 407 | 17.6% |
+| `deo:FutureWork` | 220 | 9.5% |
+| `deo:Acknowledgements` | 153 | 6.6% |
 
 ![Distribuição seções e parágrafos](charts/03_dist_secoes_paragrafos.png)
 ![Cobertura DEO](charts/04_cobertura_deo.png)
@@ -54,24 +54,24 @@
 
 | Elemento | Média/doc | Mediana | DP | P95 |
 |---|---|---|---|---|
-| Claims | 9.663 | 7.0 | 8.22 | 25.0 |
-| Limitações | 1.631 | 1.0 | 2.21 | 5.0 |
-| Trabalhos futuros | 3.218 | 2.0 | 3.098 | 9.0 |
+| Claims | 10.323 | 8.0 | 9.071 | 29.0 |
+| Limitações | 1.727 | 1.0 | 2.365 | 6.0 |
+| Trabalhos futuros | 3.468 | 3.0 | 3.403 | 10.0 |
 
 ### Concentração da extração
 
-**Coeficiente de Gini (claims):** `0.4073`
+**Coeficiente de Gini (claims):** `0.4186`
 
 > O coeficiente de Gini mede concentração: 0 = distribuição uniforme, 1 = máxima concentração.
-> Valor `0.4073` indica concentração moderada — distribuição heterogênea mas não extrema.
+> Valor `0.4186` indica concentração moderada — distribuição heterogênea mas não extrema.
 
 ### Correlação tamanho de seção × claims extraídos
 
-**Spearman ρ = `0.598`** — correlação positiva significativa: seções maiores produzem sistematicamente mais claims.
+**Spearman ρ = `0.582`** — correlação positiva significativa: seções maiores produzem sistematicamente mais claims.
 
 ### Distribuição de keywords — Lei de Zipf
 
-**Expoente α = `0.32` (R² = `0.751`)**
+**Expoente α = `0.34` (R² = `0.765`)**
 
 > A lei de Zipf clássica (vocabulário de língua natural) tem α ≈ 1. Expoente menor
 > indica cauda mais longa — termos técnicos distribuem-se de forma menos concentrada
@@ -81,16 +81,16 @@
 
 | # | Keyword | Frequência |
 |---|---|---|
-| 1 | método dos elementos finitos | 265 |
-| 2 | rede lstm | 58 |
-| 3 | análise tga | 54 |
-| 4 | rede neural | 31 |
-| 5 | modelo matemático | 20 |
-| 6 | otimização | 18 |
-| 7 | algoritmo | 17 |
-| 8 | aprendizado de máquina | 17 |
-| 9 | modelagem | 16 |
-| 10 | pvdf | 15 |
+| 1 | método dos elementos finitos | 334 |
+| 2 | análise tga | 84 |
+| 3 | rede lstm | 83 |
+| 4 | rede neural | 37 |
+| 5 | modelagem | 28 |
+| 6 | otimização | 26 |
+| 7 | modelagem matemática | 25 |
+| 8 | wisard | 23 |
+| 9 | catalisador | 22 |
+| 10 | modelo matemático | 22 |
 
 ![Distribuição claims](charts/06_dist_claims_boxplot.png)
 ![Tipos retóricos LLM](charts/07_tipos_retoricos_llm.png)
@@ -109,15 +109,15 @@
 
 | Ano | Documentos | Claims/doc | Limitações/doc |
 |---|---|---|---|
-| 2017 | 192 | 2.82 | 0.4 |
-| 2018 | 295 | 2.78 | 0.42 |
-| 2019 | 340 | 10.2 | 1.65 |
-| 2020 | 392 | 10.1 | 1.74 |
-| 2021 | 195 | 8.95 | 1.51 |
-| 2022 | 28 | 4.57 | 0.96 |
-| 2023 | 73 | 10.4 | 1.75 |
-| 2024 | 69 | 12.26 | 2.33 |
-| 2025 | 220 | 11.38 | 2.02 |
+| 2017 | 232 | 2.84 | 0.38 |
+| 2018 | 318 | 3.19 | 0.46 |
+| 2019 | 417 | 10.81 | 1.7 |
+| 2020 | 514 | 10.72 | 1.95 |
+| 2021 | 297 | 10.53 | 1.74 |
+| 2022 | 30 | 4.5 | 0.8 |
+| 2023 | 101 | 9.92 | 1.66 |
+| 2024 | 91 | 12.26 | 2.1 |
+| 2025 | 263 | 12.33 | 2.13 |
 
 ![Evolução temporal](charts/11_evolucao_temporal.png)
 
@@ -130,22 +130,22 @@ revelando a topologia das conexões entre documentos, seções, parágrafos e el
 
 | Métrica | Valor |
 |---|---|
-| Nós no subgrafo analisado | 44,445 |
-| Arestas (relações) | 6,297 |
-| Componentes conectados | 38148 |
+| Nós no subgrafo analisado | 49,519 |
+| Arestas (relações) | 6,621 |
+| Componentes conectados | 42898 |
 | Maior componente | 0.0% dos nós |
-| In-degree médio | 0.142 |
+| In-degree médio | 0.134 |
 | In-degree máximo | 1.0 |
-| Out-degree médio | 0.142 |
+| Out-degree médio | 0.134 |
 
 ### Distribuição de tipos de nós
 
 | Tipo | Nós |
 |---|---|
-| Parágrafo | 27,876 |
-| Outro | 10,682 |
-| Seção | 5,737 |
-| Referências | 150 |
+| Parágrafo | 31,483 |
+| Outro | 11,860 |
+| Seção | 6,027 |
+| Referências | 149 |
 
 A distribuição de grau em escala logarítmica (gráfico abaixo) revela se o grafo
 segue uma lei de potência (comum em grafos de conhecimento reais), onde poucos nós
@@ -162,4 +162,4 @@ concentram a maior parte das conexões.
 
 ---
 
-*Relatório gerado automaticamente por `corpus_statistics.py` — 13/05/2026 17:19*
+*Relatório gerado automaticamente por `corpus_statistics.py` — 18/05/2026 20:13*
