@@ -2,3 +2,17 @@ fase_1/data/*
 fase_2/data/*
 fase_3/data/*
 fase_1/src/__pycache__
+avaliacao/run_logs/*
+push_to_fork_branch.sh
+
+# Python cache geral
+__pycache__/
+*.pyc
+
+# logs e artefatos de execução
+*.log
+
+# artefatos Docker gerados pelo setup_docker_env.py
+Dockerfile.pipeline
+docker-compose.pipeline.yml
+.docker/pipeline_entrypoint.sh

@@ -1,10 +1,10 @@
 {
-  "n_total": 1841,
-  "n_conforms": 1725,
+  "n_total": 2316,
+  "n_conforms": 2156,
   "n_violation": 1,
-  "n_warning": 115,
-  "conformance_rate": 0.937,
-  "elapsed_s": 42.0,
+  "n_warning": 159,
+  "conformance_rate": 0.9309,
+  "elapsed_s": 86.4,
   "details": [
     {
       "file": "11422_10085.ttl",
@@ -21,6 +21,13 @@
       "n_triples": 703
     },
     {
+      "file": "11422_10091.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 991
+    },
+    {
       "file": "11422_10092.ttl",
       "conforms": false,
       "violations": [],
@@ -28,12 +35,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_10092_sec_35"
+          "node": "11422_10092_sec_34"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_10092_sec_34"
+          "node": "11422_10092_sec_35"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
@@ -44,11 +51,25 @@
       "n_triples": 1156
     },
     {
+      "file": "11422_10093.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 5808
+    },
+    {
       "file": "11422_10094.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1197
+    },
+    {
+      "file": "11422_10095.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1212
     },
     {
       "file": "11422_10098.ttl",
@@ -72,6 +93,27 @@
       "n_triples": 2968
     },
     {
+      "file": "11422_10104.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2378
+    },
+    {
+      "file": "11422_10105.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1470
+    },
+    {
+      "file": "11422_10106.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1347
+    },
+    {
       "file": "11422_10107.ttl",
       "conforms": true,
       "violations": [],
@@ -93,11 +135,25 @@
       "n_triples": 1258
     },
     {
+      "file": "11422_10110.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 902
+    },
+    {
       "file": "11422_10111.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 926
+    },
+    {
+      "file": "11422_10113.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1651
     },
     {
       "file": "11422_10114.ttl",
@@ -127,6 +183,26 @@
       "n_triples": 668
     },
     {
+      "file": "11422_10141.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_10141_sec_74"
+        }
+      ],
+      "n_triples": 4009
+    },
+    {
+      "file": "11422_10146.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3339
+    },
+    {
       "file": "11422_10148.ttl",
       "conforms": false,
       "violations": [],
@@ -134,12 +210,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_10148_sec_6"
+          "node": "11422_10148_sec_33"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_10148_sec_33"
+          "node": "11422_10148_sec_6"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
@@ -155,6 +231,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 685
+    },
+    {
+      "file": "11422_10150.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 482
     },
     {
       "file": "11422_10154.ttl",
@@ -213,11 +296,11 @@
       "n_triples": 563
     },
     {
-      "file": "11422_10164.ttl",
+      "file": "11422_10163.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1059
+      "n_triples": 5125
     },
     {
       "file": "11422_10165.ttl",
@@ -225,13 +308,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 945
-    },
-    {
-      "file": "11422_10166.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1268
     },
     {
       "file": "11422_10167.ttl",
@@ -262,6 +338,13 @@
       "n_triples": 680
     },
     {
+      "file": "11422_10183.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1528
+    },
+    {
       "file": "11422_10186.ttl",
       "conforms": true,
       "violations": [],
@@ -281,6 +364,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 984
+    },
+    {
+      "file": "11422_10194.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1373
     },
     {
       "file": "11422_10203.ttl",
@@ -330,12 +420,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_10288_sec_34"
+          "node": "11422_10288_sec_59"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_10288_sec_59"
+          "node": "11422_10288_sec_34"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
@@ -388,6 +478,13 @@
       "n_triples": 1085
     },
     {
+      "file": "11422_10301.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1207
+    },
+    {
       "file": "11422_10374.ttl",
       "conforms": true,
       "violations": [],
@@ -430,6 +527,13 @@
       "n_triples": 355
     },
     {
+      "file": "11422_11064.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1771
+    },
+    {
       "file": "11422_11118.ttl",
       "conforms": true,
       "violations": [],
@@ -465,6 +569,13 @@
       "n_triples": 1754
     },
     {
+      "file": "11422_11241.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 423
+    },
+    {
       "file": "11422_11282.ttl",
       "conforms": true,
       "violations": [],
@@ -477,6 +588,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 391
+    },
+    {
+      "file": "11422_11295.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 557
     },
     {
       "file": "11422_11349.ttl",
@@ -500,6 +618,13 @@
       "n_triples": 1701
     },
     {
+      "file": "11422_11353.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2141
+    },
+    {
       "file": "11422_11354.ttl",
       "conforms": true,
       "violations": [],
@@ -512,6 +637,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 837
+    },
+    {
+      "file": "11422_11402.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1198
+    },
+    {
+      "file": "11422_11403.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1398
     },
     {
       "file": "11422_11404.ttl",
@@ -527,18 +666,18 @@
       "n_triples": 790
     },
     {
+      "file": "11422_11405.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1568
+    },
+    {
       "file": "11422_11406.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1252
-    },
-    {
-      "file": "11422_11407.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 2298
     },
     {
       "file": "11422_11408.ttl",
@@ -548,11 +687,11 @@
       "n_triples": 767
     },
     {
-      "file": "11422_11409.ttl",
+      "file": "11422_11410.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 619
+      "n_triples": 1299
     },
     {
       "file": "11422_11415.ttl",
@@ -597,32 +736,11 @@
       "n_triples": 1434
     },
     {
-      "file": "11422_11462.ttl",
+      "file": "11422_11467.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1617
-    },
-    {
-      "file": "11422_11465.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1690
-    },
-    {
-      "file": "11422_11466.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 951
-    },
-    {
-      "file": "11422_11468.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1366
+      "n_triples": 1305
     },
     {
       "file": "11422_11558.ttl",
@@ -637,6 +755,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 629
+    },
+    {
+      "file": "11422_11560.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1860
     },
     {
       "file": "11422_11561.ttl",
@@ -709,6 +834,13 @@
       "n_triples": 2011
     },
     {
+      "file": "11422_11571.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 4025
+    },
+    {
       "file": "11422_11572.ttl",
       "conforms": true,
       "violations": [],
@@ -735,6 +867,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1741
+    },
+    {
+      "file": "11422_11604.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3706
     },
     {
       "file": "11422_11605.ttl",
@@ -807,6 +946,13 @@
       "n_triples": 634
     },
     {
+      "file": "11422_11615.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 647
+    },
+    {
       "file": "11422_11616.ttl",
       "conforms": true,
       "violations": [],
@@ -840,13 +986,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1930
-    },
-    {
-      "file": "11422_11624.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 937
     },
     {
       "file": "11422_11635.ttl",
@@ -891,6 +1030,13 @@
       "n_triples": 805
     },
     {
+      "file": "11422_11641.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1642
+    },
+    {
       "file": "11422_11642.ttl",
       "conforms": true,
       "violations": [],
@@ -926,11 +1072,25 @@
       "n_triples": 1165
     },
     {
+      "file": "11422_11665.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1445
+    },
+    {
       "file": "11422_11666.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1531
+    },
+    {
+      "file": "11422_11667.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1119
     },
     {
       "file": "11422_11668.ttl",
@@ -982,6 +1142,13 @@
       "n_triples": 1583
     },
     {
+      "file": "11422_11675.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1842
+    },
+    {
       "file": "11422_11676.ttl",
       "conforms": true,
       "violations": [],
@@ -1024,11 +1191,25 @@
       "n_triples": 573
     },
     {
+      "file": "11422_11682.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1460
+    },
+    {
       "file": "11422_11683.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1120
+    },
+    {
+      "file": "11422_11684.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1999
     },
     {
       "file": "11422_11685.ttl",
@@ -1038,12 +1219,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_11685_sec_31"
+          "node": "11422_11685_sec_64"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_11685_sec_36"
+          "node": "11422_11685_sec_31"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
@@ -1053,12 +1234,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_11685_sec_64"
+          "node": "11422_11685_sec_52"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_11685_sec_52"
+          "node": "11422_11685_sec_36"
         }
       ],
       "n_triples": 931
@@ -1078,13 +1259,6 @@
       "n_triples": 1338
     },
     {
-      "file": "11422_11697.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 2786
-    },
-    {
       "file": "11422_11706.ttl",
       "conforms": true,
       "violations": [],
@@ -1092,11 +1266,25 @@
       "n_triples": 1878
     },
     {
+      "file": "11422_11707.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1240
+    },
+    {
       "file": "11422_11708.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1669
+    },
+    {
+      "file": "11422_11709.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 835
     },
     {
       "file": "11422_11710.ttl",
@@ -1141,6 +1329,27 @@
       "n_triples": 1631
     },
     {
+      "file": "11422_11936.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1126
+    },
+    {
+      "file": "11422_11937.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1747
+    },
+    {
+      "file": "11422_11938.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 744
+    },
+    {
       "file": "11422_11939.ttl",
       "conforms": true,
       "violations": [],
@@ -1155,6 +1364,20 @@
       "n_triples": 1601
     },
     {
+      "file": "11422_12000.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2219
+    },
+    {
+      "file": "11422_12014.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1101
+    },
+    {
       "file": "11422_12015.ttl",
       "conforms": true,
       "violations": [],
@@ -1167,6 +1390,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1679
+    },
+    {
+      "file": "11422_12017.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1872
+    },
+    {
+      "file": "11422_12018.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 577
     },
     {
       "file": "11422_12019.ttl",
@@ -1238,6 +1475,20 @@
       "n_triples": 905
     },
     {
+      "file": "11422_12046.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1012
+    },
+    {
+      "file": "11422_12047.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1288
+    },
+    {
       "file": "11422_12048.ttl",
       "conforms": true,
       "violations": [],
@@ -1266,20 +1517,27 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
+          "node": "11422_12051_sec_14"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
           "node": "11422_12051_sec_25"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
           "node": "11422_12051_sec_21"
-        },
-        {
-          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
-          "path": "hasContent",
-          "node": "11422_12051_sec_14"
         }
       ],
       "n_triples": 540
+    },
+    {
+      "file": "11422_12052.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1878
     },
     {
       "file": "11422_12053.ttl",
@@ -1324,11 +1582,53 @@
       "n_triples": 1774
     },
     {
+      "file": "11422_12062.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1551
+    },
+    {
+      "file": "11422_12063.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 459
+    },
+    {
+      "file": "11422_12064.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3224
+    },
+    {
+      "file": "11422_12071.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3173
+    },
+    {
       "file": "11422_12072.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1400
+    },
+    {
+      "file": "11422_12073.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 656
+    },
+    {
+      "file": "11422_12074.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1628
     },
     {
       "file": "11422_12075.ttl",
@@ -1352,6 +1652,13 @@
       "n_triples": 844
     },
     {
+      "file": "11422_12090.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 394
+    },
+    {
       "file": "11422_12091.ttl",
       "conforms": true,
       "violations": [],
@@ -1366,6 +1673,13 @@
       "n_triples": 2270
     },
     {
+      "file": "11422_12093.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1995
+    },
+    {
       "file": "11422_12094.ttl",
       "conforms": true,
       "violations": [],
@@ -1378,6 +1692,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1035
+    },
+    {
+      "file": "11422_12119.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1639
     },
     {
       "file": "11422_12120.ttl",
@@ -1408,6 +1729,27 @@
       "n_triples": 890
     },
     {
+      "file": "11422_12124.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2532
+    },
+    {
+      "file": "11422_12147.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1226
+    },
+    {
+      "file": "11422_12148.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 871
+    },
+    {
       "file": "11422_12149.ttl",
       "conforms": true,
       "violations": [],
@@ -1422,6 +1764,13 @@
       "n_triples": 1242
     },
     {
+      "file": "11422_12151.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1837
+    },
+    {
       "file": "11422_12152.ttl",
       "conforms": true,
       "violations": [],
@@ -1429,11 +1778,46 @@
       "n_triples": 1003
     },
     {
+      "file": "11422_12153.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3270
+    },
+    {
+      "file": "11422_12154.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1684
+    },
+    {
+      "file": "11422_12155.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1789
+    },
+    {
       "file": "11422_12156.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1589
+    },
+    {
+      "file": "11422_12161.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1467
+    },
+    {
+      "file": "11422_12162.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2263
     },
     {
       "file": "11422_12163.ttl",
@@ -1448,6 +1832,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 595
+    },
+    {
+      "file": "11422_12165.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1018
     },
     {
       "file": "11422_12166.ttl",
@@ -1478,6 +1869,20 @@
       "n_triples": 3828
     },
     {
+      "file": "11422_12170.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 911
+    },
+    {
+      "file": "11422_12171.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1828
+    },
+    {
       "file": "11422_12173.ttl",
       "conforms": true,
       "violations": [],
@@ -1490,6 +1895,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 2699
+    },
+    {
+      "file": "11422_12175.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3143
     },
     {
       "file": "11422_12188.ttl",
@@ -1520,6 +1932,13 @@
       "n_triples": 721
     },
     {
+      "file": "11422_12192.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1635
+    },
+    {
       "file": "11422_12193.ttl",
       "conforms": true,
       "violations": [],
@@ -1546,6 +1965,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1887
+    },
+    {
+      "file": "11422_12209.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1034
     },
     {
       "file": "11422_12210.ttl",
@@ -1620,6 +2046,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1627
+    },
+    {
+      "file": "11422_12260.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2553
     },
     {
       "file": "11422_12261.ttl",
@@ -1706,6 +2139,13 @@
       "n_triples": 721
     },
     {
+      "file": "11422_12487.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1420
+    },
+    {
       "file": "11422_12488.ttl",
       "conforms": true,
       "violations": [],
@@ -1741,6 +2181,27 @@
       "n_triples": 1493
     },
     {
+      "file": "11422_12564.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1511
+    },
+    {
+      "file": "11422_12565.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1224
+    },
+    {
+      "file": "11422_12566.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 245
+    },
+    {
       "file": "11422_12567.ttl",
       "conforms": false,
       "violations": [],
@@ -1761,11 +2222,25 @@
       "n_triples": 2038
     },
     {
+      "file": "11422_12569.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2821
+    },
+    {
       "file": "11422_12570.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1227
+    },
+    {
+      "file": "11422_12571.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 845
     },
     {
       "file": "11422_12585.ttl",
@@ -1787,6 +2262,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 903
+    },
+    {
+      "file": "11422_12588.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1402
     },
     {
       "file": "11422_12589.ttl",
@@ -1822,6 +2304,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 777
+    },
+    {
+      "file": "11422_12708.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1149
+    },
+    {
+      "file": "11422_12709.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1017
     },
     {
       "file": "11422_12710.ttl",
@@ -1880,6 +2376,13 @@
       "n_triples": 1204
     },
     {
+      "file": "11422_12769.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 436
+    },
+    {
       "file": "11422_12771.ttl",
       "conforms": true,
       "violations": [],
@@ -1894,6 +2397,13 @@
       "n_triples": 600
     },
     {
+      "file": "11422_12774.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2274
+    },
+    {
       "file": "11422_12777.ttl",
       "conforms": true,
       "violations": [],
@@ -1901,11 +2411,36 @@
       "n_triples": 533
     },
     {
+      "file": "11422_12778.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1591
+    },
+    {
       "file": "11422_12779.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1599
+    },
+    {
+      "file": "11422_12780.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12780_sec_42"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12780_sec_9"
+        }
+      ],
+      "n_triples": 1574
     },
     {
       "file": "11422_12781.ttl",
@@ -1935,6 +2470,19 @@
       "n_triples": 1286
     },
     {
+      "file": "11422_12784.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12784_sec_73"
+        }
+      ],
+      "n_triples": 2625
+    },
+    {
       "file": "11422_12785.ttl",
       "conforms": true,
       "violations": [],
@@ -1949,6 +2497,46 @@
       "n_triples": 1204
     },
     {
+      "file": "11422_12787.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1149
+    },
+    {
+      "file": "11422_12788.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12788_sec_2"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12788_sec_53"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12788_sec_85"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12788_sec_35"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_12788_sec_17"
+        }
+      ],
+      "n_triples": 3724
+    },
+    {
       "file": "11422_12792.ttl",
       "conforms": true,
       "violations": [],
@@ -1961,6 +2549,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1384
+    },
+    {
+      "file": "11422_12794.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3934
     },
     {
       "file": "11422_12795.ttl",
@@ -2012,6 +2607,13 @@
       "n_triples": 2494
     },
     {
+      "file": "11422_12802.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2492
+    },
+    {
       "file": "11422_12803.ttl",
       "conforms": true,
       "violations": [],
@@ -2045,6 +2647,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 610
+    },
+    {
+      "file": "11422_12810.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1734
     },
     {
       "file": "11422_12811.ttl",
@@ -2094,6 +2703,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 975
+    },
+    {
+      "file": "11422_12830.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2043
     },
     {
       "file": "11422_12831.ttl",
@@ -2186,11 +2802,32 @@
       "n_triples": 2621
     },
     {
+      "file": "11422_12859.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1263
+    },
+    {
       "file": "11422_12860.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1498
+    },
+    {
+      "file": "11422_12861.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2690
+    },
+    {
+      "file": "11422_12862.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3704
     },
     {
       "file": "11422_12863.ttl",
@@ -2204,6 +2841,13 @@
         }
       ],
       "n_triples": 2148
+    },
+    {
+      "file": "11422_12864.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1774
     },
     {
       "file": "11422_12865.ttl",
@@ -2234,6 +2878,13 @@
       "n_triples": 808
     },
     {
+      "file": "11422_12869.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1174
+    },
+    {
       "file": "11422_12870.ttl",
       "conforms": true,
       "violations": [],
@@ -2246,6 +2897,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1125
+    },
+    {
+      "file": "11422_12872.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1252
     },
     {
       "file": "11422_12873.ttl",
@@ -2274,6 +2932,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 709
+    },
+    {
+      "file": "11422_12877.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1511
     },
     {
       "file": "11422_12889.ttl",
@@ -2345,6 +3010,13 @@
       "n_triples": 511
     },
     {
+      "file": "11422_12923.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2541
+    },
+    {
       "file": "11422_12924.ttl",
       "conforms": true,
       "violations": [],
@@ -2366,6 +3038,13 @@
       "n_triples": 1264
     },
     {
+      "file": "11422_12928.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1985
+    },
+    {
       "file": "11422_12929.ttl",
       "conforms": true,
       "violations": [],
@@ -2378,6 +3057,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 636
+    },
+    {
+      "file": "11422_12932.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1232
     },
     {
       "file": "11422_12934.ttl",
@@ -2413,6 +3099,27 @@
       "violations": [],
       "warnings": [],
       "n_triples": 996
+    },
+    {
+      "file": "11422_12942.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 897
+    },
+    {
+      "file": "11422_12944.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1302
+    },
+    {
+      "file": "11422_12945.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1497
     },
     {
       "file": "11422_12946.ttl",
@@ -2464,6 +3171,13 @@
       "n_triples": 766
     },
     {
+      "file": "11422_12959.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 812
+    },
+    {
       "file": "11422_12960.ttl",
       "conforms": true,
       "violations": [],
@@ -2510,6 +3224,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1082
+    },
+    {
+      "file": "11422_13000.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2798
     },
     {
       "file": "11422_13001.ttl",
@@ -2623,6 +3344,13 @@
       "n_triples": 957
     },
     {
+      "file": "11422_13067.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1008
+    },
+    {
       "file": "11422_13068.ttl",
       "conforms": true,
       "violations": [],
@@ -2637,11 +3365,32 @@
       "n_triples": 889
     },
     {
+      "file": "11422_13070.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3237
+    },
+    {
       "file": "11422_13071.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 851
+    },
+    {
+      "file": "11422_13072.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1129
+    },
+    {
+      "file": "11422_13073.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 660
     },
     {
       "file": "11422_13077.ttl",
@@ -2656,6 +3405,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1083
+    },
+    {
+      "file": "11422_13080.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1381
     },
     {
       "file": "11422_13082.ttl",
@@ -2714,6 +3470,45 @@
       "n_triples": 596
     },
     {
+      "file": "11422_13154.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2408
+    },
+    {
+      "file": "11422_13155.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 797
+    },
+    {
+      "file": "11422_13156.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 4213
+    },
+    {
+      "file": "11422_13158.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13158_sec_91"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13158_sec_54"
+        }
+      ],
+      "n_triples": 1955
+    },
+    {
       "file": "11422_13163.ttl",
       "conforms": true,
       "violations": [],
@@ -2754,6 +3549,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 2508
+    },
+    {
+      "file": "11422_13169.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2556
     },
     {
       "file": "11422_13170.ttl",
@@ -2812,6 +3614,13 @@
       "n_triples": 1558
     },
     {
+      "file": "11422_13222.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2660
+    },
+    {
       "file": "11422_13223.ttl",
       "conforms": true,
       "violations": [],
@@ -2845,6 +3654,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1005
+    },
+    {
+      "file": "11422_13235.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 995
     },
     {
       "file": "11422_13236.ttl",
@@ -2896,6 +3712,13 @@
       "n_triples": 1278
     },
     {
+      "file": "11422_13243.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1530
+    },
+    {
       "file": "11422_13244.ttl",
       "conforms": true,
       "violations": [],
@@ -2938,6 +3761,20 @@
       "n_triples": 2155
     },
     {
+      "file": "11422_13259.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1854
+    },
+    {
+      "file": "11422_13260.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2511
+    },
+    {
       "file": "11422_13261.ttl",
       "conforms": true,
       "violations": [],
@@ -2966,6 +3803,13 @@
       "n_triples": 2794
     },
     {
+      "file": "11422_13265.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 790
+    },
+    {
       "file": "11422_13266.ttl",
       "conforms": true,
       "violations": [],
@@ -2978,6 +3822,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1039
+    },
+    {
+      "file": "11422_13268.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1607
     },
     {
       "file": "11422_13269.ttl",
@@ -3001,6 +3852,13 @@
       "n_triples": 1862
     },
     {
+      "file": "11422_13278.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1759
+    },
+    {
       "file": "11422_13280.ttl",
       "conforms": true,
       "violations": [],
@@ -3015,6 +3873,13 @@
       "n_triples": 1222
     },
     {
+      "file": "11422_13282.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3053
+    },
+    {
       "file": "11422_13283.ttl",
       "conforms": true,
       "violations": [],
@@ -3027,6 +3892,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1059
+    },
+    {
+      "file": "11422_13285.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 780
     },
     {
       "file": "11422_13286.ttl",
@@ -3048,6 +3920,19 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1489
+    },
+    {
+      "file": "11422_13290.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13290_sec_29"
+        }
+      ],
+      "n_triples": 1363
     },
     {
       "file": "11422_13292.ttl",
@@ -3113,6 +3998,13 @@
       "n_triples": 1768
     },
     {
+      "file": "11422_13325.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 938
+    },
+    {
       "file": "11422_13326.ttl",
       "conforms": true,
       "violations": [],
@@ -3125,6 +4017,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 668
+    },
+    {
+      "file": "11422_13328.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1055
+    },
+    {
+      "file": "11422_13329.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1365
     },
     {
       "file": "11422_13330.ttl",
@@ -3148,6 +4054,27 @@
       "n_triples": 991
     },
     {
+      "file": "11422_13333.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 866
+    },
+    {
+      "file": "11422_13334.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1801
+    },
+    {
+      "file": "11422_13335.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 914
+    },
+    {
       "file": "11422_13336.ttl",
       "conforms": true,
       "violations": [],
@@ -3155,11 +4082,53 @@
       "n_triples": 308
     },
     {
+      "file": "11422_13337.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1381
+    },
+    {
+      "file": "11422_13338.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 490
+    },
+    {
+      "file": "11422_13339.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1369
+    },
+    {
       "file": "11422_13340.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 872
+    },
+    {
+      "file": "11422_13341.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 973
+    },
+    {
+      "file": "11422_13342.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 773
+    },
+    {
+      "file": "11422_13343.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 976
     },
     {
       "file": "11422_13344.ttl",
@@ -3183,6 +4152,20 @@
       "n_triples": 1113
     },
     {
+      "file": "11422_13355.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 651
+    },
+    {
+      "file": "11422_13356.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 646
+    },
+    {
       "file": "11422_13357.ttl",
       "conforms": true,
       "violations": [],
@@ -3197,11 +4180,11 @@
       "n_triples": 900
     },
     {
-      "file": "11422_13409.ttl",
+      "file": "11422_13411.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 935
+      "n_triples": 1059
     },
     {
       "file": "11422_13412.ttl",
@@ -3211,11 +4194,11 @@
       "n_triples": 1090
     },
     {
-      "file": "11422_13413.ttl",
+      "file": "11422_13414.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 622
+      "n_triples": 567
     },
     {
       "file": "11422_13415.ttl",
@@ -3239,6 +4222,13 @@
       "n_triples": 1317
     },
     {
+      "file": "11422_13419.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2324
+    },
+    {
       "file": "11422_13420.ttl",
       "conforms": true,
       "violations": [],
@@ -3260,6 +4250,13 @@
       "n_triples": 1204
     },
     {
+      "file": "11422_13423.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 846
+    },
+    {
       "file": "11422_13424.ttl",
       "conforms": true,
       "violations": [],
@@ -3274,11 +4271,32 @@
       "n_triples": 958
     },
     {
+      "file": "11422_13426.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 615
+    },
+    {
       "file": "11422_13427.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1360
+    },
+    {
+      "file": "11422_13428.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1262
+    },
+    {
+      "file": "11422_13477.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1877
     },
     {
       "file": "11422_13478.ttl",
@@ -3297,6 +4315,13 @@
         }
       ],
       "n_triples": 2541
+    },
+    {
+      "file": "11422_13480.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1332
     },
     {
       "file": "11422_13485.ttl",
@@ -3320,11 +4345,32 @@
       "n_triples": 1281
     },
     {
+      "file": "11422_13490.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1741
+    },
+    {
       "file": "11422_13491.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1166
+    },
+    {
+      "file": "11422_13498.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 570
+    },
+    {
+      "file": "11422_13500.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 846
     },
     {
       "file": "11422_13502.ttl",
@@ -3334,11 +4380,39 @@
       "n_triples": 1326
     },
     {
+      "file": "11422_13503.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1324
+    },
+    {
       "file": "11422_13504.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 749
+    },
+    {
+      "file": "11422_13505.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 600
+    },
+    {
+      "file": "11422_13506.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2146
+    },
+    {
+      "file": "11422_13507.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1803
     },
     {
       "file": "11422_13508.ttl",
@@ -3376,11 +4450,32 @@
       "n_triples": 1229
     },
     {
+      "file": "11422_13517.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 904
+    },
+    {
       "file": "11422_13518.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 2036
+    },
+    {
+      "file": "11422_13521.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 725
+    },
+    {
+      "file": "11422_13523.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 883
     },
     {
       "file": "11422_13524.ttl",
@@ -3395,6 +4490,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1355
+    },
+    {
+      "file": "11422_13526.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 751
+    },
+    {
+      "file": "11422_13528.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1221
     },
     {
       "file": "11422_13530.ttl",
@@ -3432,6 +4541,13 @@
       "n_triples": 1320
     },
     {
+      "file": "11422_13537.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2182
+    },
+    {
       "file": "11422_13538.ttl",
       "conforms": true,
       "violations": [],
@@ -3444,6 +4560,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1197
+    },
+    {
+      "file": "11422_13540.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1406
     },
     {
       "file": "11422_13541.ttl",
@@ -3460,6 +4583,13 @@
       "n_triples": 1083
     },
     {
+      "file": "11422_13543.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1409
+    },
+    {
       "file": "11422_13544.ttl",
       "conforms": true,
       "violations": [],
@@ -3474,11 +4604,46 @@
       "n_triples": 1024
     },
     {
+      "file": "11422_13546.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2244
+    },
+    {
       "file": "11422_13547.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1421
+    },
+    {
+      "file": "11422_13548.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 822
+    },
+    {
+      "file": "11422_13549.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 696
+    },
+    {
+      "file": "11422_13550.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2419
+    },
+    {
+      "file": "11422_13551.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 568
     },
     {
       "file": "11422_13552.ttl",
@@ -3509,6 +4674,26 @@
       "n_triples": 533
     },
     {
+      "file": "11422_13556.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13556_sec_45"
+        }
+      ],
+      "n_triples": 881
+    },
+    {
+      "file": "11422_13557.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 717
+    },
+    {
       "file": "11422_13558.ttl",
       "conforms": true,
       "violations": [],
@@ -3523,18 +4708,39 @@
       "n_triples": 858
     },
     {
-      "file": "11422_13564.ttl",
+      "file": "11422_13561.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1986
+      "n_triples": 1212
     },
     {
-      "file": "11422_13568.ttl",
+      "file": "11422_13562.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1559
+      "n_triples": 968
+    },
+    {
+      "file": "11422_13563.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 773
+    },
+    {
+      "file": "11422_13565.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 6930
+    },
+    {
+      "file": "11422_13566.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 986
     },
     {
       "file": "11422_13570.ttl",
@@ -3551,6 +4757,19 @@
       "n_triples": 2469
     },
     {
+      "file": "11422_13572.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13572_sec_40"
+        }
+      ],
+      "n_triples": 1941
+    },
+    {
       "file": "11422_13573.ttl",
       "conforms": true,
       "violations": [],
@@ -3558,11 +4777,32 @@
       "n_triples": 2693
     },
     {
+      "file": "11422_13574.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1475
+    },
+    {
       "file": "11422_13575.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1923
+    },
+    {
+      "file": "11422_13576.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1612
+    },
+    {
+      "file": "11422_13577.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2510
     },
     {
       "file": "11422_13578.ttl",
@@ -3577,6 +4817,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1496
+    },
+    {
+      "file": "11422_13580.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2680
     },
     {
       "file": "11422_13581.ttl",
@@ -3607,6 +4854,20 @@
       "n_triples": 1398
     },
     {
+      "file": "11422_13585.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2632
+    },
+    {
+      "file": "11422_13586.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1033
+    },
+    {
       "file": "11422_13587.ttl",
       "conforms": true,
       "violations": [],
@@ -3619,6 +4880,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1695
+    },
+    {
+      "file": "11422_13592.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1362
     },
     {
       "file": "11422_13593.ttl",
@@ -3649,6 +4917,13 @@
       "n_triples": 1701
     },
     {
+      "file": "11422_13598.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1390
+    },
+    {
       "file": "11422_13599.ttl",
       "conforms": true,
       "violations": [],
@@ -3668,6 +4943,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1469
+    },
+    {
+      "file": "11422_13603.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 900
     },
     {
       "file": "11422_13604.ttl",
@@ -3698,11 +4980,25 @@
       "n_triples": 789
     },
     {
+      "file": "11422_13608.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1666
+    },
+    {
       "file": "11422_13609.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 696
+    },
+    {
+      "file": "11422_13614.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1955
     },
     {
       "file": "11422_13615.ttl",
@@ -3719,6 +5015,20 @@
       "n_triples": 1909
     },
     {
+      "file": "11422_13617.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1798
+    },
+    {
+      "file": "11422_13618.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1382
+    },
+    {
       "file": "11422_13655.ttl",
       "conforms": true,
       "violations": [],
@@ -3733,11 +5043,46 @@
       "n_triples": 1036
     },
     {
+      "file": "11422_13657.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1185
+    },
+    {
       "file": "11422_13658.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1330
+    },
+    {
+      "file": "11422_13659.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1057
+    },
+    {
+      "file": "11422_13660.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 913
+    },
+    {
+      "file": "11422_13661.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1784
+    },
+    {
+      "file": "11422_13662.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 818
     },
     {
       "file": "11422_13663.ttl",
@@ -3754,11 +5099,18 @@
       "n_triples": 726
     },
     {
-      "file": "11422_13667.ttl",
+      "file": "11422_13665.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 711
+      "n_triples": 1484
+    },
+    {
+      "file": "11422_13666.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2526
     },
     {
       "file": "11422_13668.ttl",
@@ -3768,13 +5120,6 @@
       "n_triples": 866
     },
     {
-      "file": "11422_13671.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1233
-    },
-    {
       "file": "11422_13672.ttl",
       "conforms": false,
       "violations": [],
@@ -3782,29 +5127,36 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_13672_sec_70"
+          "node": "11422_13672_sec_75"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_13672_sec_75"
+          "node": "11422_13672_sec_70"
         }
       ],
       "n_triples": 1641
     },
     {
-      "file": "11422_13682.ttl",
+      "file": "11422_13675.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1081
+      "n_triples": 814
     },
     {
-      "file": "11422_13683.ttl",
+      "file": "11422_13684.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1873
+      "n_triples": 1060
+    },
+    {
+      "file": "11422_13685.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 153
     },
     {
       "file": "11422_13686.ttl",
@@ -3828,13 +5180,6 @@
       "n_triples": 502
     },
     {
-      "file": "11422_13692.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 794
-    },
-    {
       "file": "11422_13693.ttl",
       "conforms": true,
       "violations": [],
@@ -3842,11 +5187,38 @@
       "n_triples": 1217
     },
     {
+      "file": "11422_13694.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2077
+    },
+    {
+      "file": "11422_13695.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13695_sec_32"
+        }
+      ],
+      "n_triples": 1192
+    },
+    {
       "file": "11422_13719.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 802
+    },
+    {
+      "file": "11422_13720.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1792
     },
     {
       "file": "11422_13721.ttl",
@@ -3891,6 +5263,27 @@
       "n_triples": 867
     },
     {
+      "file": "11422_13729.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 643
+    },
+    {
+      "file": "11422_13730.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 948
+    },
+    {
+      "file": "11422_13731.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1391
+    },
+    {
       "file": "11422_13732.ttl",
       "conforms": false,
       "violations": [],
@@ -3916,6 +5309,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 699
+    },
+    {
+      "file": "11422_13735.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2329
+    },
+    {
+      "file": "11422_13736.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 856
     },
     {
       "file": "11422_13737.ttl",
@@ -3952,11 +5359,39 @@
       "n_triples": 1544
     },
     {
+      "file": "11422_13741.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 726
+    },
+    {
+      "file": "11422_13742.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 748
+    },
+    {
       "file": "11422_13743.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1788
+    },
+    {
+      "file": "11422_13744.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1515
+    },
+    {
+      "file": "11422_13745.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 915
     },
     {
       "file": "11422_13746.ttl",
@@ -4054,6 +5489,13 @@
       "n_triples": 951
     },
     {
+      "file": "11422_13758.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 749
+    },
+    {
       "file": "11422_13759.ttl",
       "conforms": true,
       "violations": [],
@@ -4082,6 +5524,13 @@
       "n_triples": 1420
     },
     {
+      "file": "11422_13763.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 462
+    },
+    {
       "file": "11422_13764.ttl",
       "conforms": true,
       "violations": [],
@@ -4096,11 +5545,53 @@
       "n_triples": 856
     },
     {
+      "file": "11422_13766.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3881
+    },
+    {
+      "file": "11422_13769.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 628
+    },
+    {
+      "file": "11422_13770.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1224
+    },
+    {
+      "file": "11422_13771.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2115
+    },
+    {
       "file": "11422_13772.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 242
+    },
+    {
+      "file": "11422_13773.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 867
+    },
+    {
+      "file": "11422_13774.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1043
     },
     {
       "file": "11422_13775.ttl",
@@ -4110,6 +5601,13 @@
       "n_triples": 977
     },
     {
+      "file": "11422_13776.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 818
+    },
+    {
       "file": "11422_13777.ttl",
       "conforms": true,
       "violations": [],
@@ -4117,11 +5615,66 @@
       "n_triples": 947
     },
     {
+      "file": "11422_13778.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1262
+    },
+    {
+      "file": "11422_13779.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 480
+    },
+    {
+      "file": "11422_13780.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1130
+    },
+    {
+      "file": "11422_13781.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1810
+    },
+    {
       "file": "11422_13782.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 820
+    },
+    {
+      "file": "11422_13783.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 959
+    },
+    {
+      "file": "11422_13784.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1430
+    },
+    {
+      "file": "11422_13785.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13785_sec_47"
+        }
+      ],
+      "n_triples": 1266
     },
     {
       "file": "11422_13786.ttl",
@@ -4145,6 +5698,33 @@
       "n_triples": 633
     },
     {
+      "file": "11422_13789.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1170
+    },
+    {
+      "file": "11422_13793.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1525
+    },
+    {
+      "file": "11422_13794.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_13794_sec_47"
+        }
+      ],
+      "n_triples": 1736
+    },
+    {
       "file": "11422_13795.ttl",
       "conforms": true,
       "violations": [],
@@ -4164,6 +5744,27 @@
       "violations": [],
       "warnings": [],
       "n_triples": 2168
+    },
+    {
+      "file": "11422_13798.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 768
+    },
+    {
+      "file": "11422_13799.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1754
+    },
+    {
+      "file": "11422_13800.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2068
     },
     {
       "file": "11422_13989.ttl",
@@ -4194,11 +5795,18 @@
       "n_triples": 347
     },
     {
-      "file": "11422_13994.ttl",
+      "file": "11422_13995.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 750
+      "n_triples": 1202
+    },
+    {
+      "file": "11422_13996.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3275
     },
     {
       "file": "11422_13997.ttl",
@@ -4208,32 +5816,11 @@
       "n_triples": 938
     },
     {
-      "file": "11422_13998.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1037
-    },
-    {
       "file": "11422_13999.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1058
-    },
-    {
-      "file": "11422_14001.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1188
-    },
-    {
-      "file": "11422_14002.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1065
     },
     {
       "file": "11422_14003.ttl",
@@ -4243,11 +5830,25 @@
       "n_triples": 1014
     },
     {
-      "file": "11422_14006.ttl",
+      "file": "11422_14005.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1548
+      "n_triples": 1528
+    },
+    {
+      "file": "11422_14008.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1681
+    },
+    {
+      "file": "11422_14010.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1106
     },
     {
       "file": "11422_14012.ttl",
@@ -4264,6 +5865,20 @@
       "n_triples": 756
     },
     {
+      "file": "11422_14014.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 674
+    },
+    {
+      "file": "11422_14015.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 806
+    },
+    {
       "file": "11422_14016.ttl",
       "conforms": true,
       "violations": [],
@@ -4271,11 +5886,39 @@
       "n_triples": 767
     },
     {
+      "file": "11422_14018.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1120
+    },
+    {
+      "file": "11422_14019.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1368
+    },
+    {
       "file": "11422_14020.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1585
+    },
+    {
+      "file": "11422_14021.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 946
+    },
+    {
+      "file": "11422_14022.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1412
     },
     {
       "file": "11422_14023.ttl",
@@ -4306,6 +5949,34 @@
       "n_triples": 975
     },
     {
+      "file": "11422_14027.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 992
+    },
+    {
+      "file": "11422_14028.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1055
+    },
+    {
+      "file": "11422_14029.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 582
+    },
+    {
+      "file": "11422_14030.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 538
+    },
+    {
       "file": "11422_14031.ttl",
       "conforms": true,
       "violations": [],
@@ -4318,6 +5989,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1160
+    },
+    {
+      "file": "11422_14033.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 757
     },
     {
       "file": "11422_14034.ttl",
@@ -4348,6 +6026,20 @@
       "n_triples": 1291
     },
     {
+      "file": "11422_14038.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 913
+    },
+    {
+      "file": "11422_14039.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1534
+    },
+    {
       "file": "11422_14040.ttl",
       "conforms": true,
       "violations": [],
@@ -4362,11 +6054,25 @@
       "n_triples": 613
     },
     {
+      "file": "11422_14042.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 863
+    },
+    {
       "file": "11422_14043.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1561
+    },
+    {
+      "file": "11422_14044.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2798
     },
     {
       "file": "11422_14045.ttl",
@@ -4498,6 +6204,20 @@
       "n_triples": 1394
     },
     {
+      "file": "11422_14061.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2136
+    },
+    {
+      "file": "11422_14062.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1967
+    },
+    {
       "file": "11422_14063.ttl",
       "conforms": true,
       "violations": [],
@@ -4560,6 +6280,20 @@
       "n_triples": 599
     },
     {
+      "file": "11422_14071.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1019
+    },
+    {
+      "file": "11422_14075.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1179
+    },
+    {
       "file": "11422_14076.ttl",
       "conforms": true,
       "violations": [],
@@ -4588,6 +6322,20 @@
       "n_triples": 835
     },
     {
+      "file": "11422_14081.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2105
+    },
+    {
+      "file": "11422_14082.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1624
+    },
+    {
       "file": "11422_14084.ttl",
       "conforms": true,
       "violations": [],
@@ -4600,6 +6348,19 @@
       "violations": [],
       "warnings": [],
       "n_triples": 231
+    },
+    {
+      "file": "11422_14445.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_14445_sec_1"
+        }
+      ],
+      "n_triples": 205
     },
     {
       "file": "11422_15731.ttl",
@@ -4700,13 +6461,6 @@
       "n_triples": 251
     },
     {
-      "file": "11422_15827.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 148
-    },
-    {
       "file": "11422_15829.ttl",
       "conforms": true,
       "violations": [],
@@ -4714,11 +6468,17 @@
       "n_triples": 419
     },
     {
-      "file": "11422_15886.ttl",
-      "conforms": true,
+      "file": "11422_15830.ttl",
+      "conforms": false,
       "violations": [],
-      "warnings": [],
-      "n_triples": 1385
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_15830_sec_0"
+        }
+      ],
+      "n_triples": 1675
     },
     {
       "file": "11422_16175.ttl",
@@ -4754,6 +6514,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 283
+    },
+    {
+      "file": "11422_17051.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2086
     },
     {
       "file": "11422_17069.ttl",
@@ -4816,6 +6583,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 275
+    },
+    {
+      "file": "11422_17166.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 509
     },
     {
       "file": "11422_17184.ttl",
@@ -4902,6 +6676,13 @@
       "n_triples": 215
     },
     {
+      "file": "11422_17255.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 485
+    },
+    {
       "file": "11422_19311.ttl",
       "conforms": true,
       "violations": [],
@@ -4914,6 +6695,27 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1139
+    },
+    {
+      "file": "11422_20052.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2526
+    },
+    {
+      "file": "11422_20053.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 399
+    },
+    {
+      "file": "11422_20054.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1123
     },
     {
       "file": "11422_20089.ttl",
@@ -4944,11 +6746,32 @@
       "n_triples": 1540
     },
     {
+      "file": "11422_20113.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1103
+    },
+    {
       "file": "11422_20115.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1327
+    },
+    {
+      "file": "11422_20116.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1764
+    },
+    {
+      "file": "11422_20117.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1314
     },
     {
       "file": "11422_20144.ttl",
@@ -5028,12 +6851,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_20187_sec_45"
+          "node": "11422_20187_sec_26"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_20187_sec_26"
+          "node": "11422_20187_sec_45"
         }
       ],
       "n_triples": 4221
@@ -5046,11 +6869,32 @@
       "n_triples": 1310
     },
     {
+      "file": "11422_20203.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1037
+    },
+    {
+      "file": "11422_20205.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1398
+    },
+    {
       "file": "11422_20206.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 777
+    },
+    {
+      "file": "11422_20209.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 402
     },
     {
       "file": "11422_20257.ttl",
@@ -5065,13 +6909,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1335
-    },
-    {
-      "file": "11422_20270.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1407
     },
     {
       "file": "11422_20283.ttl",
@@ -5095,13 +6932,6 @@
       "n_triples": 1146
     },
     {
-      "file": "11422_20301.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 2214
-    },
-    {
       "file": "11422_20415.ttl",
       "conforms": true,
       "violations": [],
@@ -5123,11 +6953,25 @@
       "n_triples": 1233
     },
     {
+      "file": "11422_20419.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1113
+    },
+    {
       "file": "11422_20420.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1126
+    },
+    {
+      "file": "11422_20696.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 568
     },
     {
       "file": "11422_20697.ttl",
@@ -5158,6 +7002,20 @@
       "n_triples": 1027
     },
     {
+      "file": "11422_21249.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1448
+    },
+    {
+      "file": "11422_21250.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1250
+    },
+    {
       "file": "11422_21251.ttl",
       "conforms": true,
       "violations": [],
@@ -5179,6 +7037,13 @@
       "n_triples": 868
     },
     {
+      "file": "11422_21282.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3026
+    },
+    {
       "file": "11422_21283.ttl",
       "conforms": true,
       "violations": [],
@@ -5186,11 +7051,25 @@
       "n_triples": 1666
     },
     {
-      "file": "11422_21288.ttl",
+      "file": "11422_21342.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1076
+      "n_triples": 947
+    },
+    {
+      "file": "11422_21346.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 719
+    },
+    {
+      "file": "11422_21348.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1168
     },
     {
       "file": "11422_21351.ttl",
@@ -5207,6 +7086,13 @@
       "n_triples": 1717
     },
     {
+      "file": "11422_21354.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1393
+    },
+    {
       "file": "11422_21355.ttl",
       "conforms": true,
       "violations": [],
@@ -5221,6 +7107,20 @@
       "n_triples": 759
     },
     {
+      "file": "11422_21398.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 722
+    },
+    {
+      "file": "11422_21480.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 704
+    },
+    {
       "file": "11422_21482.ttl",
       "conforms": true,
       "violations": [],
@@ -5233,6 +7133,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 988
+    },
+    {
+      "file": "11422_21494.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 922
     },
     {
       "file": "11422_21495.ttl",
@@ -5263,6 +7170,20 @@
       "n_triples": 523
     },
     {
+      "file": "11422_21499.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1030
+    },
+    {
+      "file": "11422_21512.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 491
+    },
+    {
       "file": "11422_21514.ttl",
       "conforms": true,
       "violations": [],
@@ -5291,11 +7212,18 @@
       "n_triples": 522
     },
     {
-      "file": "11422_21707.ttl",
+      "file": "11422_21519.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1282
+      "n_triples": 1120
+    },
+    {
+      "file": "11422_21709.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1986
     },
     {
       "file": "11422_21710.ttl",
@@ -5310,6 +7238,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1113
+    },
+    {
+      "file": "11422_21714.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1256
     },
     {
       "file": "11422_21715.ttl",
@@ -5345,6 +7280,19 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1925
+    },
+    {
+      "file": "11422_21773.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_21773_sec_18"
+        }
+      ],
+      "n_triples": 1722
     },
     {
       "file": "11422_21776.ttl",
@@ -5395,11 +7343,25 @@
       "n_triples": 2308
     },
     {
+      "file": "11422_21944.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1313
+    },
+    {
       "file": "11422_21945.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1220
+    },
+    {
+      "file": "11422_21949.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1015
     },
     {
       "file": "11422_21950.ttl",
@@ -5423,6 +7385,13 @@
       "n_triples": 1297
     },
     {
+      "file": "11422_22000.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1140
+    },
+    {
       "file": "11422_22017.ttl",
       "conforms": true,
       "violations": [],
@@ -5444,11 +7413,32 @@
       "n_triples": 804
     },
     {
+      "file": "11422_22091.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1394
+    },
+    {
       "file": "11422_22092.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 669
+    },
+    {
+      "file": "11422_22093.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1022
+    },
+    {
+      "file": "11422_2224.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 295
     },
     {
       "file": "11422_2234.ttl",
@@ -5507,6 +7497,13 @@
       "n_triples": 312
     },
     {
+      "file": "11422_22717.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 810
+    },
+    {
       "file": "11422_22718.ttl",
       "conforms": true,
       "violations": [],
@@ -5528,6 +7525,20 @@
       "n_triples": 834
     },
     {
+      "file": "11422_22722.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 813
+    },
+    {
+      "file": "11422_22743.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2176
+    },
+    {
       "file": "11422_22745.ttl",
       "conforms": true,
       "violations": [],
@@ -5542,6 +7553,19 @@
       "n_triples": 300
     },
     {
+      "file": "11422_2286.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2286_sec_1"
+        }
+      ],
+      "n_triples": 632
+    },
+    {
       "file": "11422_2289.ttl",
       "conforms": true,
       "violations": [],
@@ -5554,6 +7578,19 @@
       "violations": [],
       "warnings": [],
       "n_triples": 296
+    },
+    {
+      "file": "11422_2292.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2292_sec_1"
+        }
+      ],
+      "n_triples": 721
     },
     {
       "file": "11422_2293.ttl",
@@ -5590,6 +7627,13 @@
       "n_triples": 246
     },
     {
+      "file": "11422_2300.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 555
+    },
+    {
       "file": "11422_2303.ttl",
       "conforms": true,
       "violations": [],
@@ -5601,7 +7645,7 @@
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 343
+      "n_triples": 353
     },
     {
       "file": "11422_2310.ttl",
@@ -5625,11 +7669,45 @@
       "n_triples": 119
     },
     {
-      "file": "11422_23159.ttl",
+      "file": "11422_23153.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 834
+      "n_triples": 916
+    },
+    {
+      "file": "11422_23154.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 644
+    },
+    {
+      "file": "11422_23155.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 876
+    },
+    {
+      "file": "11422_23158.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1576
+    },
+    {
+      "file": "11422_2316.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2316_sec_1"
+        }
+      ],
+      "n_triples": 692
     },
     {
       "file": "11422_23160.ttl",
@@ -5637,6 +7715,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1327
+    },
+    {
+      "file": "11422_23161.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2736
     },
     {
       "file": "11422_23162.ttl",
@@ -5667,6 +7752,13 @@
       "n_triples": 698
     },
     {
+      "file": "11422_23166.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1163
+    },
+    {
       "file": "11422_23167.ttl",
       "conforms": true,
       "violations": [],
@@ -5695,22 +7787,22 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_23170_sec_24"
-        },
-        {
-          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
-          "path": "hasContent",
-          "node": "11422_23170_sec_55"
-        },
-        {
-          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
-          "path": "hasContent",
           "node": "11422_23170_sec_42"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
           "node": "11422_23170_sec_15"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_23170_sec_24"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_23170_sec_55"
         }
       ],
       "n_triples": 1441
@@ -5749,6 +7841,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 666
+    },
+    {
+      "file": "11422_23177.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2216
     },
     {
       "file": "11422_23178.ttl",
@@ -5800,11 +7899,38 @@
       "n_triples": 2010
     },
     {
+      "file": "11422_23184.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_23184_sec_41"
+        }
+      ],
+      "n_triples": 1781
+    },
+    {
+      "file": "11422_23185.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1362
+    },
+    {
       "file": "11422_23186.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1777
+    },
+    {
+      "file": "11422_23187.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2230
     },
     {
       "file": "11422_23188.ttl",
@@ -5821,6 +7947,13 @@
       "n_triples": 1002
     },
     {
+      "file": "11422_23191.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1026
+    },
+    {
       "file": "11422_23192.ttl",
       "conforms": true,
       "violations": [],
@@ -5833,6 +7966,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1780
+    },
+    {
+      "file": "11422_23194.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2502
     },
     {
       "file": "11422_23195.ttl",
@@ -5856,6 +7996,20 @@
       "n_triples": 367
     },
     {
+      "file": "11422_23198.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2007
+    },
+    {
+      "file": "11422_23199.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1997
+    },
+    {
       "file": "11422_23200.ttl",
       "conforms": true,
       "violations": [],
@@ -5868,6 +8022,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1120
+    },
+    {
+      "file": "11422_23202.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3379
     },
     {
       "file": "11422_23203.ttl",
@@ -5947,6 +8108,13 @@
       "n_triples": 1483
     },
     {
+      "file": "11422_23215.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1425
+    },
+    {
       "file": "11422_23216.ttl",
       "conforms": true,
       "violations": [],
@@ -6014,11 +8182,25 @@
       "n_triples": 1571
     },
     {
+      "file": "11422_23224.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1444
+    },
+    {
       "file": "11422_23225.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1703
+    },
+    {
+      "file": "11422_23226.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 909
     },
     {
       "file": "11422_23227.ttl",
@@ -6056,6 +8238,20 @@
       "n_triples": 1870
     },
     {
+      "file": "11422_23232.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2782
+    },
+    {
+      "file": "11422_23233.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2117
+    },
+    {
       "file": "11422_23234.ttl",
       "conforms": true,
       "violations": [],
@@ -6068,13 +8264,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 976
-    },
-    {
-      "file": "11422_23240.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1124
     },
     {
       "file": "11422_23242.ttl",
@@ -6154,6 +8343,13 @@
       "n_triples": 1982
     },
     {
+      "file": "11422_23650.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2389
+    },
+    {
       "file": "11422_2504.ttl",
       "conforms": true,
       "violations": [],
@@ -6173,6 +8369,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 106
+    },
+    {
+      "file": "11422_2520.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 893
     },
     {
       "file": "11422_2521.ttl",
@@ -6356,6 +8559,13 @@
       "n_triples": 400
     },
     {
+      "file": "11422_25622.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2384
+    },
+    {
       "file": "11422_25623.ttl",
       "conforms": true,
       "violations": [],
@@ -6391,6 +8601,20 @@
       "n_triples": 1282
     },
     {
+      "file": "11422_25632.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 802
+    },
+    {
+      "file": "11422_25639.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1506
+    },
+    {
       "file": "11422_25640.ttl",
       "conforms": true,
       "violations": [],
@@ -6410,6 +8634,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 654
+    },
+    {
+      "file": "11422_25643.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1300
     },
     {
       "file": "11422_25644.ttl",
@@ -6468,6 +8699,13 @@
       "n_triples": 581
     },
     {
+      "file": "11422_25669.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1754
+    },
+    {
       "file": "11422_25670.ttl",
       "conforms": true,
       "violations": [],
@@ -6487,6 +8725,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1386
+    },
+    {
+      "file": "11422_25673.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3581
     },
     {
       "file": "11422_25674.ttl",
@@ -6534,6 +8779,13 @@
         }
       ],
       "n_triples": 2747
+    },
+    {
+      "file": "11422_25688.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 4898
     },
     {
       "file": "11422_25689.ttl",
@@ -6743,6 +8995,13 @@
       "n_triples": 792
     },
     {
+      "file": "11422_25809.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 941
+    },
+    {
       "file": "11422_25810.ttl",
       "conforms": false,
       "violations": [],
@@ -6754,6 +9013,13 @@
         }
       ],
       "n_triples": 2167
+    },
+    {
+      "file": "11422_25812.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1227
     },
     {
       "file": "11422_25813.ttl",
@@ -6774,6 +9040,13 @@
         }
       ],
       "n_triples": 353
+    },
+    {
+      "file": "11422_25830.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3145
     },
     {
       "file": "11422_25831.ttl",
@@ -6846,11 +9119,25 @@
       "n_triples": 525
     },
     {
+      "file": "11422_25860.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2248
+    },
+    {
       "file": "11422_2588.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 371
+    },
+    {
+      "file": "11422_25885.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1481
     },
     {
       "file": "11422_25898.ttl",
@@ -6860,11 +9147,25 @@
       "n_triples": 850
     },
     {
+      "file": "11422_25899.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1469
+    },
+    {
       "file": "11422_25900.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 943
+    },
+    {
+      "file": "11422_25919.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1126
     },
     {
       "file": "11422_25920.ttl",
@@ -6902,6 +9203,13 @@
       "n_triples": 2010
     },
     {
+      "file": "11422_25946.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 470
+    },
+    {
       "file": "11422_25947.ttl",
       "conforms": true,
       "violations": [],
@@ -6916,6 +9224,13 @@
       "n_triples": 1718
     },
     {
+      "file": "11422_2595.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 445
+    },
+    {
       "file": "11422_25952.ttl",
       "conforms": true,
       "violations": [],
@@ -6928,6 +9243,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 930
+    },
+    {
+      "file": "11422_25973.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 4985
+    },
+    {
+      "file": "11422_25976.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2335
     },
     {
       "file": "11422_25983.ttl",
@@ -7020,6 +9349,13 @@
       "n_triples": 1955
     },
     {
+      "file": "11422_26087.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 612
+    },
+    {
       "file": "11422_26106.ttl",
       "conforms": true,
       "violations": [],
@@ -7062,6 +9398,13 @@
       "n_triples": 2475
     },
     {
+      "file": "11422_26147.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1341
+    },
+    {
       "file": "11422_26148.ttl",
       "conforms": true,
       "violations": [],
@@ -7074,6 +9417,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1629
+    },
+    {
+      "file": "11422_26164.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2270
     },
     {
       "file": "11422_26179.ttl",
@@ -7118,18 +9468,39 @@
       "n_triples": 761
     },
     {
-      "file": "11422_26189.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1554
-    },
-    {
       "file": "11422_26190.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 2806
+    },
+    {
+      "file": "11422_26191.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1876
+    },
+    {
+      "file": "11422_26192.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2211
+    },
+    {
+      "file": "11422_26193.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1149
+    },
+    {
+      "file": "11422_26194.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2136
     },
     {
       "file": "11422_26196.ttl",
@@ -7202,6 +9573,13 @@
       "n_triples": 2006
     },
     {
+      "file": "11422_26257.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 6205
+    },
+    {
       "file": "11422_26259.ttl",
       "conforms": true,
       "violations": [],
@@ -7214,6 +9592,26 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1707
+    },
+    {
+      "file": "11422_26262.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_26262_sec_158"
+        }
+      ],
+      "n_triples": 3966
+    },
+    {
+      "file": "11422_2627.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 612
     },
     {
       "file": "11422_2628.ttl",
@@ -7249,6 +9647,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 967
+    },
+    {
+      "file": "11422_26308.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 889
     },
     {
       "file": "11422_2631.ttl",
@@ -7306,11 +9711,31 @@
       "n_triples": 1723
     },
     {
+      "file": "11422_26445.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1004
+    },
+    {
       "file": "11422_26446.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1179
+    },
+    {
+      "file": "11422_26447.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_26447_sec_116"
+        }
+      ],
+      "n_triples": 2880
     },
     {
       "file": "11422_26451.ttl",
@@ -7340,18 +9765,18 @@
       "n_triples": 306
     },
     {
-      "file": "11422_26505.ttl",
+      "file": "11422_26504.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 945
+      "n_triples": 2164
     },
     {
-      "file": "11422_26508.ttl",
+      "file": "11422_26506.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1488
+      "n_triples": 1890
     },
     {
       "file": "11422_2651.ttl",
@@ -7359,13 +9784,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 281
-    },
-    {
-      "file": "11422_26510.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1689
     },
     {
       "file": "11422_26614.ttl",
@@ -7452,12 +9870,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_26656_sec_36"
+          "node": "11422_26656_sec_37"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_26656_sec_37"
+          "node": "11422_26656_sec_36"
         }
       ],
       "n_triples": 1456
@@ -7505,11 +9923,79 @@
       "n_triples": 1005
     },
     {
+      "file": "11422_26713.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1985
+    },
+    {
+      "file": "11422_26715.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2153
+    },
+    {
       "file": "11422_26716.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1347
+    },
+    {
+      "file": "11422_2673.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2673_sec_2"
+        }
+      ],
+      "n_triples": 158
+    },
+    {
+      "file": "11422_2674.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2674_sec_0"
+        }
+      ],
+      "n_triples": 278
+    },
+    {
+      "file": "11422_26750.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_26750_sec_88"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_26750_sec_45"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_26750_sec_75"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_26750_sec_60"
+        }
+      ],
+      "n_triples": 2257
     },
     {
       "file": "11422_26751.ttl",
@@ -7537,6 +10023,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 789
+    },
+    {
+      "file": "11422_26754.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1711
+    },
+    {
+      "file": "11422_26755.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2253
     },
     {
       "file": "11422_26756.ttl",
@@ -7628,6 +10128,13 @@
       "n_triples": 715
     },
     {
+      "file": "11422_27042.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1663
+    },
+    {
       "file": "11422_27043.ttl",
       "conforms": true,
       "violations": [],
@@ -7670,11 +10177,25 @@
       "n_triples": 2051
     },
     {
+      "file": "11422_27075.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1503
+    },
+    {
       "file": "11422_27151.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 2333
+    },
+    {
+      "file": "11422_27152.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2959
     },
     {
       "file": "11422_27169.ttl",
@@ -7740,6 +10261,13 @@
       "n_triples": 850
     },
     {
+      "file": "11422_27246.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1173
+    },
+    {
       "file": "11422_27247.ttl",
       "conforms": true,
       "violations": [],
@@ -7768,11 +10296,25 @@
       "n_triples": 812
     },
     {
+      "file": "11422_2747.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 513
+    },
+    {
       "file": "11422_27475.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1053
+    },
+    {
+      "file": "11422_27477.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1731
     },
     {
       "file": "11422_27479.ttl",
@@ -7851,11 +10393,25 @@
       "n_triples": 874
     },
     {
+      "file": "11422_27534.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2089
+    },
+    {
       "file": "11422_27535.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1556
+    },
+    {
+      "file": "11422_2755.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 705
     },
     {
       "file": "11422_27553.ttl",
@@ -7942,6 +10498,13 @@
       "n_triples": 1322
     },
     {
+      "file": "11422_27658.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1244
+    },
+    {
       "file": "11422_27659.ttl",
       "conforms": true,
       "violations": [],
@@ -7954,6 +10517,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 677
+    },
+    {
+      "file": "11422_27663.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 681
     },
     {
       "file": "11422_27664.ttl",
@@ -7984,6 +10554,19 @@
       "n_triples": 641
     },
     {
+      "file": "11422_27668.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_27668_sec_37"
+        }
+      ],
+      "n_triples": 2583
+    },
+    {
       "file": "11422_27669.ttl",
       "conforms": true,
       "violations": [],
@@ -8012,6 +10595,13 @@
       "n_triples": 721
     },
     {
+      "file": "11422_27713.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1088
+    },
+    {
       "file": "11422_27714.ttl",
       "conforms": true,
       "violations": [],
@@ -8024,6 +10614,19 @@
       "violations": [],
       "warnings": [],
       "n_triples": 975
+    },
+    {
+      "file": "11422_27716.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_27716_sec_129"
+        }
+      ],
+      "n_triples": 3700
     },
     {
       "file": "11422_27717.ttl",
@@ -8054,6 +10657,13 @@
       "n_triples": 1502
     },
     {
+      "file": "11422_2774.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 424
+    },
+    {
       "file": "11422_27740.ttl",
       "conforms": true,
       "violations": [],
@@ -8082,12 +10692,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_2777_sec_1"
+          "node": "11422_2777_sec_2"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_2777_sec_2"
+          "node": "11422_2777_sec_1"
         }
       ],
       "n_triples": 280
@@ -8196,12 +10806,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_2791_sec_0"
+          "node": "11422_2791_sec_1"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_2791_sec_1"
+          "node": "11422_2791_sec_0"
         }
       ],
       "n_triples": 731
@@ -8226,6 +10836,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 376
+    },
+    {
+      "file": "11422_2811.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 654
     },
     {
       "file": "11422_2812.ttl",
@@ -8280,11 +10897,31 @@
       "n_triples": 810
     },
     {
+      "file": "11422_28125.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 567
+    },
+    {
       "file": "11422_28137.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 940
+    },
+    {
+      "file": "11422_28138.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_28138_sec_2"
+        }
+      ],
+      "n_triples": 1226
     },
     {
       "file": "11422_28139.ttl",
@@ -8294,11 +10931,32 @@
       "n_triples": 455
     },
     {
+      "file": "11422_28140.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 878
+    },
+    {
       "file": "11422_28141.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 525
+    },
+    {
+      "file": "11422_2815.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 794
+    },
+    {
+      "file": "11422_2816.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 699
     },
     {
       "file": "11422_28169.ttl",
@@ -8336,6 +10994,19 @@
       "n_triples": 1238
     },
     {
+      "file": "11422_28253.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_28253_sec_19"
+        }
+      ],
+      "n_triples": 915
+    },
+    {
       "file": "11422_28254.ttl",
       "conforms": true,
       "violations": [],
@@ -8348,6 +11019,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 642
+    },
+    {
+      "file": "11422_28256.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1321
     },
     {
       "file": "11422_28258.ttl",
@@ -8375,6 +11053,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1367
+    },
+    {
+      "file": "11422_28333.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1401
+    },
+    {
+      "file": "11422_28334.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 994
     },
     {
       "file": "11422_28341.ttl",
@@ -8439,6 +11131,13 @@
       "n_triples": 988
     },
     {
+      "file": "11422_28416.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 989
+    },
+    {
       "file": "11422_28417.ttl",
       "conforms": true,
       "violations": [],
@@ -8451,6 +11150,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 564
+    },
+    {
+      "file": "11422_28419.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1911
     },
     {
       "file": "11422_2842.ttl",
@@ -8488,6 +11194,13 @@
       "n_triples": 731
     },
     {
+      "file": "11422_28475.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1758
+    },
+    {
       "file": "11422_28478.ttl",
       "conforms": true,
       "violations": [],
@@ -8507,6 +11220,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1539
+    },
+    {
+      "file": "11422_28504.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1348
     },
     {
       "file": "11422_28505.ttl",
@@ -8568,6 +11288,19 @@
         }
       ],
       "n_triples": 175
+    },
+    {
+      "file": "11422_2872.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2872_sec_1"
+        }
+      ],
+      "n_triples": 418
     },
     {
       "file": "11422_2873.ttl",
@@ -8673,6 +11406,47 @@
       "n_triples": 1158
     },
     {
+      "file": "11422_29086.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1132
+    },
+    {
+      "file": "11422_29087.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_29087_sec_1"
+        }
+      ],
+      "n_triples": 798
+    },
+    {
+      "file": "11422_29088.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1088
+    },
+    {
+      "file": "11422_29089.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 511
+    },
+    {
+      "file": "11422_29090.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1050
+    },
+    {
       "file": "11422_2913.ttl",
       "conforms": true,
       "violations": [],
@@ -8692,6 +11466,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 968
+    },
+    {
+      "file": "11422_2916.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 441
     },
     {
       "file": "11422_2918.ttl",
@@ -8721,6 +11502,20 @@
       "n_triples": 651
     },
     {
+      "file": "11422_2933.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1080
+    },
+    {
+      "file": "11422_2934.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 449
+    },
+    {
       "file": "11422_2935.ttl",
       "conforms": true,
       "violations": [],
@@ -8735,6 +11530,13 @@
       "n_triples": 392
     },
     {
+      "file": "11422_2950.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 497
+    },
+    {
       "file": "11422_2951.ttl",
       "conforms": true,
       "violations": [],
@@ -8742,11 +11544,43 @@
       "n_triples": 602
     },
     {
+      "file": "11422_2952.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 723
+    },
+    {
+      "file": "11422_2953.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2953_sec_1"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_2953_sec_2"
+        }
+      ],
+      "n_triples": 924
+    },
+    {
       "file": "11422_2955.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 133
+    },
+    {
+      "file": "11422_2956.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 490
     },
     {
       "file": "11422_2963.ttl",
@@ -8887,6 +11721,13 @@
       "n_triples": 257
     },
     {
+      "file": "11422_2999.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1092
+    },
+    {
       "file": "11422_3000.ttl",
       "conforms": false,
       "violations": [],
@@ -8942,6 +11783,19 @@
       "n_triples": 926
     },
     {
+      "file": "11422_3058.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3058_sec_0"
+        }
+      ],
+      "n_triples": 727
+    },
+    {
       "file": "11422_3059.ttl",
       "conforms": true,
       "violations": [],
@@ -8954,6 +11808,33 @@
       "violations": [],
       "warnings": [],
       "n_triples": 281
+    },
+    {
+      "file": "11422_3061.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 622
+    },
+    {
+      "file": "11422_3062.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3062_sec_1"
+        }
+      ],
+      "n_triples": 654
+    },
+    {
+      "file": "11422_3063.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1819
     },
     {
       "file": "11422_3064.ttl",
@@ -9024,6 +11905,13 @@
       "n_triples": 404
     },
     {
+      "file": "11422_3212.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1454
+    },
+    {
       "file": "11422_3213.ttl",
       "conforms": false,
       "violations": [],
@@ -9070,6 +11958,13 @@
       "n_triples": 492
     },
     {
+      "file": "11422_3218.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 406
+    },
+    {
       "file": "11422_3219.ttl",
       "conforms": true,
       "violations": [],
@@ -9108,6 +12003,19 @@
       "violations": [],
       "warnings": [],
       "n_triples": 673
+    },
+    {
+      "file": "11422_3224.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3224_sec_1"
+        }
+      ],
+      "n_triples": 556
     },
     {
       "file": "11422_3233.ttl",
@@ -9171,6 +12079,32 @@
       "n_triples": 734
     },
     {
+      "file": "11422_3241.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3241_sec_0"
+        }
+      ],
+      "n_triples": 1001
+    },
+    {
+      "file": "11422_3243.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3243_sec_1"
+        }
+      ],
+      "n_triples": 507
+    },
+    {
       "file": "11422_3245.ttl",
       "conforms": true,
       "violations": [],
@@ -9230,11 +12164,50 @@
       "n_triples": 347
     },
     {
+      "file": "11422_3258.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3258_sec_0"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3258_sec_1"
+        }
+      ],
+      "n_triples": 364
+    },
+    {
       "file": "11422_3260.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 804
+    },
+    {
+      "file": "11422_3263.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1217
+    },
+    {
+      "file": "11422_3264.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 394
+    },
+    {
+      "file": "11422_3265.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 257
     },
     {
       "file": "11422_3266.ttl",
@@ -9249,6 +12222,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 302
+    },
+    {
+      "file": "11422_3268.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 564
     },
     {
       "file": "11422_3269.ttl",
@@ -9375,6 +12355,13 @@
       "n_triples": 259
     },
     {
+      "file": "11422_3322.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 500
+    },
+    {
       "file": "11422_3323.ttl",
       "conforms": false,
       "violations": [],
@@ -9395,12 +12382,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3342_sec_1"
+          "node": "11422_3342_sec_0"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3342_sec_0"
+          "node": "11422_3342_sec_1"
         }
       ],
       "n_triples": 426
@@ -9418,6 +12405,26 @@
       "violations": [],
       "warnings": [],
       "n_triples": 373
+    },
+    {
+      "file": "11422_3370.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3370_sec_1"
+        }
+      ],
+      "n_triples": 795
+    },
+    {
+      "file": "11422_3371.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 229
     },
     {
       "file": "11422_3372.ttl",
@@ -9454,6 +12461,32 @@
       "n_triples": 174
     },
     {
+      "file": "11422_3376.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3376_sec_1"
+        }
+      ],
+      "n_triples": 522
+    },
+    {
+      "file": "11422_3377.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3377_sec_36"
+        }
+      ],
+      "n_triples": 664
+    },
+    {
       "file": "11422_3378.ttl",
       "conforms": false,
       "violations": [],
@@ -9472,6 +12505,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 295
+    },
+    {
+      "file": "11422_3380.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 520
     },
     {
       "file": "11422_3381.ttl",
@@ -9509,12 +12549,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3385_sec_0"
+          "node": "11422_3385_sec_1"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3385_sec_1"
+          "node": "11422_3385_sec_0"
         }
       ],
       "n_triples": 674
@@ -9545,6 +12585,19 @@
         }
       ],
       "n_triples": 356
+    },
+    {
+      "file": "11422_3389.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3389_sec_3"
+        }
+      ],
+      "n_triples": 520
     },
     {
       "file": "11422_3390.ttl",
@@ -9636,6 +12689,13 @@
       "n_triples": 654
     },
     {
+      "file": "11422_3408.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 477
+    },
+    {
       "file": "11422_3409.ttl",
       "conforms": true,
       "violations": [],
@@ -9685,12 +12745,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3415_sec_1"
+          "node": "11422_3415_sec_0"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3415_sec_0"
+          "node": "11422_3415_sec_1"
         }
       ],
       "n_triples": 150
@@ -9884,6 +12944,13 @@
       "n_triples": 116
     },
     {
+      "file": "11422_3525.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 957
+    },
+    {
       "file": "11422_3533.ttl",
       "conforms": true,
       "violations": [],
@@ -9933,12 +13000,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3552_sec_1"
+          "node": "11422_3552_sec_2"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3552_sec_2"
+          "node": "11422_3552_sec_1"
         }
       ],
       "n_triples": 573
@@ -9986,6 +13053,13 @@
       "n_triples": 401
     },
     {
+      "file": "11422_3561.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 499
+    },
+    {
       "file": "11422_3562.ttl",
       "conforms": true,
       "violations": [],
@@ -9993,11 +13067,31 @@
       "n_triples": 641
     },
     {
+      "file": "11422_3563.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3563_sec_1"
+        }
+      ],
+      "n_triples": 937
+    },
+    {
       "file": "11422_3564.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 586
+    },
+    {
+      "file": "11422_3576.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 888
     },
     {
       "file": "11422_3577.ttl",
@@ -10019,6 +13113,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 850
+    },
+    {
+      "file": "11422_3580.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 539
     },
     {
       "file": "11422_3583.ttl",
@@ -10128,6 +13229,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 806
+    },
+    {
+      "file": "11422_3596.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 665
     },
     {
       "file": "11422_3597.ttl",
@@ -10261,6 +13369,13 @@
       "n_triples": 149
     },
     {
+      "file": "11422_3639.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1101
+    },
+    {
       "file": "11422_3640.ttl",
       "conforms": true,
       "violations": [],
@@ -10349,13 +13464,6 @@
       "n_triples": 695
     },
     {
-      "file": "11422_3652.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 362
-    },
-    {
       "file": "11422_3653.ttl",
       "conforms": true,
       "violations": [],
@@ -10397,13 +13505,6 @@
       "n_triples": 482
     },
     {
-      "file": "11422_3658.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 379
-    },
-    {
       "file": "11422_3659.ttl",
       "conforms": true,
       "violations": [],
@@ -10418,12 +13519,12 @@
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3660_sec_0"
+          "node": "11422_3660_sec_1"
         },
         {
           "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
           "path": "hasContent",
-          "node": "11422_3660_sec_1"
+          "node": "11422_3660_sec_0"
         }
       ],
       "n_triples": 240
@@ -10622,6 +13723,13 @@
       "n_triples": 86
     },
     {
+      "file": "11422_3694.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 66
+    },
+    {
       "file": "11422_3695.ttl",
       "conforms": true,
       "violations": [],
@@ -10663,6 +13771,13 @@
       "n_triples": 310
     },
     {
+      "file": "11422_3704.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1403
+    },
+    {
       "file": "11422_3705.ttl",
       "conforms": true,
       "violations": [],
@@ -10684,11 +13799,11 @@
       "n_triples": 160
     },
     {
-      "file": "11422_3709.ttl",
+      "file": "11422_3710.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 319
+      "n_triples": 993
     },
     {
       "file": "11422_3712.ttl",
@@ -10705,11 +13820,31 @@
       "n_triples": 355
     },
     {
+      "file": "11422_3714.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_3714_sec_2"
+        }
+      ],
+      "n_triples": 645
+    },
+    {
       "file": "11422_3715.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 258
+    },
+    {
+      "file": "11422_3716.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 885
     },
     {
       "file": "11422_3717.ttl",
@@ -10761,11 +13896,11 @@
       "n_triples": 690
     },
     {
-      "file": "11422_3731.ttl",
+      "file": "11422_3730.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 376
+      "n_triples": 76
     },
     {
       "file": "11422_3732.ttl",
@@ -10956,11 +14091,11 @@
       "n_triples": 766
     },
     {
-      "file": "11422_3796.ttl",
+      "file": "11422_3795.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 414
+      "n_triples": 309
     },
     {
       "file": "11422_3797.ttl",
@@ -10995,6 +14130,13 @@
         }
       ],
       "n_triples": 326
+    },
+    {
+      "file": "11422_3802.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 252
     },
     {
       "file": "11422_3803.ttl",
@@ -11039,6 +14181,13 @@
       "n_triples": 425
     },
     {
+      "file": "11422_3826.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 383
+    },
+    {
       "file": "11422_3827.ttl",
       "conforms": true,
       "violations": [],
@@ -11067,39 +14216,11 @@
       "n_triples": 438
     },
     {
-      "file": "11422_3880.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 664
-    },
-    {
-      "file": "11422_3881.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 607
-    },
-    {
-      "file": "11422_3882.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 516
-    },
-    {
       "file": "11422_3883.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 281
-    },
-    {
-      "file": "11422_3884.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 889
     },
     {
       "file": "11422_3894.ttl",
@@ -11214,11 +14335,11 @@
       "n_triples": 306
     },
     {
-      "file": "11422_3930.ttl",
+      "file": "11422_3929.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 443
+      "n_triples": 147
     },
     {
       "file": "11422_3931.ttl",
@@ -11228,11 +14349,25 @@
       "n_triples": 112
     },
     {
+      "file": "11422_3932.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1442
+    },
+    {
       "file": "11422_3933.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 564
+    },
+    {
+      "file": "11422_3934.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 354
     },
     {
       "file": "11422_3935.ttl",
@@ -11247,6 +14382,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 328
+    },
+    {
+      "file": "11422_3937.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 441
     },
     {
       "file": "11422_3944.ttl",
@@ -11277,6 +14419,13 @@
       "n_triples": 115
     },
     {
+      "file": "11422_3949.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 356
+    },
+    {
       "file": "11422_3950.ttl",
       "conforms": false,
       "violations": [],
@@ -11295,13 +14444,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1103
-    },
-    {
-      "file": "11422_3953.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 198
     },
     {
       "file": "11422_3954.ttl",
@@ -11330,6 +14472,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 189
+    },
+    {
+      "file": "11422_3959.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 291
     },
     {
       "file": "11422_3960.ttl",
@@ -11395,25 +14544,11 @@
       "n_triples": 176
     },
     {
-      "file": "11422_3982.ttl",
+      "file": "11422_3981.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 753
-    },
-    {
-      "file": "11422_3983.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 494
-    },
-    {
-      "file": "11422_3984.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1099
+      "n_triples": 358
     },
     {
       "file": "11422_3985.ttl",
@@ -11437,13 +14572,6 @@
       "n_triples": 754
     },
     {
-      "file": "11422_3989.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 977
-    },
-    {
       "file": "11422_4009.ttl",
       "conforms": true,
       "violations": [],
@@ -11463,13 +14591,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 340
-    },
-    {
-      "file": "11422_4018.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 455
     },
     {
       "file": "11422_4100.ttl",
@@ -11528,6 +14649,13 @@
       "n_triples": 517
     },
     {
+      "file": "11422_4268.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 221
+    },
+    {
       "file": "11422_4269.ttl",
       "conforms": true,
       "violations": [],
@@ -11542,6 +14670,13 @@
       "n_triples": 199
     },
     {
+      "file": "11422_5756.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3053
+    },
+    {
       "file": "11422_5849.ttl",
       "conforms": false,
       "violations": [],
@@ -11553,6 +14688,24 @@
         }
       ],
       "n_triples": 479
+    },
+    {
+      "file": "11422_5941.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_5941_sec_36"
+        },
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_5941_sec_39"
+        }
+      ],
+      "n_triples": 1928
     },
     {
       "file": "11422_5942.ttl",
@@ -11576,6 +14729,13 @@
       "n_triples": 669
     },
     {
+      "file": "11422_5960.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1309
+    },
+    {
       "file": "11422_5961.ttl",
       "conforms": true,
       "violations": [],
@@ -11588,6 +14748,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 416
+    },
+    {
+      "file": "11422_5963.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2596
     },
     {
       "file": "11422_5964.ttl",
@@ -11625,11 +14792,25 @@
       "n_triples": 1183
     },
     {
+      "file": "11422_5987.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 641
+    },
+    {
       "file": "11422_5988.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 691
+    },
+    {
+      "file": "11422_5989.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1830
     },
     {
       "file": "11422_5990.ttl",
@@ -11660,6 +14841,13 @@
       "n_triples": 1166
     },
     {
+      "file": "11422_5997.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2146
+    },
+    {
       "file": "11422_5998.ttl",
       "conforms": true,
       "violations": [],
@@ -11686,6 +14874,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1165
+    },
+    {
+      "file": "11422_6003.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1893
     },
     {
       "file": "11422_6004.ttl",
@@ -11786,6 +14981,13 @@
       "n_triples": 1778
     },
     {
+      "file": "11422_6097.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3275
+    },
+    {
       "file": "11422_6098.ttl",
       "conforms": true,
       "violations": [],
@@ -11798,6 +15000,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1005
+    },
+    {
+      "file": "11422_6100.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 832
     },
     {
       "file": "11422_6108.ttl",
@@ -11833,6 +15042,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 900
+    },
+    {
+      "file": "11422_6123.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 488
     },
     {
       "file": "11422_6150.ttl",
@@ -11947,11 +15163,25 @@
       "n_triples": 1175
     },
     {
+      "file": "11422_6319.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1592
+    },
+    {
       "file": "11422_6320.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 765
+    },
+    {
+      "file": "11422_6321.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1300
     },
     {
       "file": "11422_6322.ttl",
@@ -12205,6 +15435,20 @@
       "n_triples": 1383
     },
     {
+      "file": "11422_6444.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 3293
+    },
+    {
+      "file": "11422_6462.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2103
+    },
+    {
       "file": "11422_6464.ttl",
       "conforms": true,
       "violations": [],
@@ -12253,6 +15497,13 @@
       "n_triples": 1195
     },
     {
+      "file": "11422_6471.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 532
+    },
+    {
       "file": "11422_6486.ttl",
       "conforms": true,
       "violations": [],
@@ -12281,6 +15532,13 @@
       "n_triples": 2056
     },
     {
+      "file": "11422_6493.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1445
+    },
+    {
       "file": "11422_6494.ttl",
       "conforms": true,
       "violations": [],
@@ -12300,6 +15558,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 794
+    },
+    {
+      "file": "11422_6536.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1998
+    },
+    {
+      "file": "11422_6541.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 970
     },
     {
       "file": "11422_6542.ttl",
@@ -12372,11 +15644,11 @@
       "n_triples": 417
     },
     {
-      "file": "11422_6641.ttl",
+      "file": "11422_6640.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 114
+      "n_triples": 969
     },
     {
       "file": "11422_6655.ttl",
@@ -12391,6 +15663,26 @@
       "violations": [],
       "warnings": [],
       "n_triples": 130
+    },
+    {
+      "file": "11422_6657.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_6657_abstract"
+        }
+      ],
+      "n_triples": 197
+    },
+    {
+      "file": "11422_6658.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 157
     },
     {
       "file": "11422_6659.ttl",
@@ -12412,6 +15704,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 527
+    },
+    {
+      "file": "11422_6951.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2138
     },
     {
       "file": "11422_6957.ttl",
@@ -12442,11 +15741,11 @@
       "n_triples": 673
     },
     {
-      "file": "11422_7036.ttl",
+      "file": "11422_7088.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
-      "n_triples": 1320
+      "n_triples": 2158
     },
     {
       "file": "11422_7091.ttl",
@@ -12491,11 +15790,39 @@
       "n_triples": 629
     },
     {
+      "file": "11422_7112.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 939
+    },
+    {
+      "file": "11422_7221.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1758
+    },
+    {
+      "file": "11422_7241.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2022
+    },
+    {
       "file": "11422_7285.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 824
+    },
+    {
+      "file": "11422_7286.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1018
     },
     {
       "file": "11422_7288.ttl",
@@ -12519,6 +15846,13 @@
       "n_triples": 554
     },
     {
+      "file": "11422_7318.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1742
+    },
+    {
       "file": "11422_7321.ttl",
       "conforms": true,
       "violations": [],
@@ -12526,11 +15860,25 @@
       "n_triples": 1259
     },
     {
+      "file": "11422_7322.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1092
+    },
+    {
       "file": "11422_7324.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1079
+    },
+    {
+      "file": "11422_7333.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2919
     },
     {
       "file": "11422_7336.ttl",
@@ -12582,6 +15930,20 @@
       "n_triples": 830
     },
     {
+      "file": "11422_7413.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 927
+    },
+    {
+      "file": "11422_7414.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1255
+    },
+    {
       "file": "11422_7415.ttl",
       "conforms": true,
       "violations": [],
@@ -12610,6 +15972,20 @@
       "n_triples": 1174
     },
     {
+      "file": "11422_7419.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2622
+    },
+    {
+      "file": "11422_7420.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 498
+    },
+    {
       "file": "11422_7421.ttl",
       "conforms": true,
       "violations": [],
@@ -12635,6 +16011,13 @@
         }
       ],
       "n_triples": 3159
+    },
+    {
+      "file": "11422_7424.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1764
     },
     {
       "file": "11422_7425.ttl",
@@ -12704,6 +16087,13 @@
       "n_triples": 740
     },
     {
+      "file": "11422_7606.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 928
+    },
+    {
       "file": "11422_7608.ttl",
       "conforms": true,
       "violations": [],
@@ -12716,13 +16106,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1260
-    },
-    {
-      "file": "11422_7645.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 3411
     },
     {
       "file": "11422_7648.ttl",
@@ -12767,6 +16150,13 @@
       "n_triples": 1521
     },
     {
+      "file": "11422_7667.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1819
+    },
+    {
       "file": "11422_7668.ttl",
       "conforms": true,
       "violations": [],
@@ -12793,6 +16183,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1173
+    },
+    {
+      "file": "11422_7680.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1946
     },
     {
       "file": "11422_7684.ttl",
@@ -12961,11 +16358,25 @@
       "n_triples": 333
     },
     {
+      "file": "11422_7864.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1266
+    },
+    {
       "file": "11422_7865.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1394
+    },
+    {
+      "file": "11422_7912.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1673
     },
     {
       "file": "11422_7913.ttl",
@@ -12982,6 +16393,13 @@
       "n_triples": 1183
     },
     {
+      "file": "11422_8119.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 583
+    },
+    {
       "file": "11422_8166.ttl",
       "conforms": true,
       "violations": [],
@@ -12994,6 +16412,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1311
+    },
+    {
+      "file": "11422_8168.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 4703
     },
     {
       "file": "11422_8169.ttl",
@@ -13015,6 +16440,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 821
+    },
+    {
+      "file": "11422_8173.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 733
     },
     {
       "file": "11422_8174.ttl",
@@ -13094,6 +16526,13 @@
       "n_triples": 2228
     },
     {
+      "file": "11422_8272.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1431
+    },
+    {
       "file": "11422_8273.ttl",
       "conforms": true,
       "violations": [],
@@ -13106,6 +16545,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1002
+    },
+    {
+      "file": "11422_8277.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2370
     },
     {
       "file": "11422_8279.ttl",
@@ -13122,11 +16568,25 @@
       "n_triples": 602
     },
     {
+      "file": "11422_8316.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1753
+    },
+    {
       "file": "11422_8329.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1551
+    },
+    {
+      "file": "11422_8330.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 920
     },
     {
       "file": "11422_8331.ttl",
@@ -13155,6 +16615,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 635
+    },
+    {
+      "file": "11422_8474.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2789
     },
     {
       "file": "11422_8644.ttl",
@@ -13303,6 +16770,13 @@
       "n_triples": 2453
     },
     {
+      "file": "11422_8707.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 838
+    },
+    {
       "file": "11422_8709.ttl",
       "conforms": true,
       "violations": [],
@@ -13317,6 +16791,13 @@
       "n_triples": 740
     },
     {
+      "file": "11422_8883.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1847
+    },
+    {
       "file": "11422_9226.ttl",
       "conforms": true,
       "violations": [],
@@ -13324,11 +16805,25 @@
       "n_triples": 157
     },
     {
+      "file": "11422_9279.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1879
+    },
+    {
       "file": "11422_9280.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 655
+    },
+    {
+      "file": "11422_9281.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 774
     },
     {
       "file": "11422_9284.ttl",
@@ -13387,6 +16882,20 @@
       "n_triples": 493
     },
     {
+      "file": "11422_9370.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2224
+    },
+    {
+      "file": "11422_9396.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1570
+    },
+    {
       "file": "11422_9397.ttl",
       "conforms": true,
       "violations": [],
@@ -13401,6 +16910,33 @@
       "n_triples": 683
     },
     {
+      "file": "11422_9405.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1700
+    },
+    {
+      "file": "11422_9406.ttl",
+      "conforms": false,
+      "violations": [],
+      "warnings": [
+        {
+          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
+          "path": "hasContent",
+          "node": "11422_9406_sec_87"
+        }
+      ],
+      "n_triples": 1737
+    },
+    {
+      "file": "11422_9425.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 709
+    },
+    {
       "file": "11422_9426.ttl",
       "conforms": true,
       "violations": [],
@@ -13413,6 +16949,20 @@
       "violations": [],
       "warnings": [],
       "n_triples": 790
+    },
+    {
+      "file": "11422_9428.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1649
+    },
+    {
+      "file": "11422_9429.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2823
     },
     {
       "file": "11422_9430.ttl",
@@ -13443,11 +16993,25 @@
       "n_triples": 1309
     },
     {
+      "file": "11422_9488.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 981
+    },
+    {
       "file": "11422_9489.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 799
+    },
+    {
+      "file": "11422_9491.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1358
     },
     {
       "file": "11422_9546.ttl",
@@ -13478,6 +17042,13 @@
       "n_triples": 1151
     },
     {
+      "file": "11422_9588.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1011
+    },
+    {
       "file": "11422_9589.ttl",
       "conforms": true,
       "violations": [],
@@ -13499,25 +17070,11 @@
       "n_triples": 347
     },
     {
-      "file": "11422_9609.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 1198
-    },
-    {
       "file": "11422_9614.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 893
-    },
-    {
-      "file": "11422_9615.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 966
     },
     {
       "file": "11422_9675.ttl",
@@ -13527,17 +17084,11 @@
       "n_triples": 490
     },
     {
-      "file": "11422_9676.ttl",
-      "conforms": false,
+      "file": "11422_9679.ttl",
+      "conforms": true,
       "violations": [],
-      "warnings": [
-        {
-          "message": "Abstract vazio ou muito curto (menos de 30 caracteres).",
-          "path": "hasContent",
-          "node": "11422_9676_sec_17"
-        }
-      ],
-      "n_triples": 3221
+      "warnings": [],
+      "n_triples": 1553
     },
     {
       "file": "11422_9680.ttl",
@@ -13588,6 +17139,13 @@
       "n_triples": 1535
     },
     {
+      "file": "11422_9751.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1025
+    },
+    {
       "file": "11422_9752.ttl",
       "conforms": true,
       "violations": [],
@@ -13602,11 +17160,32 @@
       "n_triples": 1509
     },
     {
+      "file": "11422_9754.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2078
+    },
+    {
+      "file": "11422_9755.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1082
+    },
+    {
       "file": "11422_9756.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 1310
+    },
+    {
+      "file": "11422_9757.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1442
     },
     {
       "file": "11422_9758.ttl",
@@ -13644,6 +17223,13 @@
       "n_triples": 2089
     },
     {
+      "file": "11422_9765.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 2822
+    },
+    {
       "file": "11422_9766.ttl",
       "conforms": true,
       "violations": [],
@@ -13658,11 +17244,32 @@
       "n_triples": 1334
     },
     {
+      "file": "11422_9769.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1708
+    },
+    {
       "file": "11422_9771.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 743
+    },
+    {
+      "file": "11422_9772.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 773
+    },
+    {
+      "file": "11422_9773.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 363
     },
     {
       "file": "11422_9777.ttl",
@@ -13677,6 +17284,13 @@
       "violations": [],
       "warnings": [],
       "n_triples": 922
+    },
+    {
+      "file": "11422_9801.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 921
     },
     {
       "file": "11422_9802.ttl",
@@ -13714,6 +17328,27 @@
       "n_triples": 1224
     },
     {
+      "file": "11422_9811.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1058
+    },
+    {
+      "file": "11422_9822.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1187
+    },
+    {
+      "file": "11422_9826.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 804
+    },
+    {
       "file": "11422_9827.ttl",
       "conforms": true,
       "violations": [],
@@ -13728,6 +17363,13 @@
       "n_triples": 768
     },
     {
+      "file": "11422_9830.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 1104
+    },
+    {
       "file": "11422_9841.ttl",
       "conforms": true,
       "violations": [],
@@ -13735,11 +17377,25 @@
       "n_triples": 353
     },
     {
+      "file": "11422_9842.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 543
+    },
+    {
       "file": "11422_9843.ttl",
       "conforms": true,
       "violations": [],
       "warnings": [],
       "n_triples": 907
+    },
+    {
+      "file": "11422_9844.ttl",
+      "conforms": true,
+      "violations": [],
+      "warnings": [],
+      "n_triples": 863
     },
     {
       "file": "11422_9845.ttl",
@@ -13754,13 +17410,6 @@
       "violations": [],
       "warnings": [],
       "n_triples": 1368
-    },
-    {
-      "file": "11422_9877.ttl",
-      "conforms": true,
-      "violations": [],
-      "warnings": [],
-      "n_triples": 744
     },
     {
       "file": "11422_9963.ttl",

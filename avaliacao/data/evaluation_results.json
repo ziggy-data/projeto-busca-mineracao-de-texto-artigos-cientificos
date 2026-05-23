@@ -6,15 +6,15 @@
     "n_pass": 3
   },
   "h1": {
-    "total_documentos": 1845,
-    "elegiveis": 1570,
-    "ok": 1569,
-    "no_target": 275,
-    "failed": 1,
-    "taxa_sucesso": 0.9994,
-    "taxa_falhas": 0.0006,
-    "docs_com_claim": 1551,
-    "taxa_claim": 0.9885,
+    "total_documentos": 7641,
+    "elegiveis": 3929,
+    "ok": 3926,
+    "no_target": 3712,
+    "failed": 3,
+    "taxa_sucesso": 0.9992,
+    "taxa_falhas": 0.0008,
+    "docs_com_claim": 1993,
+    "taxa_claim": 0.9886,
     "criteria": {
       "taxa_sucesso": true,
       "taxa_falhas": true,
@@ -24,25 +24,25 @@
   },
   "h2": {
     "shacl": {
-      "n_total": 1841,
-      "n_conforms": 1725,
+      "n_total": 2316,
+      "n_conforms": 2156,
       "n_violation": 1,
-      "n_warning": 115,
-      "conformance": 0.937,
-      "viol_rate": 0.0005,
-      "n_warn_msgs": 151,
+      "n_warning": 159,
+      "conformance": 0.9309,
+      "viol_rate": 0.0004,
+      "n_warn_msgs": 207,
       "warn_types": [
         "Abstract vazio ou muito curto (menos de 30 caracteres)."
       ]
     },
     "compare": {
       "generic_ratio": 0.02,
-      "rhet_ok": 0.8333333333333334,
+      "rhet_ok": 0.9666666666666667,
       "source": "comparison_llama3.1_8b_vs_qwen2.5_7b.md"
     },
     "campos_preenchidos": {
-      "campos_avg": 3.188,
-      "n_docs": 1569
+      "campos_avg": 3.207,
+      "n_docs": 2016
     },
     "criteria": {
       "shacl_conformidade": true,
@@ -70,69 +70,69 @@
         "2017": 0,
         "2018": 0,
         "2019": 6,
-        "2020": 11,
-        "2021": 5,
+        "2020": 14,
+        "2021": 9,
         "2022": 0,
-        "2023": 3,
+        "2023": 5,
         "2024": 3,
-        "2025": 20
+        "2025": 22
       },
       "fem_por_ano": {
-        "2017": 22,
-        "2018": 8,
+        "2017": 27,
+        "2018": 11,
         "2019": 7,
         "2020": 2,
-        "2021": 4,
+        "2021": 7,
         "2022": 3,
-        "2023": 0,
+        "2023": 3,
         "2024": 1,
-        "2025": 4
+        "2025": 6
       },
       "variacao_detectada": true
     },
     "densidade_phd_msc": {
-      "phd_docs": 455,
-      "phd_claims": 5996,
-      "phd_avg": 13.18,
-      "msc_docs": 1386,
-      "msc_claims": 9164,
-      "msc_avg": 6.61,
+      "phd_docs": 671,
+      "phd_claims": 9505,
+      "phd_avg": 14.17,
+      "msc_docs": 1645,
+      "msc_claims": 11305,
+      "msc_avg": 6.87,
       "phd_maior": true
     },
     "perfis_limitacao": {
       "areas": [
-        "ENGENHARIA CIVIL",
         "ENGENHARIAS",
-        "ENGENHARIA ELETRICA",
+        "ENGENHARIA CIVIL",
         "ENGENHARIA QUIMICA",
-        "ENGENHARIA DE MATERIAIS E METALURGICA",
+        "ENGENHARIA ELETRICA",
         "ENGENHARIA DE PRODUCAO",
-        "ENGENHARIA DE TRANSPORTES",
-        "ENGENHARIA NAVAL E OCEANICA",
-        "ENGENHARIA DE SOFTWARE",
+        "ENGENHARIA DE MATERIAIS E METALURGICA",
         "ENGENHARIA MECANICA",
-        "CIENCIA DA COMPUTACAO",
+        "ENGENHARIA NAVAL E OCEANICA",
+        "ENGENHARIA DE TRANSPORTES",
+        "ENGENHARIA DE SOFTWARE",
         "ENGENHARIA BIOMEDICA",
-        "PLANEJAMENTO E ORGANIZACAO DO SISTEMA DE TRANSPORTE",
+        "CIENCIA DA COMPUTACAO",
         "ENGENHARIA ECONOMICA",
-        "ESTRUTURAS"
+        "ESTRUTURAS",
+        "PLANEJAMENTO E ORGANIZACAO DO SISTEMA DE TRANSPORTE"
       ],
       "areas_n": {
-        "ENGENHARIA CIVIL": 283,
-        "ENGENHARIAS": 262,
-        "ENGENHARIA ELETRICA": 216,
-        "ENGENHARIA QUIMICA": 157,
-        "ENGENHARIA DE MATERIAIS E METALURGICA": 121,
-        "ENGENHARIA DE PRODUCAO": 99,
-        "ENGENHARIA DE TRANSPORTES": 95,
-        "ENGENHARIA NAVAL E OCEANICA": 82,
-        "ENGENHARIA DE SOFTWARE": 59,
-        "ENGENHARIA MECANICA": 52,
-        "CIENCIA DA COMPUTACAO": 48,
-        "ENGENHARIA BIOMEDICA": 43,
-        "PLANEJAMENTO E ORGANIZACAO DO SISTEMA DE TRANSPORTE": 42,
-        "ENGENHARIA ECONOMICA": 32,
-        "ESTRUTURAS": 25
+        "ENGENHARIAS": 419,
+        "ENGENHARIA CIVIL": 306,
+        "ENGENHARIA QUIMICA": 269,
+        "ENGENHARIA ELETRICA": 264,
+        "ENGENHARIA DE PRODUCAO": 163,
+        "ENGENHARIA DE MATERIAIS E METALURGICA": 145,
+        "ENGENHARIA MECANICA": 133,
+        "ENGENHARIA NAVAL E OCEANICA": 115,
+        "ENGENHARIA DE TRANSPORTES": 110,
+        "ENGENHARIA DE SOFTWARE": 89,
+        "ENGENHARIA BIOMEDICA": 62,
+        "CIENCIA DA COMPUTACAO": 59,
+        "ENGENHARIA ECONOMICA": 40,
+        "ESTRUTURAS": 38,
+        "PLANEJAMENTO E ORGANIZACAO DO SISTEMA DE TRANSPORTE": 38
       },
       "n_areas": 15,
       "criterio": "≥ 2 áreas"

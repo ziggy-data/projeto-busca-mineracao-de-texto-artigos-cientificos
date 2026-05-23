@@ -243,6 +243,9 @@ def build_report(corpus: dict, eval_data: dict | None,
                 status = "✓ zero" if c.get("passou") else f"✗ {c['valor']}"
                 gi_crit_rows += f"| {c['descricao']} | {status} |\n"
 
+    gi_crit_table = gi_crit_rows if gi_crit_rows else "| _Não disponível_ | — |\n"
+    gi_table = gi_rows if gi_rows else "| _Não disponível_ | — |\n"
+
     md = f"""# Relatório Final — Grafo de Conhecimento de Discurso Científico
 
 **Projeto:** Construção de um Grafo de Conhecimento de Discurso Científico  
@@ -324,13 +327,13 @@ sem conexão com outros, duplicatas, referências quebradas.
 
 | Verificação | Resultado |
 |---|---|
-{gi_crit_rows if gi_crit_rows else "| _Não disponível_ | — |\n"}
+{gi_crit_table}
 
 **Contagens do corpus** (informativas):
 
 | Métrica | Valor |
 |---|---|
-{gi_rows if gi_rows else "| _Não disponível_ | — |\n"}
+{gi_table}
 
 ### 2.3 Como as duas abordagens se complementam
 
