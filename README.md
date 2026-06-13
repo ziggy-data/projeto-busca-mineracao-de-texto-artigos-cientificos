@@ -38,13 +38,13 @@ O projeto articula três áreas:
 
 ---
 
-## 2. Proposta e hipóteses
+## 2. Proposta e critérios de avaliação
 
 ### Hipótese principal
 
 > É possível extrair automaticamente elementos de discurso científico — afirmações, contribuições, limitações e direções de pesquisa futura — de teses e dissertações de engenharia com qualidade suficiente para revelar padrões temáticos e temporais no corpus, utilizando exclusivamente modelos de linguagem locais e ontologias abertas.
 
-### Hipóteses verificáveis
+### Critérios verificáveis
 
 **H1 — Viabilidade de extração:** um modelo de linguagem de pequeno porte, executado localmente sem ajuste fino, extrai elementos de discurso de seções de conclusão e resultados com taxa de sucesso ≥ 50% dos documentos elegíveis.
 
@@ -215,7 +215,7 @@ A pipeline completa é orquestrada pelo `run_pipeline.py` em 20 passos:
 | 15 | SPARQL básico | `fase_3/sparql_queries.py` | 20 queries de análise |
 | 16 | SPARQL avançado | `fase_3/sparql_advanced.py` | 10 queries aprofundadas |
 | 17 | Integridade do grafo | `avaliacao/validate_graph.py` | Verificações semânticas SPARQL |
-| 18 | Avaliar hipóteses | `avaliacao/evaluate_project.py` | Veredicto H1/H2/H3 |
+| 18 | Avaliar critérios | `avaliacao/evaluate_project.py` | Veredicto H1/H2/H3 |
 | 19 | Gerar relatório | `avaliacao/generate_report.py` | Relatório Markdown final |
 | 20 | Estatísticas do corpus | `avaliacao/corpus_statistics.py` | Gera estatísticas descritivas, gráficos e relatório consolidado do corpus |
 
@@ -301,7 +301,7 @@ O indicador central é a **taxa de violações críticas** — não a conformida
 | Padrão | W3C SHACL 1.0 | SPARQL 1.1 |
 | Detecta | Metadados ausentes, tipos incorretos | Órfãos, duplicatas, relações quebradas |
 
-### 6.3 Avaliação das hipóteses
+### 6.3 Avaliação dos critérios de aceitação
 
 `avaliacao/evaluate_project.py` lê os artefatos da pipeline e verifica cada critério da proposta, exibindo para cada hipótese a pergunta, o critério, o valor medido e um veredicto — sem narrativa conclusiva.
 
